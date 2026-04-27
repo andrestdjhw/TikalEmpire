@@ -1,0 +1,475 @@
+<?php
+/*
+ * Template Name: Homepage
+ * Template Post Type: page
+ */
+
+get_header(); ?>
+
+<style>
+@keyframes hpTicker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+@keyframes hpBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+.hp-service-card { transition: box-shadow 0.3s ease; }
+.hp-card-gold-border { opacity: 0; transition: opacity 0.3s; }
+.hp-service-card:hover .hp-card-gold-border { opacity: 1; }
+.hp-explore-link { opacity: 0; transform: translateY(8px); transition: opacity 0.3s, transform 0.3s; }
+.hp-service-card:hover .hp-explore-link { opacity: 1; transform: translateY(0); }
+.hp-service-card img { transition: transform 0.4s ease, filter 0.3s ease; }
+.hp-service-card:hover img { transform: scale(1.05); filter: brightness(0.82); }
+.hp-pillar { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.hp-pillar:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(11,31,51,0.12); border-color: rgba(201,168,76,0.4) !important; }
+.hp-area-card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+.hp-area-card:hover { transform: translateY(-4px); border-color: rgba(201,168,76,0.4) !important; box-shadow: 0 12px 32px rgba(11,31,51,0.2); }
+.hp-testimonial-card { transition: border-color 0.3s, background 0.3s; }
+.hp-testimonial-card:hover { border-color: rgba(201,168,76,0.35) !important; background: rgba(201,168,76,0.04) !important; }
+.hp-fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.hp-fade-up.visible { opacity: 1; transform: translateY(0); }
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.28) !important; }
+input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C !important; }
+
+@media (max-width: 1024px) {
+  .hp-services-grid    { grid-template-columns: repeat(2,1fr) !important; }
+  .hp-pillars-grid     { grid-template-columns: repeat(2,1fr) !important; }
+  .hp-steps-grid       { grid-template-columns: repeat(2,1fr) !important; }
+  .hp-areas-grid       { grid-template-columns: repeat(3,1fr) !important; }
+  .hp-cta-grid         { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .hp-who-grid         { grid-template-columns: 1fr !important; gap: 40px !important; }
+}
+@media (max-width: 768px) {
+  .hp-services-grid    { grid-template-columns: 1fr !important; }
+  .hp-pillars-grid     { grid-template-columns: 1fr !important; }
+  .hp-steps-grid       { grid-template-columns: 1fr !important; }
+  .hp-ba-grid          { grid-template-columns: 1fr !important; }
+  .hp-testimonials-grid { grid-template-columns: 1fr !important; }
+  .hp-areas-grid       { grid-template-columns: repeat(2,1fr) !important; }
+}
+@media (max-width: 480px) {
+  .hp-areas-grid       { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<!-- ═══ BLOCK 1 — HERO ═══════════════════════════════════════════════════════ -->
+<section style="position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; background-image:url('/wp-content/uploads/hero-kitchen.jpg'); background-size:cover; background-position:center; background-attachment:fixed;">
+  <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(11,31,51,0.82) 0%, rgba(11,31,51,0.6) 60%, rgba(11,31,51,0.45) 100%); z-index:1;"></div>
+  <div style="position:relative; z-index:2; text-align:center; padding:0 24px; max-width:940px; margin:0 auto;">
+    <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:28px;">
+      <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Maryland's Trusted Remodeling Team</span>
+      <div style="width:36px; height:1px; background:#C9A84C;"></div>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2.4rem,7vw,5.2rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:28px;">
+      When We Transform Your Home,<br><span style="color:#C9A84C;">the Stress Disappears.</span>
+    </h1>
+    <p style="font-family:'Inter',sans-serif; font-size:clamp(1rem,2.2vw,1.2rem); font-weight:400; color:rgba(255,255,255,0.8); line-height:1.75; max-width:680px; margin:0 auto 44px;">
+      Maryland homeowners trust Tikal Empire for kitchen remodeling, bathroom renovations, and flooring installation that delivers exactly what was promised — on time, on budget, and built to last.
+    </p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:56px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s, transform 0.15s;" onmouseover="this.style.background='#DFB95A'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C'; this.style.transform='none';">Request a Free Estimate</a>
+      <a href="/our-work" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#fff; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:56px; border-radius:4px; border:2px solid rgba(255,255,255,0.55); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'; this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(255,255,255,0.55)'; this.style.color='#fff';">See Our Work</a>
+    </div>
+  </div>
+  <div style="position:absolute; bottom:32px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:hpBounce 2.2s ease-in-out infinite;">
+    <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.6)" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ─── TRUST BAR ─────────────────────────────────────────────────────────── -->
+<div style="background:#071828; border-bottom:1px solid rgba(201,168,76,0.1);">
+  <div style="max-width:1280px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:center; gap:28px; flex-wrap:wrap;">
+    <?php
+    $trust_items = [
+      ['path'=>'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z','text'=>'MHIC #154361'],
+      ['path'=>'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z','text'=>'Licensed &amp; Insured'],
+      ['path'=>'M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z','text'=>'5 Specialist Team'],
+      ['path'=>'M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z','text'=>'12–16 Projects / Month'],
+      ['path'=>'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z','text'=>'Serving Maryland — 50 Mile Radius'],
+    ];
+    foreach ($trust_items as $idx => $item) : ?>
+      <?php if ($idx > 0) : ?><span style="color:rgba(201,168,76,0.25); font-size:18px;">·</span><?php endif; ?>
+      <div style="display:flex; align-items:center; gap:8px; white-space:nowrap;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $item['path']; ?>"/></svg>
+        <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; color:rgba(255,255,255,0.68);"><?php echo $item['text']; ?></span>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</div>
+
+<!-- ═══ BLOCK 2 — TICKER ═════════════════════════════════════════════════════ -->
+<div style="background:#0B1F33; overflow:hidden; padding:9px 0; border-bottom:1px solid rgba(201,168,76,0.1);">
+  <div style="display:flex; animation:hpTicker 48s linear infinite;">
+    <?php
+    $t = 'Your home, transformed with certainty.   ·   MHIC Licensed #154361   ·   Kitchen Remodeling   ·   Bathroom Remodeling   ·   Flooring Installation   ·   Howard County   ·   Montgomery County   ·   Frederick County   ·   Schedule Discipline   ·   Craftsmanship You Can See   ·   Licensed &amp; Insured   ·   ';
+    for ($i=0;$i<3;$i++): ?>
+      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; padding-right:6rem; flex-shrink:0; white-space:nowrap;"><?php echo $t; ?></span>
+    <?php endfor; ?>
+  </div>
+</div>
+
+<!-- ═══ BLOCK 3 — WHO WE ARE ════════════════════════════════════════════════ -->
+<section style="background:#F7F7F5; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:3fr 2fr; gap:80px; align-items:center;" class="hp-who-grid">
+    <div class="hp-fade-up">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+        <div style="width:36px; height:2px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Who We Are</span>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:900; color:#0B1F33; line-height:1.1; margin-bottom:28px;">
+        One Team.<br>Every Detail.<br>Zero Surprises.
+      </h2>
+      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2C2C2C; line-height:1.8;">
+        <p style="margin:0;">Tikal Empire LLC is a licensed home improvement contractor <strong style="color:#0B1F33;">(MHIC #154361)</strong> serving Maryland homeowners across Howard, Montgomery, Frederick, Prince George's, and Anne Arundel counties.</p>
+        <p style="margin:0;">We specialize in kitchen remodeling, bathroom renovations, and flooring installation — and we exist to do one thing: <em>transform your home with the certainty you deserve.</em></p>
+        <p style="margin:0;">That means showing up when we say. Finishing when we promise. Treating your home with the same respect we'd want for our own. And delivering results that make you say — yes, that's exactly what I imagined.</p>
+      </div>
+      <a href="/about-us" style="display:inline-flex; align-items:center; gap:8px; margin-top:36px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none; border-bottom:2px solid rgba(201,168,76,0.35); padding-bottom:4px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='rgba(201,168,76,0.35)'">
+        Learn Our Story <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px;" class="hp-fade-up">
+      <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; position:relative; background:linear-gradient(135deg,#0B1F33,#4A6F8A);">
+        <img src="/wp-content/uploads/team-jobsite.jpg" alt="Tikal Empire team on a clean, organized jobsite" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Our Team</span></div>
+      </div>
+      <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; position:relative; background:linear-gradient(135deg,#1a2f44,#0B1F33);">
+        <img src="/wp-content/uploads/kitchen-detail.jpg" alt="Precision kitchen detail — cabinet hardware and countertop edge" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Craftsmanship Detail</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 4 — SERVICES ═══════════════════════════════════════════════════ -->
+<section style="background:#0B1F33; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:64px;" class="hp-fade-up">
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What We Do</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; line-height:1.2; max-width:620px; margin:0 auto;">
+        Everything Your Home Needs.<br><span style="color:#C9A84C;">One Team</span> You Can Trust.
+      </h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-services-grid">
+      <?php
+      $services = [
+        ['title'=>'Kitchen Remodeling','desc'=>'Full kitchen transformations — layout, cabinets, countertops, tile, electrical & plumbing coordination.','price'=>'Starting at $80,000','cta'=>'Explore Kitchen Remodeling','href'=>'/kitchen-remodeling','img'=>'/wp-content/uploads/kitchen-remodel.jpg','alt'=>'Completed kitchen remodel'],
+        ['title'=>'Bathroom Remodeling','desc'=>'Complete bathroom renovations — tile, shower conversions, vanities, fixtures, and modern upgrades built to last.','price'=>'Starting at $18,000','cta'=>'Explore Bathroom Remodeling','href'=>'/bathroom-remodeling','img'=>'/wp-content/uploads/bathroom-remodel.jpg','alt'=>'Completed bathroom renovation'],
+        ['title'=>'Flooring Installation','desc'=>'Hardwood, LVP, vinyl, ceramic, carpet, and laminate — installed with precision for a flawless, lasting finish.','price'=>null,'cta'=>'Request an Estimate','href'=>'/flooring-installation','img'=>'/wp-content/uploads/flooring-install.jpg','alt'=>'LVP flooring installation'],
+      ];
+      foreach ($services as $s) : ?>
+        <div class="hp-service-card" style="position:relative; border-radius:8px; overflow:hidden; background:#071828; border:1px solid rgba(255,255,255,0.07);">
+          <div class="hp-card-gold-border" style="position:absolute; inset:0; border:2px solid #C9A84C; border-radius:8px; z-index:3; pointer-events:none;"></div>
+          <div style="height:240px; overflow:hidden; position:relative;">
+            <img src="<?php echo $s['img']; ?>" alt="<?php echo esc_attr($s['alt']); ?>" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0B1F33,#4A6F8A)'; this.style.display='none';"/>
+            <div style="position:absolute; inset:0; background:linear-gradient(transparent 40%,rgba(7,24,40,0.92) 100%);"></div>
+          </div>
+          <div style="padding:28px 24px 28px;">
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
+            <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:14px;"><?php echo $s['desc']; ?></p>
+            <?php if ($s['price']) : ?>
+              <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.06em; color:#C9A84C; margin-bottom:20px;"><?php echo $s['price']; ?></p>
+            <?php else: ?><div style="margin-bottom:20px;"></div><?php endif; ?>
+            <a href="<?php echo $s['href']; ?>" class="hp-explore-link" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">
+              <?php echo $s['cta']; ?> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 5 — WHY TIKAL EMPIRE ════════════════════════════════════════ -->
+<section style="background:#F7F7F5; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:64px;" class="hp-fade-up">
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Why Homeowners Choose Us</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0B1F33; line-height:1.2; max-width:720px; margin:0 auto;">
+        In an Industry Full of Broken Promises,<br>We Deliver <span style="color:#C9A84C;">Certainty.</span>
+      </h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;" class="hp-pillars-grid">
+      <?php
+      $pillars = [
+        ['d'=>'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z','title'=>'Clean Site Protocol','body'=>'We protect every surface before we start — floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived.'],
+        ['d'=>'M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z','title'=>'Schedule Discipline','body'=>'We arrive when we say. We finish when we promise. Every project has a defined timeline — and we hold to it without excuses.'],
+        ['d'=>'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z','title'=>'Craftsmanship You Can See','body'=>'We use locally sourced premium cabinets and high-quality materials built for longevity — not the imported, low-durability products found with budget contractors.'],
+        ['d'=>'M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-5-8H9v2h4v-2zm2-4H9v2h6V8z','title'=>'MHIC Licensed & Insured','body'=>'License #154361. General Liability Insurance active. This eliminates over 60% of informal competitors. Your home and investment are fully protected.'],
+      ];
+      foreach ($pillars as $p) : ?>
+        <div class="hp-pillar" style="background:#fff; border-radius:8px; padding:32px 24px; border:1px solid rgba(11,31,51,0.08);">
+          <div style="width:52px; height:52px; border-radius:10px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:20px; flex-shrink:0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $p['d']; ?>"/></svg>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0B1F33; margin-bottom:12px;"><?php echo $p['title']; ?></h3>
+          <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2C2C2C; line-height:1.75; margin:0; opacity:0.78;"><?php echo $p['body']; ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 6 — PROCESS ════════════════════════════════════════════════════ -->
+<section style="background:#fff; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:72px;" class="hp-fade-up">
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">How We Work</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0B1F33; line-height:1.2; max-width:620px; margin:0 auto;">
+        A Clear Process.<br>No Guesswork. No Surprises.
+      </h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px; position:relative;" class="hp-steps-grid">
+      <div style="position:absolute; top:44px; left:12.5%; right:12.5%; height:1px; background:linear-gradient(90deg,#C9A84C44,#4A6F8A44,#C9A84C44); z-index:0;" class="hidden lg:block"></div>
+      <?php
+      $steps = [
+        ['n'=>'01','title'=>'Free In-Home Consultation','body'=>'We visit your property, listen to your goals, and honestly assess the scope. No pressure. No obligation. Just a clear conversation about what your home needs and what it will cost.'],
+        ['n'=>'02','title'=>'Detailed Written Estimate','body'=>'You receive a clear, written proposal with defined scope, timeline, and pricing. No vague numbers. No hidden costs. You know exactly what you\'re getting before we touch a surface.'],
+        ['n'=>'03','title'=>'Expert Execution','body'=>'Our team arrives on schedule, protects your home, and delivers premium craftsmanship — with daily cleanup and progress updates so you always know what\'s happening.'],
+        ['n'=>'04','title'=>'Final Walk-Through & Approval','body'=>'We don\'t consider a project complete until you do. Every job ends with a full walk-through, your complete approval, and the confidence that you made the right call.'],
+      ];
+      foreach ($steps as $i => $step) : ?>
+        <div class="hp-fade-up" style="padding:0 20px; text-align:center; position:relative; z-index:1;" data-delay="<?php echo $i*120; ?>">
+          <div style="width:88px; height:88px; border-radius:50%; background:linear-gradient(135deg,#0B1F33,#071828); border:2px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 28px; box-shadow:0 8px 24px rgba(11,31,51,0.14);">
+            <span style="font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:900; color:#C9A84C;"><?php echo $step['n']; ?></span>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0B1F33; margin-bottom:14px;"><?php echo $step['title']; ?></h3>
+          <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2C2C2C; line-height:1.75; opacity:0.72; margin:0;"><?php echo $step['body']; ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div style="text-align:center; margin-top:56px;">
+      <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 40px; height:52px; border-radius:4px; box-shadow:0 4px 20px rgba(201,168,76,0.28); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
+        Start With a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 7 — BEFORE / AFTER GALLERY ════════════════════════════════════ -->
+<section style="background:#FDF8EC; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Real Projects. Real Results.</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0B1F33; line-height:1.2;">See the Transformation.</h2>
+      <p style="font-family:'Inter',sans-serif; font-size:15px; color:#2C2C2C; opacity:0.55; margin-top:12px;">Drag the slider left or right to reveal each transformation.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-ba-grid">
+      <?php
+      $projects = [
+        ['label'=>'Kitchen Remodel','location'=>'Ellicott City, MD','before'=>'/wp-content/uploads/kitchen-before.jpg','after'=>'/wp-content/uploads/kitchen-after.jpg'],
+        ['label'=>'Bathroom Renovation','location'=>'Rockville, MD','before'=>'/wp-content/uploads/bathroom-before.jpg','after'=>'/wp-content/uploads/bathroom-after.jpg'],
+        ['label'=>'Flooring Installation','location'=>'Columbia, MD','before'=>'/wp-content/uploads/flooring-before.jpg','after'=>'/wp-content/uploads/flooring-after.jpg'],
+      ];
+      foreach ($projects as $idx => $proj) : ?>
+        <div>
+          <div class="ba-container" data-idx="<?php echo $idx; ?>" style="position:relative; width:100%; padding-top:66.666%; border-radius:8px; overflow:hidden; cursor:ew-resize; user-select:none; box-shadow:0 8px 32px rgba(11,31,51,0.15);">
+            <img src="<?php echo $proj['before']; ?>" alt="Before — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.style.background='#4A6F8A'; this.src='';" />
+            <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
+            <div class="ba-clip" style="position:absolute; inset:0; width:50%; overflow:hidden;">
+              <img src="<?php echo $proj['after']; ?>" class="ba-after-img" alt="After — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; top:0; left:0; height:100%; object-fit:cover;" onerror="this.style.background='#C9A84C'; this.src='';" />
+            </div>
+            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0B1F33; padding:4px 10px; border-radius:3px;">After</span>
+            <div class="ba-handle" style="position:absolute; top:0; left:50%; width:3px; height:100%; background:#C9A84C; transform:translateX(-50%); z-index:10; pointer-events:none;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#C9A84C; border:3px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F33" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:14px; display:flex; align-items:center; justify-content:space-between; padding:0 4px;">
+            <div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#0B1F33; margin:0;"><?php echo $proj['label']; ?></p>
+              <p style="font-family:'Inter',sans-serif; font-size:12px; color:#4A6F8A; margin:3px 0 0;"><?php echo $proj['location']; ?></p>
+            </div>
+            <a href="/our-work" style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">View →</a>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div style="text-align:center; margin-top:52px;">
+      <a href="/our-work" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#0B1F33; text-decoration:none; border-bottom:2px solid #C9A84C; padding-bottom:4px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#0B1F33'">
+        View Our Full Portfolio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 8 — TESTIMONIALS ══════════════════════════════════════════════ -->
+<section style="background:#0B1F33; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What Maryland Homeowners Are Saying</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; line-height:1.2;">
+        They Trusted Us.<br>Here's What They Found.
+      </h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-testimonials-grid">
+      <?php
+      $testimonials = [
+        ['quote'=>'Tikal Empire completely transformed our kitchen — from dated oak cabinets to a stunning modern space. They finished on time, within budget, and left our home spotless every single day.','name'=>'Jennifer M.','city'=>'Potomac, MD','service'=>'Kitchen Remodel'],
+        ['quote'=>'Our master bathroom went from a 1990s eyesore to something out of a magazine. Cristian and his team were professional, communicative, and the craftsmanship is flawless.','name'=>'Marcus & Diana T.','city'=>'Columbia, MD','service'=>'Bathroom Renovation'],
+        ['quote'=>'They installed LVP throughout our entire first floor in two days. The seams are invisible, the pattern layout is perfect, and they cleaned up better than any contractor we\'ve ever hired.','name'=>'Robert K.','city'=>'Ellicott City, MD','service'=>'Flooring Installation'],
+      ];
+      foreach ($testimonials as $t) : ?>
+        <div class="hp-testimonial-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:32px 28px; display:flex; flex-direction:column; gap:20px;">
+          <div style="display:flex; gap:3px;"><?php for($i=0;$i<5;$i++): ?><svg width="16" height="16" viewBox="0 0 20 20" fill="#C9A84C"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><?php endfor; ?></div>
+          <blockquote style="font-family:'Playfair Display',serif; font-size:15px; font-style:italic; color:rgba(255,255,255,0.82); line-height:1.75; margin:0; flex:1;">"<?php echo $t['quote']; ?>"</blockquote>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid rgba(255,255,255,0.07);">
+            <div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#fff; margin:0;"><?php echo $t['name']; ?></p>
+              <p style="font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.38); margin:3px 0 0;"><?php echo $t['city']; ?></p>
+            </div>
+            <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:rgba(201,168,76,0.12); color:#C9A84C; padding:4px 10px; border-radius:3px; border:1px solid rgba(201,168,76,0.2);"><?php echo $t['service']; ?></span>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Read More Reviews on Google →
+      </a>
+    </div>
+    <div style="margin-top:48px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; gap:28px; flex-wrap:wrap;">
+      <?php foreach(['Google Reviews ★★★★★','MHIC #154361','Licensed & Insured','Maryland'] as $badge): ?>
+        <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.3);"><?php echo $badge; ?></span>
+        <span style="color:rgba(201,168,76,0.2);">·</span>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 9 — SERVICE AREAS ════════════════════════════════════════════ -->
+<section style="background:#F7F7F5; padding:96px 0;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+    <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Service Areas</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0B1F33; line-height:1.2;">
+        Serving Maryland's Most<br><span style="color:#C9A84C;">Valued Communities.</span>
+      </h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px;" class="hp-areas-grid">
+      <?php
+      $areas = [
+        ['county'=>'Howard County','cities'=>['Columbia','Ellicott City','Laurel','Jessup']],
+        ['county'=>'Montgomery County','cities'=>['Rockville','Gaithersburg','Potomac','Bethesda']],
+        ['county'=>'Frederick County','cities'=>['Frederick','Germantown','Clarksburg','Damascus']],
+        ['county'=>"Prince George's County",'cities'=>['Bowie','Greenbelt','Hyattsville','Largo']],
+        ['county'=>'Anne Arundel County','cities'=>['Annapolis','Pasadena','Severn','Glen Burnie']],
+      ];
+      foreach ($areas as $area) : ?>
+        <div class="hp-area-card" style="background:#0B1F33; border-radius:8px; padding:28px 20px; border:1px solid rgba(201,168,76,0.12);">
+          <div style="width:32px; height:32px; border-radius:6px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <!-- H3 for SEO — per spec county names must render as H3 text -->
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; color:#C9A84C; margin-bottom:12px;"><?php echo $area['county']; ?></h3>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:7px;">
+            <?php foreach ($area['cities'] as $city) : ?>
+              <li style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.5);"><?php echo $city; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <p style="text-align:center; margin-top:32px; font-family:'Inter',sans-serif; font-size:14px; color:#2C2C2C; opacity:0.55;">
+      Don't see your area? <a href="/contact" style="color:#C9A84C; text-decoration:none; font-weight:600; border-bottom:1px solid rgba(201,168,76,0.35);">Contact us</a> — we serve a 50-mile radius and may still be able to help.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ BLOCK 10 — CONTACT FORM (React Component) ══════════════════════════ -->
+<div id="contact-form-root"></div>
+
+
+<!-- ═══ JAVASCRIPT — Before/After Slider + Scroll Animations ═════════════════ -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // ── Before / After Sliders ─────────────────────────────────────────────
+  document.querySelectorAll('.ba-container').forEach(function (c) {
+    var clip   = c.querySelector('.ba-clip')
+    var afterImg = c.querySelector('.ba-after-img')
+    var handle = c.querySelector('.ba-handle')
+    var drag   = false
+
+    function setPos(clientX) {
+      var r   = c.getBoundingClientRect()
+      var pct = Math.min(100, Math.max(0, ((clientX - r.left) / r.width) * 100))
+      clip.style.width       = pct + '%'
+      handle.style.left      = pct + '%'
+      afterImg.style.width   = r.width + 'px'
+    }
+
+    c.addEventListener('mousedown',  function (e) { drag = true; setPos(e.clientX); e.preventDefault(); })
+    document.addEventListener('mouseup',    function ()  { drag = false; })
+    document.addEventListener('mousemove',  function (e) { if (drag) setPos(e.clientX); })
+    c.addEventListener('touchstart', function (e) { drag = true; setPos(e.touches[0].clientX); }, { passive: true })
+    document.addEventListener('touchend',   function ()  { drag = false; })
+    document.addEventListener('touchmove',  function (e) { if (drag) setPos(e.touches[0].clientX); }, { passive: true })
+
+    // Init width
+    var ro = new ResizeObserver(function () {
+      afterImg.style.width = c.getBoundingClientRect().width + 'px'
+    })
+    ro.observe(c)
+    afterImg.style.width = c.getBoundingClientRect().width + 'px'
+  })
+
+  // ── Scroll Animations ──────────────────────────────────────────────────
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var el    = entry.target
+        var delay = parseInt(el.dataset.delay || 0)
+        setTimeout(function () { el.classList.add('visible') }, delay)
+        io.unobserve(el)
+      }
+    })
+  }, { threshold: 0.12 })
+
+  document.querySelectorAll('.hp-fade-up').forEach(function (el) { io.observe(el) })
+
+  // ── Form feedback ──────────────────────────────────────────────────────
+  var form   = document.getElementById('hp-estimate-form')
+  var submit = document.getElementById('hp-submit')
+  if (form && submit) {
+    form.addEventListener('submit', function () {
+      submit.textContent = 'Sending...'
+      submit.disabled    = true
+      submit.style.opacity = '0.65'
+    })
+  }
+
+})
+</script>
+
+<?php get_footer(); ?>
