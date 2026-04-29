@@ -49,7 +49,9 @@ $contact_config = json_encode([
   'googleReviews'=> 'https://g.page/r/YOUR_GOOGLE_PLACE_ID/review',
 ]);
 ?>
-<div id="contact-form-root" data-cf-config='<?php echo esc_attr($contact_config); ?>'></div>
+<div style="background:#0d1b2a;">
+  <div id="contact-form-root" data-cf-config='<?php echo esc_attr($contact_config); ?>'></div>
+</div>
 
 <!-- ═══ RESPONSE PROMISE ══════════════════════════════════════════════════════ -->
 <section style="background:#d1d5db; padding:40px 0; border-top:1px solid rgba(11,31,51,0.07);">

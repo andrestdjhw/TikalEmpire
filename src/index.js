@@ -15,7 +15,12 @@ if (document.querySelector("#footer-root")) {
   ReactDOM.createRoot(document.querySelector("#footer-root")).render(<Footer />)
 }
 
-// ── Contact Form ───────────────────────────────────────────────────────────────
+// ── ContactForm — full mode (Block 10 homepage, contact page) ─────────────────
 if (document.querySelector("#contact-form-root")) {
   ReactDOM.createRoot(document.querySelector("#contact-form-root")).render(<ContactForm />)
+}
+
+// ── ContactForm — compact mode (hero embed) ───────────────────────────────────
+if (document.querySelector("#hero-form-root")) {
+  ReactDOM.createRoot(document.querySelector("#hero-form-root")).render(<ContactForm />)
 }

@@ -3,25 +3,25 @@ import React, { useState, useEffect, useRef, useMemo } from "react"
 // ─────────────────────────────────────────────────────────────────────────────
 //  ⚙️  CONFIGURATION — fill these in before deploying
 // ─────────────────────────────────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID"   // EmailJS → Email Services
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"  // EmailJS → Email Templates
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY"   // EmailJS → Account → Public Key
-const RECAPTCHA_SITE_KEY  = "YOUR_SITE_KEY"     // Google reCAPTCHA v2 Site Key
+const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID"
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"
+const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY"
+const RECAPTCHA_SITE_KEY  = "YOUR_SITE_KEY"
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  Brand tokens
 // ─────────────────────────────────────────────────────────────────────────────
 const C = {
-  navy:    "#0d1b2a",
-  gold:    "#C9A84C",
-  goldHov: "#DFB95A",
-  steel:   "#415a77",
-  midGray: "#6b7280",
+  navy:     "#0d1b2a",
+  gold:     "#C9A84C",
+  goldHov:  "#DFB95A",
+  steel:    "#415a77",
+  midGray:  "#6b7280",
   lightGray:"#d1d5db",
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Default contact info (homepage variant)
+//  Default contact info (homepage / full mode variant)
 // ─────────────────────────────────────────────────────────────────────────────
 const DEFAULT_INFO = {
   headline:      "Your Home Deserves Certainty.",
@@ -35,7 +35,7 @@ const DEFAULT_INFO = {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Shared base style for all inputs
+//  Shared input base style
 // ─────────────────────────────────────────────────────────────────────────────
 const INPUT_BASE = {
   width: "100%",
@@ -94,7 +94,7 @@ function FieldWrap({ label, error, children }) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  SVG icons
+//  Icons
 // ─────────────────────────────────────────────────────────────────────────────
 const ICONS = {
   phone: (color) => (
@@ -154,7 +154,7 @@ function IconBox({ bg, border, children }) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  ContactInfo — left panel
+//  ContactInfo — left panel (full mode only)
 // ─────────────────────────────────────────────────────────────────────────────
 function ContactInfo({ info }) {
   const paragraphs = info.sub.split("\n\n")
@@ -163,30 +163,19 @@ function ContactInfo({ info }) {
     <div>
       <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
         <div style={{ width: "36px", height: "1px", background: C.gold }} />
-        <span style={{
-          fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700,
-          letterSpacing: "0.25em", textTransform: "uppercase", color: C.gold,
-        }}>
+        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: C.gold }}>
           Ready to Start?
         </span>
       </div>
 
-      <h2 style={{
-        fontFamily: "'Playfair Display', serif",
-        fontSize: "clamp(1.8rem,3.5vw,3rem)",
-        fontWeight: 900, color: "#fff", lineHeight: 1.12, marginBottom: "20px",
-      }}>
+      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem,3.5vw,3rem)", fontWeight: 900, color: "#fff", lineHeight: 1.12, marginBottom: "20px" }}>
         {info.headline}{" "}
         <span style={{ color: C.gold }}>{info.headlineGold}</span>
       </h2>
 
       <div style={{ marginBottom: "32px" }}>
         {paragraphs.map((para, i) => (
-          <p key={i} style={{
-            fontFamily: "'Inter', sans-serif", fontSize: "15px",
-            color: "rgba(255,255,255,0.58)", lineHeight: 1.8,
-            margin: i < paragraphs.length - 1 ? "0 0 14px" : 0,
-          }}>
+          <p key={i} style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", color: "rgba(255,255,255,0.58)", lineHeight: 1.8, margin: i < paragraphs.length - 1 ? "0 0 14px" : 0 }}>
             {para}
           </p>
         ))}
@@ -195,94 +184,54 @@ function ContactInfo({ info }) {
       <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "28px" }}>
 
         {info.phones.map((ph) => (
-          <a key={ph.href} href={ph.href}
-            style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
-            <IconBox bg="rgba(201,168,76,0.1)" border="rgba(201,168,76,0.2)">
-              {ICONS.phone(C.gold)}
-            </IconBox>
+          <a key={ph.href} href={ph.href} style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
+            <IconBox bg="rgba(201,168,76,0.1)" border="rgba(201,168,76,0.2)">{ICONS.phone(C.gold)}</IconBox>
             <div>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>
-                {ph.label}
-              </p>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "17px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>
-                {ph.number}
-              </p>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>{ph.label}</p>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "17px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>{ph.number}</p>
             </div>
           </a>
         ))}
 
         {info.email && (
-          <a href={`mailto:${info.email}`}
-            style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
-            <IconBox bg="rgba(74,111,138,0.12)" border="rgba(74,111,138,0.2)">
-              {ICONS.email(C.steel)}
-            </IconBox>
+          <a href={`mailto:${info.email}`} style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
+            <IconBox bg="rgba(74,111,138,0.12)" border="rgba(74,111,138,0.2)">{ICONS.email(C.steel)}</IconBox>
             <div>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>
-                Email
-              </p>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "14px", fontWeight: 600, color: "rgba(255,255,255,0.75)", margin: "3px 0 0" }}>
-                {info.email}
-              </p>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>Email</p>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "14px", fontWeight: 600, color: "rgba(255,255,255,0.75)", margin: "3px 0 0" }}>{info.email}</p>
             </div>
           </a>
         )}
 
         {info.address && (
           <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-            <IconBox bg="rgba(74,111,138,0.12)" border="rgba(74,111,138,0.2)">
-              {ICONS.pin(C.steel)}
-            </IconBox>
+            <IconBox bg="rgba(74,111,138,0.12)" border="rgba(74,111,138,0.2)">{ICONS.pin(C.steel)}</IconBox>
             <div>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>
-                Address
-              </p>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>Address</p>
               <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "14px", fontWeight: 500, color: "rgba(255,255,255,0.65)", margin: "3px 0 0", lineHeight: 1.5 }}>
                 {info.address.split("\n").map((line, i, arr) => (
-                  <React.Fragment key={i}>
-                    {line}{i < arr.length - 1 && <br />}
-                  </React.Fragment>
+                  <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
                 ))}
               </p>
             </div>
           </div>
         )}
 
-        <a
-          href={info.whatsapp || "https://wa.me/13013004172"}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}
-        >
-          <IconBox bg="rgba(37,211,102,0.1)" border="rgba(37,211,102,0.2)">
-            {ICONS.whatsapp}
-          </IconBox>
+        <a href={info.whatsapp || "https://wa.me/13013004172"} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
+          <IconBox bg="rgba(37,211,102,0.1)" border="rgba(37,211,102,0.2)">{ICONS.whatsapp}</IconBox>
           <div>
-            <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>
-              WhatsApp
-            </p>
-            <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "15px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>
-              Message Us
-            </p>
+            <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>WhatsApp</p>
+            <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "15px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>Message Us</p>
           </div>
         </a>
 
       </div>
 
-      <div style={{
-        display: "inline-flex", alignItems: "center", gap: "12px",
-        padding: "12px 18px", borderRadius: "6px",
-        border: "1px solid rgba(201,168,76,0.25)",
-        background: "rgba(201,168,76,0.05)",
-      }}>
+      <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", padding: "12px 18px", borderRadius: "6px", border: "1px solid rgba(201,168,76,0.25)", background: "rgba(201,168,76,0.05)" }}>
         {ICONS.shield(C.gold)}
         <div>
-          <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: C.gold, margin: 0 }}>
-            MHIC #154361 — Licensed & Insured
-          </p>
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "11px", color: "rgba(255,255,255,0.32)", margin: "4px 0 0" }}>
-            We respond within 24–48 hours. No pressure. Just clarity.
-          </p>
+          <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: C.gold, margin: 0 }}>MHIC #154361 — Licensed & Insured</p>
+          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "11px", color: "rgba(255,255,255,0.32)", margin: "4px 0 0" }}>We respond within 24–48 hours. No pressure. Just clarity.</p>
         </div>
       </div>
 
@@ -291,22 +240,9 @@ function ContactInfo({ info }) {
           href={info.googleReviews}
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            display: "inline-flex", alignItems: "center", gap: "10px",
-            padding: "10px 16px", borderRadius: "6px", marginTop: "10px",
-            border: "1px solid rgba(255,255,255,0.1)",
-            background: "rgba(255,255,255,0.04)",
-            textDecoration: "none",
-            transition: "border-color 0.2s, background 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"
-            e.currentTarget.style.background  = "rgba(201,168,76,0.06)"
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"
-            e.currentTarget.style.background  = "rgba(255,255,255,0.04)"
-          }}
+          style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "10px 16px", borderRadius: "6px", marginTop: "10px", border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.04)", textDecoration: "none", transition: "border-color 0.2s, background 0.2s" }}
+          onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "rgba(201,168,76,0.06)" }}
+          onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";  e.currentTarget.style.background = "rgba(255,255,255,0.04)" }}
         >
           {ICONS.google}
           <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.06em", color: "rgba(255,255,255,0.55)" }}>
@@ -319,16 +255,15 @@ function ContactInfo({ info }) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  useScript — load external script once, return ready flag
+//  useScript
 // ─────────────────────────────────────────────────────────────────────────────
 function useScript(src) {
   const [ready, setReady] = useState(false)
   useEffect(() => {
     if (!src) return
     if (document.querySelector(`script[src="${src}"]`)) { setReady(true); return }
-    const s   = document.createElement("script")
-    s.src     = src
-    s.async   = true
+    const s = document.createElement("script")
+    s.src = src; s.async = true
     s.onload  = () => setReady(true)
     s.onerror = () => console.warn("[ContactForm] Script failed:", src)
     document.head.appendChild(s)
@@ -337,21 +272,35 @@ function useScript(src) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Form status
+//  Status enum
 // ─────────────────────────────────────────────────────────────────────────────
 const STATUS = { IDLE: "idle", SENDING: "sending", SUCCESS: "success", ERROR: "error" }
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  ContactForm — main component
+//
+//  Modes:
+//    full    (default) — two-column section: ContactInfo left + form card right
+//    compact           — glass card only, used in hero embed (#hero-form-root)
+//
+//  Config via data-cf-config JSON attribute on the mount div.
 // ─────────────────────────────────────────────────────────────────────────────
 function ContactForm() {
-  const info = useMemo(() => {
-    const el = document.querySelector("[data-cf-config]")
-    if (!el) return DEFAULT_INFO
-    try { return { ...DEFAULT_INFO, ...JSON.parse(el.dataset.cfConfig) } }
-    catch { return DEFAULT_INFO }
+
+  // ── Read config from mount div ──────────────────────────────────────────────
+  const config = useMemo(() => {
+    const mounts = document.querySelectorAll("[data-cf-config]")
+    let parsed = {}
+    mounts.forEach((el) => {
+      try { Object.assign(parsed, JSON.parse(el.dataset.cfConfig)) } catch {}
+    })
+    return parsed
   }, [])
 
+  const info      = { ...DEFAULT_INFO, ...config }
+  const isCompact = config.mode === "compact"
+
+  // ── Form state ──────────────────────────────────────────────────────────────
   const [fields, setFields] = useState({
     full_name: "", phone: "", email: "",
     service: "", city_zip: "", message: "",
@@ -359,28 +308,23 @@ function ContactForm() {
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState(STATUS.IDLE)
 
-  // reCAPTCHA v2 refs
-  const captchaContainerRef = useRef(null)  // div where widget renders
-  const widgetIdRef         = useRef(null)  // grecaptcha widget ID
-  const captchaTokenRef     = useRef("")    // token set by callback
+  // ── reCAPTCHA refs ──────────────────────────────────────────────────────────
+  const captchaContainerRef = useRef(null)
+  const widgetIdRef         = useRef(null)
+  const captchaTokenRef     = useRef("")
 
-  // Load SDKs
+  // ── Load SDKs ───────────────────────────────────────────────────────────────
   const emailjsReady   = useScript("https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js")
-  // render=explicit → we control when the widget renders
   const recaptchaReady = useScript("https://www.google.com/recaptcha/api.js?render=explicit")
 
-  // Init EmailJS
   useEffect(() => {
     if (emailjsReady && window.emailjs) {
       window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY })
     }
   }, [emailjsReady])
 
-  // Render reCAPTCHA v2 widget once the script is ready and the div exists
   useEffect(() => {
     if (!recaptchaReady) return
-
-    // Poll until grecaptcha.render is available
     const poll = setInterval(() => {
       if (
         window.grecaptcha &&
@@ -389,48 +333,36 @@ function ContactForm() {
         widgetIdRef.current === null
       ) {
         widgetIdRef.current = window.grecaptcha.render(captchaContainerRef.current, {
-          sitekey:  RECAPTCHA_SITE_KEY,
-          theme:    "dark",        // matches our dark form card
-          size:     "normal",
-          callback: (token) => {
-            // Called when user checks the box — store the token
-            captchaTokenRef.current = token
-            // Clear any captcha error
-            setErrors((prev) => ({ ...prev, captcha: "" }))
-          },
-          "expired-callback": () => {
-            // Token expired — user needs to re-check
-            captchaTokenRef.current = ""
-          },
-          "error-callback": () => {
-            captchaTokenRef.current = ""
-          },
+          sitekey:            RECAPTCHA_SITE_KEY,
+          theme:              "dark",
+          size:               "normal",
+          callback:           (token) => { captchaTokenRef.current = token; setErrors((p) => ({ ...p, captcha: "" })) },
+          "expired-callback": () => { captchaTokenRef.current = "" },
+          "error-callback":   () => { captchaTokenRef.current = "" },
         })
         clearInterval(poll)
       }
     }, 150)
-
     return () => clearInterval(poll)
   }, [recaptchaReady])
 
-  // ── Field helpers ──────────────────────────────────────────────────────────
+  // ── Helpers ─────────────────────────────────────────────────────────────────
   function update(e) {
     const { name, value } = e.target
-    setFields((prev) => ({ ...prev, [name]: value }))
-    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }))
+    setFields((p) => ({ ...p, [name]: value }))
+    if (errors[name]) setErrors((p) => ({ ...p, [name]: "" }))
   }
 
-  function inputStyle(name) {
+  function fieldStyle(name) {
     return { ...INPUT_BASE, borderColor: errors[name] ? "#ff6b6b" : "rgba(255,255,255,0.12)" }
   }
 
   function onFocus(e) { e.currentTarget.style.borderColor = C.gold }
-  function onBlur(e) {
-    e.currentTarget.style.borderColor =
-      errors[e.currentTarget.name] ? "#ff6b6b" : "rgba(255,255,255,0.12)"
+  function onBlur(e)  {
+    e.currentTarget.style.borderColor = errors[e.currentTarget.name] ? "#ff6b6b" : "rgba(255,255,255,0.12)"
   }
 
-  // ── Validation ─────────────────────────────────────────────────────────────
+  // ── Validation ──────────────────────────────────────────────────────────────
   function validate() {
     const e = {}
     if (!fields.full_name.trim()) e.full_name = "Please enter your name."
@@ -440,27 +372,20 @@ function ContactForm() {
     } else if (!/\S+@\S+\.\S+/.test(fields.email)) {
       e.email = "Please enter a valid email address."
     }
-    if (!fields.city_zip.trim()) e.city_zip = "Please enter your city or ZIP code."
-    // reCAPTCHA v2 — must be checked
-    if (!captchaTokenRef.current) e.captcha = "Please confirm you're not a robot."
+    if (!fields.city_zip.trim())  e.city_zip  = "Please enter your city or ZIP code."
+    if (!captchaTokenRef.current) e.captcha   = "Please confirm you're not a robot."
     return e
   }
 
-  // ── Submit ─────────────────────────────────────────────────────────────────
+  // ── Submit ──────────────────────────────────────────────────────────────────
   async function handleSubmit(e) {
     e.preventDefault()
-
     const errs = validate()
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs)
-      return
-    }
+    if (Object.keys(errs).length > 0) { setErrors(errs); return }
 
     setStatus(STATUS.SENDING)
-
     try {
       if (!window.emailjs) throw new Error("EmailJS not initialized")
-
       await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         from_name:      fields.full_name,
         from_phone:     fields.phone,
@@ -471,56 +396,146 @@ function ContactForm() {
         captcha_token:  captchaTokenRef.current,
         reply_to:       fields.email,
       })
-
       setStatus(STATUS.SUCCESS)
       setFields({ full_name: "", phone: "", email: "", service: "", city_zip: "", message: "" })
-
-      // Reset the reCAPTCHA widget so it can be used again
       captchaTokenRef.current = ""
-      if (widgetIdRef.current !== null && window.grecaptcha) {
-        window.grecaptcha.reset(widgetIdRef.current)
-      }
-
+      if (widgetIdRef.current !== null && window.grecaptcha) window.grecaptcha.reset(widgetIdRef.current)
     } catch (err) {
-      console.error("[ContactForm] Submit error:", err)
+      console.error("[ContactForm]", err)
       setStatus(STATUS.ERROR)
-      // Reset captcha on error too
       captchaTokenRef.current = ""
-      if (widgetIdRef.current !== null && window.grecaptcha) {
-        window.grecaptcha.reset(widgetIdRef.current)
-      }
+      if (widgetIdRef.current !== null && window.grecaptcha) window.grecaptcha.reset(widgetIdRef.current)
     }
   }
 
-  // ── Reset form after success ───────────────────────────────────────────────
   function resetForm() {
     setStatus(STATUS.IDLE)
     setErrors({})
-    // Re-render widget (it was already reset above, just clear any lingering state)
     captchaTokenRef.current = ""
   }
 
-  // ── JSX ────────────────────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────────
+  //  Shared sub-components — used in both modes
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  // Success screen
+  const SuccessScreen = () => (
+    <div className="cf-success">
+      <div className="cf-success-icon">{ICONS.check(C.gold)}</div>
+      <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0 }}>
+        We Got Your Request!
+      </h3>
+      <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: "320px", margin: 0 }}>
+        We'll reach out within 24–48 hours to schedule your free in-home estimate. No pressure — just clarity.
+      </p>
+      <a href="tel:+13013004172" style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: C.gold, textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "2px" }}>
+        Or call us now: (301) 300-4172
+      </a>
+      <button
+        onClick={resetForm}
+        style={{ background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "8px 20px", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", transition: "border-color 0.2s, color 0.2s" }}
+        onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold }}
+        onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)"; e.currentTarget.style.color = "rgba(255,255,255,0.4)" }}
+      >
+        Submit another request
+      </button>
+    </div>
+  )
+
+  // Form fields
+  const FormFields = () => (
+    <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+
+      <FieldWrap label="Full Name *" error={errors.full_name}>
+        <input type="text" name="full_name" placeholder="Your full name"
+          value={fields.full_name} onChange={update} onFocus={onFocus} onBlur={onBlur}
+          style={fieldStyle("full_name")} />
+      </FieldWrap>
+
+      <div className="cf-row-2">
+        <FieldWrap label="Phone Number *" error={errors.phone}>
+          <input type="tel" name="phone" placeholder="(301) 000-0000"
+            value={fields.phone} onChange={update} onFocus={onFocus} onBlur={onBlur}
+            style={fieldStyle("phone")} />
+        </FieldWrap>
+        <FieldWrap label="Email Address *" error={errors.email}>
+          <input type="email" name="email" placeholder="you@email.com"
+            value={fields.email} onChange={update} onFocus={onFocus} onBlur={onBlur}
+            style={fieldStyle("email")} />
+        </FieldWrap>
+      </div>
+
+      <div className="cf-row-2">
+        <FieldWrap label="Service Needed">
+          <select name="service" value={fields.service}
+            onChange={update} onFocus={onFocus} onBlur={onBlur}
+            style={{ ...fieldStyle("service"), cursor: "pointer" }}>
+            <option value="">Select service...</option>
+            <option value="Kitchen Remodeling">Kitchen Remodeling</option>
+            <option value="Bathroom Remodeling">Bathroom Remodeling</option>
+            <option value="Flooring Installation">Flooring Installation</option>
+            <option value="Multiple Services">Multiple Services</option>
+            <option value="Not Sure">Not Sure</option>
+          </select>
+        </FieldWrap>
+        <FieldWrap label="City or ZIP Code *" error={errors.city_zip}>
+          <input type="text" name="city_zip" placeholder="Columbia, 21044"
+            value={fields.city_zip} onChange={update} onFocus={onFocus} onBlur={onBlur}
+            style={fieldStyle("city_zip")} />
+        </FieldWrap>
+      </div>
+
+      <FieldWrap label="Tell Us About Your Project">
+        <textarea name="message"
+          placeholder="Describe your project — scope, timeline, specific ideas..."
+          value={fields.message} onChange={update} onFocus={onFocus} onBlur={onBlur}
+          rows={isCompact ? 3 : 4}
+          style={{ ...fieldStyle("message"), resize: "vertical", minHeight: isCompact ? "80px" : "100px" }} />
+      </FieldWrap>
+
+      <div className="cf-captcha-wrap">
+        <div ref={captchaContainerRef} />
+        {errors.captcha && <span className="cf-captcha-error">{errors.captcha}</span>}
+      </div>
+
+      {status === STATUS.ERROR && (
+        <div style={{ padding: "12px 16px", borderRadius: "6px", background: "rgba(255,107,107,0.1)", border: "1px solid rgba(255,107,107,0.25)" }}>
+          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "13px", color: "#ff6b6b", margin: 0, lineHeight: 1.5 }}>
+            Something went wrong. Please call us at{" "}
+            <a href="tel:+13013004172" style={{ color: C.gold }}>(301) 300-4172</a>.
+          </p>
+        </div>
+      )}
+
+      <button type="submit" className="cf-submit" disabled={status === STATUS.SENDING}>
+        {status === STATUS.SENDING ? "Sending…" : "Request Free Estimate"}
+      </button>
+
+    </form>
+  )
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  //  Render
+  // ─────────────────────────────────────────────────────────────────────────────
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
 
+        /* ── Full mode ─────────────────────────────────────────────── */
         .cf-section {
-          background: ${C.navy};
+          background: transparent;
           padding: 96px 0;
           position: relative;
           overflow: hidden;
         }
         .cf-section::before {
-          content: ''; position: absolute;
-          top: -80px; right: -80px;
+          content: ''; position: absolute; top: -80px; right: -80px;
           width: 360px; height: 360px; border-radius: 50%;
           background: rgba(201,168,76,0.04); pointer-events: none;
         }
         .cf-section::after {
-          content: ''; position: absolute;
-          bottom: -100px; left: -100px;
+          content: ''; position: absolute; bottom: -100px; left: -100px;
           width: 450px; height: 450px; border-radius: 50%;
           background: rgba(74,111,138,0.07); pointer-events: none;
         }
@@ -535,36 +550,19 @@ function ContactForm() {
           border: 1px solid rgba(255,255,255,0.1);
           border-radius: 12px; padding: 40px 36px;
         }
-        .cf-row-2 {
-          display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-        }
-
-        /* reCAPTCHA widget wrapper — dark theme blends naturally */
-        .cf-captcha-wrap {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-        }
-        .cf-captcha-error {
-          font-family: 'Inter', sans-serif;
-          font-size: 11px;
-          color: #ff6b6b;
-        }
-
+        .cf-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .cf-submit {
           width: 100%; background: ${C.gold}; color: ${C.navy};
-          font-family: 'Montserrat', sans-serif;
-          font-size: 12px; font-weight: 800;
+          font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800;
           letter-spacing: 0.13em; text-transform: uppercase;
-          border: none; border-radius: 4px; padding: 16px;
-          cursor: pointer; box-shadow: 0 4px 20px rgba(201,168,76,0.28);
+          border: none; border-radius: 4px; padding: 16px; cursor: pointer;
+          box-shadow: 0 4px 20px rgba(201,168,76,0.28);
           transition: background 0.2s, transform 0.15s, opacity 0.2s;
         }
-        .cf-submit:hover:not(:disabled) {
-          background: ${C.goldHov}; transform: translateY(-1px);
-        }
+        .cf-submit:hover:not(:disabled) { background: ${C.goldHov}; transform: translateY(-1px); }
         .cf-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-
+        .cf-captcha-wrap { display: flex; flex-direction: column; gap: 6px; }
+        .cf-captcha-error { font-family: 'Inter', sans-serif; font-size: 11px; color: #ff6b6b; }
         .cf-success {
           display: flex; flex-direction: column;
           align-items: center; justify-content: center;
@@ -572,8 +570,7 @@ function ContactForm() {
         }
         .cf-success-icon {
           width: 64px; height: 64px; border-radius: 50%;
-          background: rgba(201,168,76,0.12);
-          border: 2px solid rgba(201,168,76,0.3);
+          background: rgba(201,168,76,0.12); border: 2px solid rgba(201,168,76,0.3);
           display: flex; align-items: center; justify-content: center;
           animation: cfPop 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
         }
@@ -581,10 +578,12 @@ function ContactForm() {
           from { transform: scale(0.5); opacity: 0; }
           to   { transform: scale(1);   opacity: 1; }
         }
-
         .cf-card input::placeholder,
-        .cf-card textarea::placeholder { color: rgba(255,255,255,0.28); }
-        .cf-card select option { background: ${C.navy}; color: #fff; }
+        .cf-card textarea::placeholder,
+        .cf-compact-card input::placeholder,
+        .cf-compact-card textarea::placeholder { color: rgba(255,255,255,0.28); }
+        .cf-card select option,
+        .cf-compact-card select option { background: ${C.navy}; color: #fff; }
 
         @media (max-width: 1024px) {
           .cf-inner { grid-template-columns: 1fr !important; gap: 48px !important; }
@@ -593,150 +592,66 @@ function ContactForm() {
           .cf-row-2 { grid-template-columns: 1fr !important; }
           .cf-card  { padding: 28px 20px !important; }
         }
+
+        /* ── Compact mode — hero embed ─────────────────────────────── */
+        .cf-compact-card {
+          background: rgba(13,27,42,0.78);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border: 1px solid rgba(201,168,76,0.22);
+          border-radius: 12px;
+          padding: 32px 28px;
+        }
+        @media (max-width: 640px) {
+          .cf-compact-card { padding: 24px 18px !important; }
+          .cf-compact-card .cf-row-2 { grid-template-columns: 1fr !important; }
+        }
       `}</style>
 
-      <section className="cf-section">
-        <div className="cf-inner">
-
-          {/* ── Left: contact info ── */}
-          <ContactInfo info={info} />
-
-          {/* ── Right: form card ── */}
-          <div className="cf-card">
-
-            {status === STATUS.SUCCESS ? (
-              /* ── Success screen ── */
-              <div className="cf-success">
-                <div className="cf-success-icon">
-                  {ICONS.check(C.gold)}
-                </div>
-                <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.6rem", fontWeight: 700, color: "#fff", margin: 0 }}>
-                  We Got Your Request!
-                </h3>
-                <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: "340px", margin: 0 }}>
-                  We'll reach out within 24–48 hours to schedule your free in-home estimate. No pressure — just clarity.
-                </p>
-                <a
-                  href="tel:+13013004172"
-                  style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: C.gold, textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "2px" }}
-                >
-                  Or call us now: (301) 300-4172
-                </a>
-                <button
-                  onClick={resetForm}
-                  style={{ background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "8px 20px", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", transition: "border-color 0.2s, color 0.2s" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)"; e.currentTarget.style.color = "rgba(255,255,255,0.4)" }}
-                >
-                  Submit another request
-                </button>
-              </div>
-            ) : (
-              /* ── Form ── */
-              <>
-                <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
-                  Request Your Free Estimate
-                </h3>
-                <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "13px", color: "rgba(255,255,255,0.4)", marginBottom: "28px", lineHeight: 1.6 }}>
-                  We respond within 24–48 hours. No pressure. Just clarity.
-                </p>
-
-                <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-
-                  <FieldWrap label="Full Name *" error={errors.full_name}>
-                    <input
-                      type="text" name="full_name" placeholder="Your full name"
-                      value={fields.full_name}
-                      onChange={update} onFocus={onFocus} onBlur={onBlur}
-                      style={inputStyle("full_name")}
-                    />
-                  </FieldWrap>
-
-                  <div className="cf-row-2">
-                    <FieldWrap label="Phone Number *" error={errors.phone}>
-                      <input
-                        type="tel" name="phone" placeholder="(301) 000-0000"
-                        value={fields.phone}
-                        onChange={update} onFocus={onFocus} onBlur={onBlur}
-                        style={inputStyle("phone")}
-                      />
-                    </FieldWrap>
-                    <FieldWrap label="Email Address *" error={errors.email}>
-                      <input
-                        type="email" name="email" placeholder="you@email.com"
-                        value={fields.email}
-                        onChange={update} onFocus={onFocus} onBlur={onBlur}
-                        style={inputStyle("email")}
-                      />
-                    </FieldWrap>
-                  </div>
-
-                  <div className="cf-row-2">
-                    <FieldWrap label="Service Needed">
-                      <select
-                        name="service" value={fields.service}
-                        onChange={update} onFocus={onFocus} onBlur={onBlur}
-                        style={{ ...inputStyle("service"), cursor: "pointer" }}
-                      >
-                        <option value="">Select service...</option>
-                        <option value="Kitchen Remodeling">Kitchen Remodeling</option>
-                        <option value="Bathroom Remodeling">Bathroom Remodeling</option>
-                        <option value="Flooring Installation">Flooring Installation</option>
-                        <option value="Multiple Services">Multiple Services</option>
-                        <option value="Not Sure">Not Sure</option>
-                      </select>
-                    </FieldWrap>
-                    <FieldWrap label="City or ZIP Code *" error={errors.city_zip}>
-                      <input
-                        type="text" name="city_zip" placeholder="Columbia, 21044"
-                        value={fields.city_zip}
-                        onChange={update} onFocus={onFocus} onBlur={onBlur}
-                        style={inputStyle("city_zip")}
-                      />
-                    </FieldWrap>
-                  </div>
-
-                  <FieldWrap label="Tell Us About Your Project">
-                    <textarea
-                      name="message"
-                      placeholder="Describe your project — scope, timeline, specific ideas..."
-                      value={fields.message}
-                      onChange={update} onFocus={onFocus} onBlur={onBlur}
-                      rows={4}
-                      style={{ ...inputStyle("message"), resize: "vertical", minHeight: "100px" }}
-                    />
-                  </FieldWrap>
-
-                  {/* ── reCAPTCHA v2 widget ── */}
-                  <div className="cf-captcha-wrap">
-                    {/* This div is the mount point — grecaptcha.render() targets it */}
-                    <div ref={captchaContainerRef} />
-                    {errors.captcha && (
-                      <span className="cf-captcha-error">{errors.captcha}</span>
-                    )}
-                  </div>
-
-                  {/* Error banner */}
-                  {status === STATUS.ERROR && (
-                    <div style={{ padding: "12px 16px", borderRadius: "6px", background: "rgba(255,107,107,0.1)", border: "1px solid rgba(255,107,107,0.25)" }}>
-                      <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "13px", color: "#ff6b6b", margin: 0, lineHeight: 1.5 }}>
-                        Something went wrong. Please call us at{" "}
-                        <a href="tel:+13013004172" style={{ color: C.gold }}>(301) 300-4172</a>.
-                      </p>
-                    </div>
-                  )}
-
-                  <button type="submit" className="cf-submit" disabled={status === STATUS.SENDING}>
-                    {status === STATUS.SENDING ? "Sending…" : "Request Free Estimate"}
-                  </button>
-
-                </form>
-              </>
-            )}
-          </div>
-
+      {/* ── COMPACT MODE — hero embed ───────────────────────────────────────── */}
+      {isCompact && (
+        <div className="cf-compact-card">
+          <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: C.gold, margin: "0 0 8px" }}>
+            Free In-Home Estimate
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.4rem", fontWeight: 700, color: "#fff", margin: "0 0 6px", lineHeight: 1.2 }}>
+            Get Your Free Estimate
+          </h2>
+          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: "0 0 22px", lineHeight: 1.55 }}>
+            No pressure. We respond within 24–48 hours.
+          </p>
+          {status === STATUS.SUCCESS ? <SuccessScreen /> : <FormFields />}
         </div>
-      </section>
+      )}
+
+      {/* ── FULL MODE — default ─────────────────────────────────────────────── */}
+      {!isCompact && (
+        <section className="cf-section">
+          <div className="cf-inner">
+
+            {/* Left: contact info */}
+            <ContactInfo info={info} />
+
+            {/* Right: form card */}
+            <div className="cf-card">
+              {status === STATUS.SUCCESS ? (
+                <SuccessScreen />
+              ) : (
+                <>
+                  <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
+                    Request Your Free Estimate
+                  </h3>
+                  <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "13px", color: "rgba(255,255,255,0.4)", marginBottom: "28px", lineHeight: 1.6 }}>
+                    We respond within 24–48 hours. No pressure. Just clarity.
+                  </p>
+                  <FormFields />
+                </>
+              )}
+            </div>
+
+          </div>
+        </section>
+      )}
     </>
   )
 }

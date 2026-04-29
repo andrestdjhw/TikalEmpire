@@ -4,7 +4,54 @@
  * Template Post Type: page
  */
 
-get_header(); ?>
+get_header();
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  🖼  BACKGROUND IMAGES — update paths to match your WordPress Media uploads.
+//  Leave a value as '' (empty string) to use the solid colour fallback instead.
+// ─────────────────────────────────────────────────────────────────────────────
+$bg = [
+  'hero'         => '/wp-content/uploads/2026/04/KitchenRemodelingHero-scaled.jpg',   // Block 1 — Hero
+  'services'     => '/wp-content/uploads/2026/04/Estampados-01-scaled.png',   // Block 4 — What We Do
+  'process'      => '/wp-content/uploads/2026/04/Estampados-02-scaled.png',   // Block 6 — How We Work
+  'testimonials' => '/wp-content/uploads/2026/04/Estampados-01-scaled.png',   // Block 8 — Reviews / Testimonials
+  'contact'      => '/wp-content/uploads/2026/04/Estampados-01-scaled.png',   // Block 10 — Contact Form
+];
+
+// Overlay opacity per section (0.0 = transparent, 1.0 = full solid colour).
+// Increase if text becomes hard to read against the photo.
+$overlay = [
+  'hero'         => 0.72,
+  'services'     => 0.88,
+  'process'      => 0.92,
+  'testimonials' => 0.88,
+  'contact'      => 0.85,
+];
+
+/**
+ * Returns inline CSS for a section background.
+ * If $path is empty, returns the plain solid colour.
+ * If $path is set, adds the image behind a semi-transparent colour overlay.
+ */
+function hp_section_style( $path, $bg_color, $overlay_opacity, $position = 'center' ) {
+  $base = "background:{$bg_color};";
+  if ( empty( $path ) ) return $base;
+  return "position:relative; background:{$bg_color};"; // overlay handled by child div
+}
+
+/**
+ * Outputs the overlay div that sits between the bg image and the content.
+ * Call this immediately after opening the <section> tag when a bg image is set.
+ */
+function hp_bg_overlay( $path, $bg_color, $overlay_opacity, $position = 'center' ) {
+  if ( empty( $path ) ) return;
+  echo "<div style=\"position:absolute; inset:0; z-index:0;
+    background-image:url('{$path}');
+    background-size:cover; background-position:{$position}; background-attachment:scroll;
+    background-color:{$bg_color};\"></div>";
+  echo "<div style=\"position:absolute; inset:0; z-index:1; background:{$bg_color}; opacity:{$overlay_opacity};\"></div>";
+}
+?>
 
 <style>
 @keyframes hpTicker {
@@ -55,30 +102,85 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
 </style>
 
 <!-- ═══ BLOCK 1 — HERO ═══════════════════════════════════════════════════════ -->
-<section style="position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; background-image:url('/wp-content/uploads/hero-kitchen.jpg'); background-size:cover; background-position:center; background-attachment:fixed;">
-  <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(11,31,51,0.82) 0%, rgba(11,31,51,0.6) 60%, rgba(11,31,51,0.45) 100%); z-index:1;"></div>
-  <div style="position:relative; z-index:2; text-align:center; padding:0 24px; max-width:940px; margin:0 auto;">
-    <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:28px;">
-      <div style="width:36px; height:1px; background:#C9A84C;"></div>
-      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Maryland's Trusted Remodeling Team</span>
-      <div style="width:36px; height:1px; background:#C9A84C;"></div>
+<section style="position:relative; min-height:100vh; display:flex; align-items:center; <?php if(!empty($bg['hero'])): ?>background-image:url('<?php echo esc_url($bg['hero']); ?>'); background-size:cover; background-position:center; background-attachment:fixed;<?php else: ?>background:#0d1b2a;<?php endif; ?>">
+
+  <!-- Overlay -->
+  <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(13,27,42,<?php echo $overlay['hero']; ?>) 0%, rgba(13,27,42,<?php echo round($overlay['hero'] * 0.73, 2); ?>) 60%, rgba(13,27,42,<?php echo round($overlay['hero'] * 0.55, 2); ?>) 100%); z-index:1;"></div>
+
+  <!-- Two-column grid: headline left · form right -->
+  <div style="position:relative; z-index:2; width:100%; max-width:1280px; margin:0 auto; padding:100px 24px 80px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;" class="hp-hero-grid">
+
+    <!-- ── Left: headline + sub + CTAs + trust ── -->
+    <div>
+      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:24px;">
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Maryland's Trusted Remodeling Team</span>
+        <div style="width:36px; height:1px; background:#C9A84C;"></div>
+      </div>
+
+      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4.5vw,4rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:22px;">
+        When We Transform Your Home,<br><span style="color:#C9A84C;">the Stress Disappears.</span>
+      </h1>
+
+      <p style="font-family:'Inter',sans-serif; font-size:clamp(0.95rem,1.8vw,1.1rem); color:rgba(255,255,255,0.75); line-height:1.78; max-width:500px; margin-bottom:36px;">
+        Maryland homeowners trust Tikal Empire for kitchen remodeling, bathroom renovations, and flooring installation that delivers exactly what was promised — on time, on budget, and built to last.
+      </p>
+
+      <!-- CTAs -->
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;">
+        <a href="/our-work" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 28px; height:52px; border-radius:4px; border:2px solid rgba(255,255,255,0.45); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'; this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(255,255,255,0.45)'; this.style.color='#fff';">
+          See Our Work
+        </a>
+        <a href="/about-us" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); text-decoration:none; padding:0 12px; height:52px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.55)';">
+          Learn Our Story
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div style="display:flex; gap:20px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(255,255,255,0.1);">
+        <?php foreach([
+          ['icon'=>'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z', 'text'=>'MHIC #154361'],
+          ['icon'=>'M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z', 'text'=>'(301) 300-4172'],
+          ['icon'=>'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z', 'text'=>'Serving Maryland · 50 Miles'],
+          ['icon'=>'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z', 'text'=>'★★★★★ Google Reviews'],
+        ] as $b): ?>
+          <span style="display:flex; align-items:center; gap:7px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4);">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $b['icon']; ?>"/></svg>
+            <?php echo $b['text']; ?>
+          </span>
+        <?php endforeach; ?>
+      </div>
     </div>
-    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2.4rem,7vw,5.2rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:28px;">
-      When We Transform Your Home,<br><span style="color:#C9A84C;">the Stress Disappears.</span>
-    </h1>
-    <p style="font-family:'Inter',sans-serif; font-size:clamp(1rem,2.2vw,1.2rem); font-weight:400; color:rgba(255,255,255,0.8); line-height:1.75; max-width:680px; margin:0 auto 44px;">
-      Maryland homeowners trust Tikal Empire for kitchen remodeling, bathroom renovations, and flooring installation that delivers exactly what was promised — on time, on budget, and built to last.
-    </p>
-    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:56px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s, transform 0.15s;" onmouseover="this.style.background='#DFB95A'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C'; this.style.transform='none';">Request a Free Estimate</a>
-      <a href="/our-work" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#fff; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:56px; border-radius:4px; border:2px solid rgba(255,255,255,0.55); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'; this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(255,255,255,0.55)'; this.style.color='#fff';">See Our Work</a>
+
+    <!-- ── Right: ContactForm in compact mode ── -->
+    <?php
+    $hero_form_config = json_encode([
+      'mode'         => 'compact',
+      'headline'     => '',
+      'headlineGold' => '',
+    ]);
+    ?>
+    <div>
+      <div id="hero-form-root" data-cf-config='<?php echo esc_attr($hero_form_config); ?>'></div>
     </div>
+
   </div>
-  <div style="position:absolute; bottom:32px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:hpBounce 2.2s ease-in-out infinite;">
-    <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Scroll</span>
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.6)" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
+
+  <!-- Scroll indicator -->
+  <!-- <div style="position:absolute; bottom:28px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:6px; animation:hpBounce 2.2s ease-in-out infinite;">
+    <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.3);">Scroll</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div> -->
+
 </section>
+
+<!-- Hero responsive: stack on mobile/tablet -->
+<style>
+  @media (max-width: 960px) {
+    .hp-hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  }
+</style>
 
 <!-- ─── TRUST BAR ─────────────────────────────────────────────────────────── -->
 <div style="background:#060d18; border-bottom:1px solid rgba(201,168,76,0.1);">
@@ -146,8 +248,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
 </section>
 
 <!-- ═══ BLOCK 4 — SERVICES ═══════════════════════════════════════════════════ -->
-<section style="background:#0d1b2a; padding:96px 0;">
-  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+<section style="<?php echo hp_section_style($bg['services'], '#0d1b2a', $overlay['services']); ?> padding:96px 0;">
+  <?php hp_bg_overlay($bg['services'], '#0d1b2a', $overlay['services']); ?>
+  <div style="position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:64px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
@@ -161,9 +264,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-services-grid">
       <?php
       $services = [
-        ['title'=>'Kitchen Remodeling','desc'=>'Full kitchen transformations — layout, cabinets, countertops, tile, electrical & plumbing coordination.','price'=>'Starting at $80,000','cta'=>'Explore Kitchen Remodeling','href'=>'/kitchen-remodeling','img'=>'/wp-content/uploads/kitchen-remodel.jpg','alt'=>'Completed kitchen remodel'],
-        ['title'=>'Bathroom Remodeling','desc'=>'Complete bathroom renovations — tile, shower conversions, vanities, fixtures, and modern upgrades built to last.','price'=>'Starting at $18,000','cta'=>'Explore Bathroom Remodeling','href'=>'/bathroom-remodeling','img'=>'/wp-content/uploads/bathroom-remodel.jpg','alt'=>'Completed bathroom renovation'],
-        ['title'=>'Flooring Installation','desc'=>'Hardwood, LVP, vinyl, ceramic, carpet, and laminate — installed with precision for a flawless, lasting finish.','price'=>null,'cta'=>'Request an Estimate','href'=>'/flooring-installation','img'=>'/wp-content/uploads/flooring-install.jpg','alt'=>'LVP flooring installation'],
+        ['title'=>'Kitchen Remodeling','desc'=>'Full kitchen transformations — layout, cabinets, countertops, tile, electrical & plumbing coordination.','price'=>'Starting at $80,000','cta'=>'Explore Kitchen Remodeling','href'=>'/kitchen-remodeling','img'=>'/wp-content/uploads/2026/04/KitchenRemodelingHero-scaled.jpg','alt'=>'Completed kitchen remodel'],
+        ['title'=>'Bathroom Remodeling','desc'=>'Complete bathroom renovations — tile, shower conversions, vanities, fixtures, and modern upgrades built to last.','price'=>'Starting at $18,000','cta'=>'Explore Bathroom Remodeling','href'=>'/bathroom-remodeling','img'=>'/wp-content/uploads/2026/04/BathroomRemodelingHero-scaled.jpg','alt'=>'Completed bathroom renovation'],
+        ['title'=>'Flooring Installation','desc'=>'Hardwood, LVP, vinyl, ceramic, carpet, and laminate — installed with precision for a flawless, lasting finish.','price'=>null,'cta'=>'Request an Estimate','href'=>'/flooring-installation','img'=>'/wp-content/uploads/2026/04/FlooringInstallationHero-scaled.jpg','alt'=>'LVP flooring installation'],
       ];
       foreach ($services as $s) : ?>
         <div class="hp-service-card" style="position:relative; border-radius:8px; overflow:hidden; background:#060d18; border:1px solid rgba(255,255,255,0.07);">
@@ -223,8 +326,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
 </section>
 
 <!-- ═══ BLOCK 6 — PROCESS ════════════════════════════════════════════════════ -->
-<section style="background:#fff; padding:96px 0;">
-  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+<section style="<?php echo hp_section_style($bg['process'], '#ffffff', $overlay['process']); ?> padding:96px 0;">
+  <?php hp_bg_overlay($bg['process'], '#FFFFFF', $overlay['process']); ?>
+  <div style="position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:72px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
@@ -315,8 +419,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
 </section>
 
 <!-- ═══ BLOCK 8 — TESTIMONIALS ══════════════════════════════════════════════ -->
-<section style="background:#0d1b2a; padding:96px 0;">
-  <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
+<section style="<?php echo hp_section_style($bg['testimonials'], '#0d1b2a', $overlay['testimonials']); ?> padding:96px 0;">
+  <?php hp_bg_overlay($bg['testimonials'], '#0d1b2a', $overlay['testimonials']); ?>
+  <div style="position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
@@ -407,7 +512,12 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
 </section>
 
 <!-- ═══ BLOCK 10 — CONTACT FORM (React Component) ══════════════════════════ -->
-<div id="contact-form-root"></div>
+<section style="<?php echo hp_section_style($bg['contact'], '#0d1b2a', $overlay['contact']); ?> position:relative;">
+  <?php hp_bg_overlay($bg['contact'], '#0d1b2a', $overlay['contact']); ?>
+  <div style="position:relative; z-index:2;">
+    <div id="contact-form-root"></div>
+  </div>
+</section>
 
 
 <!-- ═══ JAVASCRIPT — Before/After Slider + Scroll Animations ═════════════════ -->
