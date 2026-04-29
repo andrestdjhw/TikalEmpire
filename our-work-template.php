@@ -20,7 +20,7 @@ get_header(); ?>
   transition:color 0.2s, border-color 0.2s;
   white-space:nowrap;
 }
-.ow-filter-btn:hover  { color:#0B1F33; }
+.ow-filter-btn:hover  { color:#0d1b2a; }
 .ow-filter-btn.active { color:#C9A84C; border-bottom-color:#C9A84C; }
 
 /* ── Project cards ────────────────────────────────────────────────────────── */
@@ -34,7 +34,7 @@ get_header(); ?>
 .ow-card[style*="display: none"] { display:none !important; }
 
 /* ── Before/After slider inside card ─────────────────────────────────────── */
-.ow-ba { position:relative; width:100%; padding-top:66%; overflow:hidden; cursor:ew-resize; user-select:none; background:#0B1F33; }
+.ow-ba { position:relative; width:100%; padding-top:66%; overflow:hidden; cursor:ew-resize; user-select:none; background:#0d1b2a; }
 .ow-ba-clip { position:absolute; inset:0; width:50%; overflow:hidden; }
 .ow-ba-handle { position:absolute; top:0; left:50%; width:3px; height:100%; background:#C9A84C; transform:translateX(-50%); z-index:10; pointer-events:none; }
 .ow-ba-knob { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; border-radius:50%; background:#C9A84C; border:3px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; }
@@ -84,7 +84,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══ FILTER + GRID ═════════════════════════════════════════════════════════ -->
-<section style="background:#F7F7F5; padding:80px 0 96px;">
+<section style="background:#d1d5db; padding:80px 0 96px;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
 
     <!-- Filter bar -->
@@ -198,8 +198,8 @@ get_header(); ?>
       foreach ($projects as $idx => $p):
         $badge_colors = [
           'kitchen'  => ['bg'=>'rgba(201,168,76,0.12)','color'=>'#C9A84C','border'=>'rgba(201,168,76,0.25)'],
-          'bathroom' => ['bg'=>'rgba(74,111,138,0.12)', 'color'=>'#4A6F8A','border'=>'rgba(74,111,138,0.25)'],
-          'flooring' => ['bg'=>'rgba(11,31,51,0.08)',   'color'=>'#0B1F33','border'=>'rgba(11,31,51,0.15)'],
+          'bathroom' => ['bg'=>'rgba(74,111,138,0.12)', 'color'=>'#415a77','border'=>'rgba(74,111,138,0.25)'],
+          'flooring' => ['bg'=>'rgba(11,31,51,0.08)',   'color'=>'#0d1b2a','border'=>'rgba(11,31,51,0.15)'],
         ];
         $bc = $badge_colors[$p['cat']];
       ?>
@@ -210,7 +210,7 @@ get_header(); ?>
             <img src="<?php echo $p['before']; ?>"
                  alt="Before — <?php echo esc_attr($p['badge']); ?> · <?php echo esc_attr($p['loc']); ?>"
                  style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"
-                 onerror="this.parentElement.style.background='linear-gradient(135deg,#4A6F8A,#0B1F33)'"/>
+                 onerror="this.parentElement.style.background='linear-gradient(135deg,#415a77,#0d1b2a)'"/>
             <span class="ow-ba-label" style="left:10px; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8);">Before</span>
 
             <!-- After clip -->
@@ -219,14 +219,14 @@ get_header(); ?>
                    class="ow-ba-after"
                    alt="After — <?php echo esc_attr($p['badge']); ?> · <?php echo esc_attr($p['loc']); ?>"
                    style="position:absolute; top:0; left:0; height:100%; object-fit:cover;"
-                   onerror="this.parentElement.parentElement.style.background='linear-gradient(135deg,#C9A84C88,#0B1F33)'"/>
+                   onerror="this.parentElement.parentElement.style.background='linear-gradient(135deg,#C9A84C88,#0d1b2a)'"/>
             </div>
-            <span class="ow-ba-label" style="right:10px; background:rgba(201,168,76,0.92); color:#0B1F33;">After</span>
+            <span class="ow-ba-label" style="right:10px; background:rgba(201,168,76,0.92); color:#0d1b2a;">After</span>
 
             <!-- Gold handle -->
             <div class="ow-ba-handle">
               <div class="ow-ba-knob">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0B1F33" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
               </div>
             </div>
           </div>
@@ -237,12 +237,12 @@ get_header(); ?>
               <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; background:<?php echo $bc['bg']; ?>; color:<?php echo $bc['color']; ?>; border:1px solid <?php echo $bc['border']; ?>; padding:4px 10px; border-radius:3px;">
                 <?php echo $p['badge']; ?>
               </span>
-              <span style="font-family:'Inter',sans-serif; font-size:12px; color:#4A6F8A; display:flex; align-items:center; gap:5px; white-space:nowrap;">
+              <span style="font-family:'Inter',sans-serif; font-size:12px; color:#415a77; display:flex; align-items:center; gap:5px; white-space:nowrap;">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                 <?php echo $p['loc']; ?>
               </span>
             </div>
-            <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2C2C2C; line-height:1.68; margin:0 0 16px; opacity:0.75;"><?php echo $p['note']; ?></p>
+            <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2f2f2f; line-height:1.68; margin:0 0 16px; opacity:0.75;"><?php echo $p['note']; ?></p>
             <a href="/contact" style="display:inline-flex; align-items:center; gap:6px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none; transition:gap 0.2s;" onmouseover="this.style.gap='10px';" onmouseout="this.style.gap='6px';">
               Get a Similar Estimate <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -253,7 +253,7 @@ get_header(); ?>
 
     <!-- Empty state (hidden by default) -->
     <div id="ow-empty" style="display:none; text-align:center; padding:72px 0;">
-      <p style="font-family:'Playfair Display',serif; font-size:1.5rem; color:#0B1F33; opacity:0.35; margin:0;">More projects coming soon.</p>
+      <p style="font-family:'Playfair Display',serif; font-size:1.5rem; color:#0d1b2a; opacity:0.35; margin:0;">More projects coming soon.</p>
     </div>
 
   </div>
@@ -264,14 +264,14 @@ get_header(); ?>
   <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;" class="ow-cta-flex">
     <div>
       <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Like What You See?</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0B1F33; line-height:1.15; margin:0 0 6px;">Request a Free Estimate for Your Home.</h2>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Request a Free Estimate for Your Home.</h2>
       <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
     </div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0B1F33; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#071828';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0B1F33';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
         Request a Free Estimate
       </a>
-      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
+      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (301) 300-4172
       </a>

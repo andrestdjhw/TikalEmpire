@@ -62,7 +62,7 @@ get_header(); ?>
         Full kitchen transformations in Maryland — cabinets, countertops, layout, tile, and every detail in between. Licensed, structured, and delivered on schedule.
       </p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
-        <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
+        <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
           Request a Free Estimate
         </a>
         <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.75); font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.75)';">
@@ -83,17 +83,17 @@ get_header(); ?>
 </section>
 
 <!-- ═══ INTRO — Two column ════════════════════════════════════════════════════ -->
-<section style="background:#F7F7F5; padding:96px 0;">
+<section style="background:#d1d5db; padding:96px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:3fr 2fr; gap:80px; align-items:center;" class="kr-intro-grid">
     <div class="kr-fade-up">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Approach</span>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#0B1F33; line-height:1.15; margin-bottom:28px;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin-bottom:28px;">
         More Than Cabinets<br>and Countertops.
       </h2>
-      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2C2C2C; line-height:1.82;">
+      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.82;">
         <p style="margin:0;">Your kitchen is where your home begins. It's where mornings start, where family gathers, and where the character of your home is most on display.</p>
         <p style="margin:0;">At Tikal Empire, a kitchen remodel is never just about cabinets and countertops. It's about creating a space that functions perfectly for how you actually live — and looks exactly the way you imagined it.</p>
         <p style="margin:0;">With our MHIC-licensed team, locally sourced premium cabinets, and a structured process from design to final walk-through, you get a kitchen that lasts decades and makes you proud every single day.</p>
@@ -105,13 +105,13 @@ get_header(); ?>
         foreach ($stats as $s): ?>
           <div>
             <p style="font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;"><?php echo $s['val']; ?></p>
-            <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#2C2C2C; opacity:0.55; margin:5px 0 0;"><?php echo $s['lbl']; ?></p>
+            <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#2f2f2f; opacity:0.55; margin:5px 0 0;"><?php echo $s['lbl']; ?></p>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
     <div class="kr-fade-up" style="display:flex; flex-direction:column; gap:16px;">
-      <div style="border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0B1F33,#4A6F8A); position:relative;">
+      <div style="border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0d1b2a,#415a77); position:relative;">
         <img src="/wp-content/uploads/kitchen-cabinet-detail.jpg" alt="Premium kitchen cabinet hardware detail" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
         <div style="position:absolute; bottom:0; left:0; right:0; padding:16px 18px; background:linear-gradient(transparent,rgba(11,31,51,0.88));">
           <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Craftsmanship Detail</span>
@@ -130,7 +130,7 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What's Included</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2; max-width:560px; margin:0 auto;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:560px; margin:0 auto;">
         We Handle Everything.<br>You Focus on the Vision.
       </h2>
     </div>
@@ -147,22 +147,22 @@ get_header(); ?>
         ['icon'=>'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z','label'=>'Painting & Finishing'],
       ];
       foreach ($svcs as $svc): ?>
-        <div class="kr-service-item" style="display:flex; align-items:flex-start; gap:14px; padding:20px 18px; border-radius:8px; border:1px solid rgba(11,31,51,0.08); background:#F7F7F5;">
+        <div class="kr-service-item" style="display:flex; align-items:flex-start; gap:14px; padding:20px 18px; border-radius:8px; border:1px solid rgba(11,31,51,0.08); background:#d1d5db;">
           <div style="width:40px; height:40px; border-radius:8px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $svc['icon']; ?>"/></svg>
           </div>
-          <span style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.04em; color:#0B1F33; line-height:1.5; padding-top:9px;"><?php echo $svc['label']; ?></span>
+          <span style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.04em; color:#0d1b2a; line-height:1.5; padding-top:9px;"><?php echo $svc['label']; ?></span>
         </div>
       <?php endforeach; ?>
     </div>
-    <p style="text-align:center; margin-top:28px; font-family:'Inter',sans-serif; font-size:14px; color:#2C2C2C; opacity:0.5;">
+    <p style="text-align:center; margin-top:28px; font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.5;">
       Not sure what your project needs? <a href="/contact" style="color:#C9A84C; text-decoration:none; font-weight:600; border-bottom:1px solid rgba(201,168,76,0.4);">Let's talk through it together →</a>
     </p>
   </div>
 </section>
 
 <!-- ═══ INVESTMENT RANGE ══════════════════════════════════════════════════════ -->
-<section style="background:#0B1F33; padding:96px 0;">
+<section style="background:#0d1b2a; padding:96px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:52px;" class="kr-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
@@ -193,7 +193,7 @@ get_header(); ?>
       <!-- Tier 2 -->
       <div class="kr-pricing-card" style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.38); border-radius:10px; padding:40px 36px; position:relative; overflow:hidden;">
         <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,transparent,#C9A84C,transparent);"></div>
-        <div style="position:absolute; top:16px; right:20px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; border-radius:3px;">Most Popular</div>
+        <div style="position:absolute; top:16px; right:20px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; border-radius:3px;">Most Popular</div>
         <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C9A84C; margin:0 0 12px;">Full Kitchen Transformation</p>
         <p style="font-family:'Playfair Display',serif; font-size:3rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;">$150,000<span style="font-size:1.2rem; color:rgba(255,255,255,0.45); font-family:'Montserrat',sans-serif; font-weight:500;">+</span></p>
         <p style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:10px 0 28px;">4–6 Weeks</p>
@@ -222,10 +222,10 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Real Projects. Real Results.</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         Kitchen Transformations<br>Across Maryland.
       </h2>
-      <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2C2C2C; opacity:0.5; margin-top:12px;">Drag the slider to reveal each transformation.</p>
+      <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.5; margin-top:12px;">Drag the slider to reveal each transformation.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="kr-ba-grid">
       <?php
@@ -237,22 +237,22 @@ get_header(); ?>
       foreach ($projects as $idx => $p): ?>
         <div>
           <div class="kr-ba-wrap" data-ba="<?php echo $idx; ?>">
-            <img src="<?php echo $p['before']; ?>" alt="Before — <?php echo esc_attr($p['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.style.background='#4A6F8A'"/>
+            <img src="<?php echo $p['before']; ?>" alt="Before — <?php echo esc_attr($p['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.style.background='#415a77'"/>
             <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
             <div class="kr-ba-after-clip">
               <img src="<?php echo $p['after']; ?>" class="kr-ba-after-img" alt="After — <?php echo esc_attr($p['label']); ?>" style="position:absolute; top:0; left:0; height:100%; object-fit:cover;" onerror="this.parentElement.parentElement.style.background='#C9A84C'"/>
             </div>
-            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0B1F33; padding:4px 10px; border-radius:3px;">After</span>
+            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0d1b2a; padding:4px 10px; border-radius:3px;">After</span>
             <div class="kr-ba-handle">
               <div class="kr-ba-knob">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F33" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
               </div>
             </div>
           </div>
           <div style="margin-top:14px; padding:0 4px; display:flex; align-items:center; justify-content:space-between;">
             <div>
-              <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#0B1F33; margin:0;"><?php echo $p['label']; ?></p>
-              <p style="font-family:'Inter',sans-serif; font-size:12px; color:#4A6F8A; margin:3px 0 0;"><?php echo $p['location']; ?></p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#0d1b2a; margin:0;"><?php echo $p['label']; ?></p>
+              <p style="font-family:'Inter',sans-serif; font-size:12px; color:#415a77; margin:3px 0 0;"><?php echo $p['location']; ?></p>
             </div>
             <a href="/our-work" style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">View All →</a>
           </div>
@@ -271,7 +271,7 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">How We Work</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         How Your Kitchen<br>Remodel Works.
       </h2>
     </div>
@@ -286,11 +286,11 @@ get_header(); ?>
       ];
       foreach ($steps as $i => $s): ?>
         <div class="kr-fade-up" style="text-align:center; padding:0 12px;" data-delay="<?php echo $i*100; ?>">
-          <div style="width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,#0B1F33,#071828); border:2px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 20px; box-shadow:0 8px 24px rgba(11,31,51,0.14);">
+          <div style="width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,#0d1b2a,#060d18); border:2px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 20px; box-shadow:0 8px 24px rgba(11,31,51,0.14);">
             <span style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:900; color:#C9A84C;"><?php echo $s['n']; ?></span>
           </div>
-          <h3 style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0B1F33; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
-          <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2C2C2C; opacity:0.65; line-height:1.7; margin:0;"><?php echo $s['body']; ?></p>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
+          <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2f2f2f; opacity:0.65; line-height:1.7; margin:0;"><?php echo $s['body']; ?></p>
         </div>
       <?php endforeach; ?>
     </div>
@@ -298,7 +298,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══ TESTIMONIALS ══════════════════════════════════════════════════════════ -->
-<section style="background:#0B1F33; padding:80px 0;">
+<section style="background:#0d1b2a; padding:80px 0;">
   <div style="max-width:960px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:40px;" class="kr-fade-up">
       <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What Homeowners Say</span>
@@ -331,14 +331,14 @@ get_header(); ?>
   <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;" class="kr-cta-flex">
     <div>
       <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Ready to Start?</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0B1F33; line-height:1.15; margin:0 0 6px;">Ready to Transform Your Kitchen?</h2>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Ready to Transform Your Kitchen?</h2>
       <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
     </div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0B1F33; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#071828';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0B1F33';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
         Request a Free Estimate
       </a>
-      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
+      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (301) 300-4172
       </a>

@@ -12,10 +12,12 @@ const RECAPTCHA_SITE_KEY  = "YOUR_SITE_KEY"     // Google reCAPTCHA v2 Site Key
 //  Brand tokens
 // ─────────────────────────────────────────────────────────────────────────────
 const C = {
-  navy:    "#0B1F33",
+  navy:    "#0d1b2a",
   gold:    "#C9A84C",
   goldHov: "#DFB95A",
-  steel:   "#4A6F8A",
+  steel:   "#415a77",
+  midGray: "#6b7280",
+  lightGray:"#d1d5db",
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

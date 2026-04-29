@@ -2,12 +2,14 @@ import React from "react"
 
 // ─── Brand Tokens (same as Navbar) ────────────────────────────────────────────
 const C = {
-  navy:     "#0B1F33",
-  navyDeep: "#071828",
+  navy:     "#0d1b2a",
+  navyDeep: "#060d18",
   gold:     "#C9A84C",
   goldHover:"#DFB95A",
-  carbon:   "#2C2C2C",
-  steel:    "#4A6F8A",
+  carbon:   "#2f2f2f",
+  steel:    "#415a77",
+  midGray:  "#6b7280",
+  lightGray:"#d1d5db",
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

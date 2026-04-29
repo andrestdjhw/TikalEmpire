@@ -17,7 +17,7 @@ get_header(); ?>
 </style>
 
 <!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
-<section style="background:#0B1F33; padding:72px 0 56px;">
+<section style="background:#0d1b2a; padding:72px 0 56px;">
   <div style="max-width:860px; margin:0 auto; padding:0 24px;">
     <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
       <div style="width:36px; height:2px; background:#C9A84C;"></div>
@@ -33,7 +33,7 @@ get_header(); ?>
 </section>
 
 <!-- ── Content ────────────────────────────────────────────────────────────────── -->
-<section style="background:#F7F7F5; padding:72px 0 96px;">
+<section style="background:#d1d5db; padding:72px 0 96px;">
   <div style="max-width:860px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1fr 240px; gap:56px; align-items:start;" class="pp-layout">
 
     <!-- Main content -->
@@ -41,7 +41,7 @@ get_header(); ?>
 
       <!-- Intro -->
       <div style="background:#fff; border-radius:10px; padding:36px 40px; border:1px solid rgba(11,31,51,0.08); margin-bottom:32px;" class="pp-fade-up">
-        <p style="font-family:'Inter',sans-serif; font-size:15px; color:#2C2C2C; line-height:1.82; margin:0;">
+        <p style="font-family:'Inter',sans-serif; font-size:15px; color:#2f2f2f; line-height:1.82; margin:0;">
           Tikal Empire LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or contact us about our home remodeling services — kitchen remodeling, bathroom renovation, and flooring installation in Maryland.
         </p>
       </div>
@@ -165,10 +165,10 @@ get_header(); ?>
 
       foreach ($sections as $i => $s): ?>
         <div id="<?php echo $s['id']; ?>" style="background:#fff; border-radius:10px; padding:36px 40px; border:1px solid rgba(11,31,51,0.08); margin-bottom:16px; scroll-margin-top:100px;" class="pp-fade-up" data-delay="<?php echo min($i * 60, 300); ?>">
-          <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:#0B1F33; margin:0 0 18px; padding-bottom:14px; border-bottom:2px solid rgba(201,168,76,0.2);">
+          <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:#0d1b2a; margin:0 0 18px; padding-bottom:14px; border-bottom:2px solid rgba(201,168,76,0.2);">
             <?php echo $s['title']; ?>
           </h2>
-          <div style="font-family:'Inter',sans-serif; font-size:15px; color:#2C2C2C; line-height:1.82;">
+          <div style="font-family:'Inter',sans-serif; font-size:15px; color:#2f2f2f; line-height:1.82;">
             <?php echo $s['body']; ?>
           </div>
         </div>
@@ -188,10 +188,10 @@ get_header(); ?>
         <?php endforeach; ?>
       </div>
       <!-- Contact card -->
-      <div style="background:#0B1F33; border-radius:10px; padding:24px; border:1px solid rgba(201,168,76,0.15);">
+      <div style="background:#0d1b2a; border-radius:10px; padding:24px; border:1px solid rgba(201,168,76,0.15);">
         <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C; margin:0 0 10px;">Questions?</p>
         <p style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.55); line-height:1.6; margin:0 0 16px;">We're happy to explain how we handle your data.</p>
-        <a href="mailto:info@tikalempirellc.com" style="display:block; text-align:center; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:11px 0; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
+        <a href="mailto:info@tikalempirellc.com" style="display:block; text-align:center; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:11px 0; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
           Email Us
         </a>
       </div>
@@ -206,7 +206,7 @@ get_header(); ?>
   .pp-sidebar { position:static !important; }
 }
 .pp-layout ul { padding-left:20px; margin:12px 0; display:flex; flex-direction:column; gap:7px; }
-.pp-layout li { color:#2C2C2C; }
+.pp-layout li { color:#2f2f2f; }
 .pp-layout p  { margin:0 0 14px; }
 .pp-layout p:last-child { margin-bottom:0; }
 </style>

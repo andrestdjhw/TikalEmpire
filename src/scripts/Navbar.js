@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react"
 
 // ─── Brand Tokens ──────────────────────────────────────────────────────────────
 const C = {
-  navy:      "#0B1F33",   // Deep Foundation Blue — main bg, navbar, footer
-  gold:      "#C9A84C",   // Refined Gold — CTAs, accents, ticker
-  goldHover: "#DFB95A",   // Gold brightened on hover
-  navyDeep:  "#071828",   // Deeper navy for top bar
-  carbon:    "#2C2C2C",   // Technical Carbon
+  navy:     "#0d1b2a",   // Deep Navy — primary bg, navbar, footer
+  gold:     "#C9A84C",   // Refined Gold — CTAs, accents, ticker
+  goldHover:"#DFB95A",   // Gold brightened on hover
+  navyDeep: "#060d18",   // Deeper navy for top bar
+  carbon:   "#2f2f2f",   // Body text
+  steel:    "#415a77",   // Steel Blue — secondary elements
+  midGray:  "#6b7280",   // Mid Gray — subtle text, dividers
+  lightGray:"#d1d5db",   // Light Gray — section backgrounds
 }
 
 // ─── Static Data ───────────────────────────────────────────────────────────────
@@ -381,7 +384,7 @@ function Navbar() {
             */}
             <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
               <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em" }}>
-                Tikal Empire
+                Your Logo
               </span>
               <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "8px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: C.gold, marginTop: "3px" }}>
                 Kitchen · Bath · Flooring
@@ -472,7 +475,7 @@ function Navbar() {
         <div
           className="nb-mobile-menu"
           style={{
-            backgroundColor: "#081828",
+            backgroundColor: "#060d18",
             maxHeight: mobileOpen ? "620px" : "0",
             overflow: "hidden",
             transition: "max-height 0.35s cubic-bezier(0.4,0,0.2,1)",

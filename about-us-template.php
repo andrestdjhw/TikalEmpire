@@ -21,7 +21,7 @@ get_header(); ?>
 .au-cred-card:hover { box-shadow:0 14px 40px rgba(0,0,0,0.3); transform:translateY(-4px); border-color:rgba(201,168,76,0.45) !important; background:rgba(201,168,76,0.07) !important; }
 
 .au-photo-stack { position:relative; }
-.au-photo-overlap { position:absolute; bottom:-28px; right:-20px; width:55%; border:4px solid #F7F7F5; border-radius:8px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.25); }
+.au-photo-overlap { position:absolute; bottom:-28px; right:-20px; width:55%; border:4px solid #d1d5db; border-radius:8px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.25); }
 
 @media (max-width:1024px) {
   .au-origin-grid  { grid-template-columns:1fr !important; }
@@ -68,7 +68,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══ ORIGIN STORY ══════════════════════════════════════════════════════════ -->
-<section style="background:#F7F7F5; padding:104px 0;">
+<section style="background:#d1d5db; padding:104px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:88px; align-items:center;" class="au-origin-grid">
 
     <!-- Copy -->
@@ -77,18 +77,18 @@ get_header(); ?>
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Origin</span>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3rem); font-weight:900; color:#0B1F33; line-height:1.1; margin-bottom:32px;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3rem); font-weight:900; color:#0d1b2a; line-height:1.1; margin-bottom:32px;">
         Why Tikal?
       </h2>
-      <div style="display:flex; flex-direction:column; gap:20px; font-family:'Inter',sans-serif; font-size:16px; color:#2C2C2C; line-height:1.85;">
-        <p style="margin:0;">Tikal is one of the greatest cities ever built — a Maya civilization in Guatemala that constructed temples, palaces, and structures of extraordinary precision that have <strong style="color:#0B1F33;">stood for over a thousand years.</strong></p>
+      <div style="display:flex; flex-direction:column; gap:20px; font-family:'Inter',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.85;">
+        <p style="margin:0;">Tikal is one of the greatest cities ever built — a Maya civilization in Guatemala that constructed temples, palaces, and structures of extraordinary precision that have <strong style="color:#0d1b2a;">stood for over a thousand years.</strong></p>
         <p style="margin:0;">Our founder Cristian carries those roots. And when he built this company, he built it on the same principles: precision, quality that lasts, and respect for the craft.</p>
         <p style="margin:0;">Tikal Empire didn't start as a business plan. It started with a commitment — to be the contractor that Maryland homeowners could actually trust. The one who shows up, communicates clearly, finishes what they start, and delivers a result worth being proud of.</p>
-        <p style="margin:0;">Today, with MHIC license #154361, active GL insurance, and a team of five specialists, <strong style="color:#0B1F33;">that commitment is a system — not just a promise.</strong></p>
+        <p style="margin:0;">Today, with MHIC license #154361, active GL insurance, and a team of five specialists, <strong style="color:#0d1b2a;">that commitment is a system — not just a promise.</strong></p>
       </div>
       <!-- Quote pull -->
       <blockquote style="margin:36px 0 0; padding:24px 24px 24px 28px; border-left:4px solid #C9A84C; background:#FDF8EC; border-radius:0 8px 8px 0;">
-        <p style="font-family:'Playfair Display',serif; font-size:1.15rem; font-style:italic; color:#0B1F33; line-height:1.65; margin:0 0 14px;">"The same civilization that built temples meant to outlast millennia — that's the standard we bring to every kitchen, bathroom, and floor we touch."</p>
+        <p style="font-family:'Playfair Display',serif; font-size:1.15rem; font-style:italic; color:#0d1b2a; line-height:1.65; margin:0 0 14px;">"The same civilization that built temples meant to outlast millennia — that's the standard we bring to every kitchen, bathroom, and floor we touch."</p>
         <cite style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; font-style:normal;">— Cristian, Founder · Tikal Empire LLC</cite>
       </blockquote>
     </div>
@@ -96,7 +96,7 @@ get_header(); ?>
     <!-- Photo stack: Tikal ruins + Cristian modern -->
     <div class="au-fade-right au-photo-stack" style="padding-bottom:56px;">
       <!-- Main photo: Tikal ruins -->
-      <div style="border-radius:10px; overflow:hidden; aspect-ratio:4/5; background:linear-gradient(135deg,#0B1F33,#1a3550); position:relative;">
+      <div style="border-radius:10px; overflow:hidden; aspect-ratio:4/5; background:linear-gradient(135deg,#0d1b2a,#162338); position:relative;">
         <img src="/wp-content/uploads/tikal-ruins-guatemala.jpg" alt="Tikal ruins — ancient Maya city in Guatemala, inspiration for Tikal Empire" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
         <div style="position:absolute; bottom:0; left:0; right:0; padding:18px 20px; background:linear-gradient(transparent,rgba(11,31,51,0.9));">
           <p style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin:0 0 3px;">Tikal, Guatemala</p>
@@ -105,8 +105,8 @@ get_header(); ?>
       </div>
       <!-- Overlapping photo: Cristian modern -->
       <div class="au-photo-overlap">
-        <img src="/wp-content/uploads/cristian-modern-project.jpg" alt="Cristian — Founder of Tikal Empire in a completed renovation space" style="width:100%; display:block; aspect-ratio:4/3; object-fit:cover;" onerror="this.style.background='#4A6F8A'"/>
-        <div style="padding:12px 14px; background:#0B1F33;">
+        <img src="/wp-content/uploads/cristian-modern-project.jpg" alt="Cristian — Founder of Tikal Empire in a completed renovation space" style="width:100%; display:block; aspect-ratio:4/3; object-fit:cover;" onerror="this.style.background='#415a77'"/>
+        <div style="padding:12px 14px; background:#0d1b2a;">
           <p style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C; margin:0 0 2px;">Cristian</p>
           <p style="font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.5); margin:0;">Founder · Tikal Empire LLC · Maryland</p>
         </div>
@@ -124,7 +124,7 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Values</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         What Drives Everything<br>We Do.
       </h2>
     </div>
@@ -162,9 +162,9 @@ get_header(); ?>
             <div style="width:48px; height:48px; border-radius:10px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $v['icon']; ?>"/></svg>
             </div>
-            <h3 style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#0B1F33; margin:0;"><?php echo $v['title']; ?></h3>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#0d1b2a; margin:0;"><?php echo $v['title']; ?></h3>
           </div>
-          <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2C2C2C; line-height:1.75; margin:0; opacity:0.8;"><?php echo $v['body']; ?></p>
+          <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; line-height:1.75; margin:0; opacity:0.8;"><?php echo $v['body']; ?></p>
           <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.1em; color:#C9A84C; margin:0; padding-top:12px; border-top:1px solid rgba(11,31,51,0.07);"><?php echo $v['detail']; ?></p>
         </div>
       <?php endforeach; ?>
@@ -173,7 +173,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══ CREDENTIALS BLOCK ═════════════════════════════════════════════════════ -->
-<section style="background:#0B1F33; padding:80px 0;">
+<section style="background:#0d1b2a; padding:80px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:48px;" class="au-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
@@ -223,7 +223,7 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Team</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         The People Behind<br>Every Project.
       </h2>
     </div>
@@ -231,25 +231,25 @@ get_header(); ?>
     <!-- Founder card — full featured -->
     <div style="display:grid; grid-template-columns:2fr 3fr; gap:72px; align-items:center; max-width:1000px; margin:0 auto 72px;" class="au-team-grid">
       <div class="au-fade-left">
-        <div style="border-radius:10px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0B1F33,#4A6F8A); position:relative;">
+        <div style="border-radius:10px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0d1b2a,#415a77); position:relative;">
           <img src="/wp-content/uploads/cristian-headshot.jpg" alt="Cristian — Founder & Owner of Tikal Empire LLC" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;" onerror="this.style.display='none'"/>
-          <div style="position:absolute; top:16px; left:16px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:5px 12px; border-radius:3px;">Founder & Owner</div>
+          <div style="position:absolute; top:16px; left:16px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:5px 12px; border-radius:3px;">Founder & Owner</div>
         </div>
       </div>
       <div class="au-fade-right">
         <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C9A84C; margin:0 0 10px;">Tikal Empire LLC</p>
-        <h3 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:900; color:#0B1F33; margin:0 0 24px; line-height:1.1;">Cristian</h3>
-        <div style="display:flex; flex-direction:column; gap:16px; font-family:'Inter',sans-serif; font-size:16px; color:#2C2C2C; line-height:1.82;">
+        <h3 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:900; color:#0d1b2a; margin:0 0 24px; line-height:1.1;">Cristian</h3>
+        <div style="display:flex; flex-direction:column; gap:16px; font-family:'Inter',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.82;">
           <p style="margin:0;">Cristian founded Tikal Empire with one conviction: that Maryland homeowners deserve a contractor who actually delivers what they promise. Drawing on his Guatemalan heritage and the legacy of the ancient Maya builders, he built a company around the same principles that built Tikal — precision, durability, and respect for the craft.</p>
           <p style="margin:0;">With years of hands-on remodeling experience and a team of five multi-trade specialists, Cristian manages every project personally — from the first consultation to the final walk-through. He doesn't just oversee the work. He owns the outcome.</p>
-          <p style="margin:0;"><em style="color:#0B1F33; font-style:italic;">"We don't move on until you're proud of what we built together."</em></p>
+          <p style="margin:0;"><em style="color:#0d1b2a; font-style:italic;">"We don't move on until you're proud of what we built together."</em></p>
         </div>
         <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:32px;">
-          <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:0 24px; height:48px; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
+          <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:0 24px; height:48px; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             Call Cristian
           </a>
-          <a href="/contact" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:0 24px; height:48px; border-radius:4px; border:2px solid rgba(11,31,51,0.2); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C';this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(11,31,51,0.2)';this.style.color='#0B1F33';">
+          <a href="/contact" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:0 24px; height:48px; border-radius:4px; border:2px solid rgba(11,31,51,0.2); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C';this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(11,31,51,0.2)';this.style.color='#0d1b2a';">
             Request an Estimate
           </a>
         </div>
@@ -258,7 +258,7 @@ get_header(); ?>
 
     <!-- Team photo -->
     <div class="au-fade-up" style="border-radius:10px; overflow:hidden; position:relative; max-width:900px; margin:0 auto;">
-      <div style="aspect-ratio:16/7; background:linear-gradient(135deg,#0B1F33,#4A6F8A);">
+      <div style="aspect-ratio:16/7; background:linear-gradient(135deg,#0d1b2a,#415a77);">
         <img src="/wp-content/uploads/tikal-team-photo.jpg" alt="Tikal Empire team — five specialists on a completed Maryland remodeling project" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
       </div>
       <div style="position:absolute; bottom:0; left:0; right:0; padding:24px 28px; background:linear-gradient(transparent,rgba(11,31,51,0.88)); display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:12px;">
@@ -277,14 +277,14 @@ get_header(); ?>
   <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;" class="au-cta-flex">
     <div>
       <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Work With Us</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0B1F33; line-height:1.15; margin:0 0 6px;">Ready to Work With a Team You Can Trust?</h2>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Ready to Work With a Team You Can Trust?</h2>
       <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">Or call us directly: <strong>(301) 300-4172</strong></p>
     </div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0B1F33; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#071828';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0B1F33';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
         Request a Free Estimate
       </a>
-      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
+      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (301) 300-4172
       </a>

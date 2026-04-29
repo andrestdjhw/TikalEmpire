@@ -66,7 +66,7 @@ get_header(); ?>
         Professional flooring installation across Maryland — LVP, hardwood, vinyl, tile, carpet, and laminate. Precise. Clean. Built to last.
       </p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
-        <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
+        <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
           Request a Free Estimate
         </a>
         <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.75); font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.75)';">
@@ -87,32 +87,32 @@ get_header(); ?>
 </section>
 
 <!-- ═══ INTRO — Two column ════════════════════════════════════════════════════ -->
-<section style="background:#F7F7F5; padding:96px 0;">
+<section style="background:#d1d5db; padding:96px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:3fr 2fr; gap:80px; align-items:center;" class="fl-intro-grid">
     <div class="fl-fade-up">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Approach</span>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#0B1F33; line-height:1.15; margin-bottom:28px;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin-bottom:28px;">
         Precision First.<br>Flawless Finish.
       </h2>
-      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2C2C2C; line-height:1.82;">
+      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.82;">
         <p style="margin:0;">The floor is the foundation of every room's design. It's the first thing you feel when you step inside — and the last detail that either elevates or undermines everything else.</p>
         <p style="margin:0;">At Tikal Empire, we treat every floor installation as a precision project. Proper subfloor preparation. Precise cuts and transitions. Materials matched to your lifestyle, your home, and your aesthetic vision.</p>
-        <p style="margin:0;">And a finished result that looks flawless — <strong style="color:#0B1F33;">the kind you notice every time you walk in.</strong></p>
+        <p style="margin:0;">And a finished result that looks flawless — <strong style="color:#0d1b2a;">the kind you notice every time you walk in.</strong></p>
       </div>
       <div style="display:flex; gap:32px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid rgba(11,31,51,0.1);">
         <?php foreach([['val'=>'6','lbl'=>'Material Types'],['val'=>'MHIC','lbl'=>'Licensed Team'],['val'=>'MD','lbl'=>'50-Mile Radius']] as $s): ?>
           <div>
             <p style="font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;"><?php echo $s['val']; ?></p>
-            <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#2C2C2C; opacity:0.55; margin:5px 0 0;"><?php echo $s['lbl']; ?></p>
+            <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#2f2f2f; opacity:0.55; margin:5px 0 0;"><?php echo $s['lbl']; ?></p>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
     <div class="fl-fade-up">
-      <div style="border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0B1F33,#4A6F8A); position:relative;">
+      <div style="border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0d1b2a,#415a77); position:relative;">
         <img src="/wp-content/uploads/flooring-install-process.jpg" alt="Flooring specialist precisely aligning planks during installation" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
         <div style="position:absolute; bottom:0; left:0; right:0; padding:16px 18px; background:linear-gradient(transparent,rgba(11,31,51,0.88));">
           <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Installation in Progress</span>
@@ -123,7 +123,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══ MATERIAL TABS ═════════════════════════════════════════════════════════ -->
-<section style="background:#0B1F33; padding:96px 0;">
+<section style="background:#0d1b2a; padding:96px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:52px;" class="fl-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
@@ -231,20 +231,20 @@ get_header(); ?>
             <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#C9A84C; margin:0 0 5px;">Best For</p>
             <p style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.55); margin:0; line-height:1.55;"><?php echo $m['best']; ?></p>
           </div>
-          <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; margin-top:28px; background:#C9A84C; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 28px; height:48px; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
+          <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; margin-top:28px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 28px; height:48px; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
             Get a <?php echo esc_attr($m['name']); ?> Estimate
           </a>
         </div>
         <!-- Right: photos -->
         <div style="display:flex; flex-direction:column; gap:14px;">
-          <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; background:#071828;">
+          <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; background:#060d18;">
             <img src="<?php echo $m['img']; ?>" alt="<?php echo esc_attr($m['name']); ?> installed in Maryland home" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
           </div>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-            <div style="border-radius:8px; overflow:hidden; aspect-ratio:1; background:#071828;">
+            <div style="border-radius:8px; overflow:hidden; aspect-ratio:1; background:#060d18;">
               <img src="<?php echo $m['detail1']; ?>" alt="<?php echo esc_attr($m['name']); ?> detail — texture and finish" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
             </div>
-            <div style="border-radius:8px; overflow:hidden; aspect-ratio:1; background:#071828;">
+            <div style="border-radius:8px; overflow:hidden; aspect-ratio:1; background:#060d18;">
               <img src="<?php echo $m['detail2']; ?>" alt="<?php echo esc_attr($m['name']); ?> close-up — edge and transition" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
             </div>
           </div>
@@ -255,7 +255,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══ WHY OUR INSTALLATION ══════════════════════════════════════════════════ -->
-<section style="background:#F7F7F5; padding:96px 0;">
+<section style="background:#d1d5db; padding:96px 0;">
   <div style="max-width:1280px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:56px;" class="fl-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
@@ -263,7 +263,7 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Why Our Installation</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2; max-width:600px; margin:0 auto;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:600px; margin:0 auto;">
         The Difference Isn't the Material.<br><span style="color:#C9A84C;">It's the Installation.</span>
       </h2>
     </div>
@@ -283,8 +283,8 @@ get_header(); ?>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $w['icon']; ?>"/></svg>
           </div>
           <div>
-            <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.05em; color:#0B1F33; margin:0 0 8px;"><?php echo $w['title']; ?></p>
-            <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2C2C2C; opacity:0.68; line-height:1.65; margin:0;"><?php echo $w['body']; ?></p>
+            <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.05em; color:#0d1b2a; margin:0 0 8px;"><?php echo $w['title']; ?></p>
+            <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2f2f2f; opacity:0.68; line-height:1.65; margin:0;"><?php echo $w['body']; ?></p>
           </div>
         </div>
       <?php endforeach; ?>
@@ -301,7 +301,7 @@ get_header(); ?>
         <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Flooring Portfolio</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0B1F33; line-height:1.2;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         Installed Across Maryland.
       </h2>
     </div>
@@ -317,7 +317,7 @@ get_header(); ?>
         ['img'=>'/wp-content/uploads/flooring-gallery-6.jpg','label'=>'Vinyl — Basement','location'=>'Frederick, MD','span'=>'grid-column:3/4; grid-row:1/3; aspect-ratio:2/3;'],
       ];
       foreach ($gallery as $item): ?>
-        <div class="fl-gallery-item" style="<?php echo $item['span']; ?> background:linear-gradient(135deg,#0B1F33,#4A6F8A);">
+        <div class="fl-gallery-item" style="<?php echo $item['span']; ?> background:linear-gradient(135deg,#0d1b2a,#415a77);">
           <img src="<?php echo $item['img']; ?>" alt="<?php echo esc_attr($item['label']); ?> — <?php echo esc_attr($item['location']); ?>" onerror="this.style.display='none'"/>
           <div class="fl-gallery-caption">
             <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#fff; margin:0;"><?php echo $item['label']; ?></p>
@@ -327,7 +327,7 @@ get_header(); ?>
       <?php endforeach; ?>
     </div>
     <div style="text-align:center; margin-top:44px;">
-      <a href="/our-work" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#0B1F33; text-decoration:none; border-bottom:2px solid #C9A84C; padding-bottom:4px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='#0B1F33';">
+      <a href="/our-work" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#0d1b2a; text-decoration:none; border-bottom:2px solid #C9A84C; padding-bottom:4px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='#0d1b2a';">
         View Full Portfolio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -339,14 +339,14 @@ get_header(); ?>
   <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;" class="fl-cta-flex">
     <div>
       <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Ready to Start?</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0B1F33; line-height:1.15; margin:0 0 6px;">Request a Free Flooring Estimate.</h2>
+      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Request a Free Flooring Estimate.</h2>
       <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
     </div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0B1F33; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#071828';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0B1F33';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
         Request a Free Estimate
       </a>
-      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0B1F33; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
+      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (301) 300-4172
       </a>
