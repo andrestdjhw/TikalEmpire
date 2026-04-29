@@ -447,7 +447,7 @@ function Footer() {
 
               {/* Email placeholder */}
               <a
-                href="mailto:info@yourcompany.com"
+                href="mailto:info@tikalempire.com"
                 style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", transition: "opacity 0.2s" }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = "0.8"}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
@@ -459,7 +459,7 @@ function Footer() {
                 </div>
                 <div>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", margin: 0 }}>Email</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "13px", fontWeight: 600, color: "rgba(255,255,255,0.7)", margin: 0, marginTop: "2px" }}>info@yourcompany.com</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "13px", fontWeight: 600, color: "rgba(255,255,255,0.7)", margin: 0, marginTop: "2px" }}>info@tikalempire.com</p>
                 </div>
               </a>
 

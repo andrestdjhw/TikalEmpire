@@ -1745,7 +1745,7 @@ function Footer() {
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-              href: "mailto:info@yourcompany.com",
+              href: "mailto:info@tikalempire.com",
               style: {
                 display: "flex",
                 alignItems: "center",
@@ -1799,7 +1799,7 @@ function Footer() {
                     margin: 0,
                     marginTop: "2px"
                   },
-                  children: "info@yourcompany.com"
+                  children: "info@tikalempire.com"
                 })]
               })]
             })]
@@ -2231,74 +2231,213 @@ function Navbar() {
         style: {
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "8px 24px",
+          padding: "7px 24px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
+          gap: "16px"
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-          href: "tel:+13013004172",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          style: {
+            display: "flex",
+            alignItems: "center",
+            gap: "18px"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+            href: "tel:+13013004172",
+            style: {
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              fontFamily: "'Montserrat',sans-serif",
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.05em",
+              color: C.gold,
+              textDecoration: "none",
+              transition: "color 0.2s"
+            },
+            onMouseEnter: e => e.currentTarget.style.color = C.goldHover,
+            onMouseLeave: e => e.currentTarget.style.color = C.gold,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+              width: "12",
+              height: "12",
+              viewBox: "0 0 24 24",
+              fill: "currentColor",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                d: "M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              })
+            }), "(301) 300-4172"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            style: {
+              color: "rgba(255,255,255,0.12)",
+              fontSize: "12px"
+            },
+            children: "|"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+            href: "mailto:info@tikalempire.com",
+            style: {
+              display: "flex",
+              alignItems: "center",
+              gap: "6px",
+              fontFamily: "'Montserrat',sans-serif",
+              fontSize: "11px",
+              fontWeight: 600,
+              letterSpacing: "0.04em",
+              color: "rgba(255,255,255,0.5)",
+              textDecoration: "none",
+              transition: "color 0.2s"
+            },
+            onMouseEnter: e => e.currentTarget.style.color = C.gold,
+            onMouseLeave: e => e.currentTarget.style.color = "rgba(255,255,255,0.5)",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+              width: "12",
+              height: "12",
+              viewBox: "0 0 24 24",
+              fill: "currentColor",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                d: "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              })
+            }), "info@tikalempire.com"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+          href: "https://maps.google.com/?q=Maryland",
+          target: "_blank",
+          rel: "noopener noreferrer",
           style: {
             display: "flex",
             alignItems: "center",
             gap: "7px",
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: "12px",
-            fontWeight: 700,
-            letterSpacing: "0.05em",
-            color: C.gold,
+            fontFamily: "'Montserrat',sans-serif",
+            fontSize: "11px",
+            fontWeight: 600,
+            letterSpacing: "0.09em",
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,0.45)",
             textDecoration: "none",
             transition: "color 0.2s"
           },
-          onMouseEnter: e => e.currentTarget.style.color = C.goldHover,
-          onMouseLeave: e => e.currentTarget.style.color = C.gold,
+          onMouseEnter: e => e.currentTarget.style.color = C.gold,
+          onMouseLeave: e => e.currentTarget.style.color = "rgba(255,255,255,0.45)",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
             width: "13",
             height: "13",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-              d: "M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              d: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
             })
-          }), "(301) 300-4172"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+          }), "Serving Maryland \u2014 50-mile radius"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           style: {
             display: "flex",
             alignItems: "center",
-            gap: "8px",
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: "11px",
-            fontWeight: 600,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.45)"
+            gap: "6px"
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "https://facebook.com/tikalempire",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": "Facebook",
             style: {
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              backgroundColor: C.gold,
-              opacity: 0.8
-            }
-          }), "MHIC #154361 \u2014 Licensed & Insured", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              width: "28px",
+              height: "28px",
+              borderRadius: "5px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "rgba(255,255,255,0.4)",
+              background: "rgba(255,255,255,0.05)",
+              transition: "color 0.2s, background 0.2s"
+            },
+            onMouseEnter: e => {
+              e.currentTarget.style.color = C.gold;
+              e.currentTarget.style.background = "rgba(201,168,76,0.1)";
+            },
+            onMouseLeave: e => {
+              e.currentTarget.style.color = "rgba(255,255,255,0.4)";
+              e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+              width: "14",
+              height: "14",
+              viewBox: "0 0 24 24",
+              fill: "currentColor",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                d: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12.07h2.54V9.845c0-2.503 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12.07h2.773l-.443 2.89h-2.33v6.988C20.343 21.128 24 16.991 24 12.073z"
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "https://instagram.com/tikalempire",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": "Instagram",
             style: {
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              backgroundColor: C.gold,
-              opacity: 0.8
-            }
+              width: "28px",
+              height: "28px",
+              borderRadius: "5px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "rgba(255,255,255,0.4)",
+              background: "rgba(255,255,255,0.05)",
+              transition: "color 0.2s, background 0.2s"
+            },
+            onMouseEnter: e => {
+              e.currentTarget.style.color = C.gold;
+              e.currentTarget.style.background = "rgba(201,168,76,0.1)";
+            },
+            onMouseLeave: e => {
+              e.currentTarget.style.color = "rgba(255,255,255,0.4)";
+              e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+              width: "14",
+              height: "14",
+              viewBox: "0 0 24 24",
+              fill: "currentColor",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "https://g.page/r/YOUR_GOOGLE_PLACE_ID",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": "Google Reviews",
+            style: {
+              width: "28px",
+              height: "28px",
+              borderRadius: "5px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "rgba(255,255,255,0.05)",
+              transition: "background 0.2s"
+            },
+            onMouseEnter: e => e.currentTarget.style.background = "rgba(201,168,76,0.1)",
+            onMouseLeave: e => e.currentTarget.style.background = "rgba(255,255,255,0.05)",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+              viewBox: "0 0 24 24",
+              style: {
+                width: "14px",
+                height: "14px"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                fill: "#4285F4",
+                d: "M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                fill: "#34A853",
+                d: "M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                fill: "#FBBC05",
+                d: "M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                fill: "#EA4335",
+                d: "M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              })]
+            })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          style: {
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: "11px",
-            fontWeight: 500,
-            letterSpacing: "0.08em",
-            color: "rgba(255,255,255,0.38)"
-          },
-          children: "Serving Maryland \u2014 50-mile radius"
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("header", {
