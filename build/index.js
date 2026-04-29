@@ -1430,33 +1430,14 @@ function Footer() {
               textDecoration: "none",
               marginBottom: "16px"
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+              src: "/wp-content/uploads/2026/04/Tikal_imagotipo_condensado-scaled.png",
+              alt: "Tikal Empire \u2014 Kitchen, Bath & Flooring",
               style: {
-                display: "flex",
-                flexDirection: "column",
-                lineHeight: 1.1
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                style: {
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "24px",
-                  fontWeight: 900,
-                  color: "#fff",
-                  letterSpacing: "-0.02em"
-                },
-                children: "Your Logo"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                style: {
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontSize: "8px",
-                  fontWeight: 700,
-                  letterSpacing: "0.25em",
-                  textTransform: "uppercase",
-                  color: C.gold,
-                  marginTop: "4px"
-                },
-                children: "Kitchen \xB7 Bath \xB7 Flooring"
-              })]
+                height: "52px",
+                width: "auto",
+                display: "block"
+              }
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
@@ -2319,36 +2300,16 @@ function Navbar() {
             textDecoration: "none",
             display: "flex",
             alignItems: "center",
-            gap: "12px",
             flexShrink: 0
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/wp-content/uploads/2026/04/Tikal_imagotipo_condensado-scaled.png",
+            alt: "Tikal Empire \u2014 Kitchen, Bath & Flooring",
             style: {
-              display: "flex",
-              flexDirection: "column",
-              lineHeight: 1.1
-            },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              style: {
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "22px",
-                fontWeight: 900,
-                color: "#fff",
-                letterSpacing: "-0.02em"
-              },
-              children: "Your Logo"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              style: {
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "8px",
-                fontWeight: 700,
-                letterSpacing: "0.25em",
-                textTransform: "uppercase",
-                color: C.gold,
-                marginTop: "3px"
-              },
-              children: "Kitchen \xB7 Bath \xB7 Flooring"
-            })]
+              height: "48px",
+              width: "auto",
+              display: "block"
+            }
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
           className: "nb-desktop-nav",

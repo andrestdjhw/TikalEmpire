@@ -372,24 +372,12 @@ function Navbar() {
           }}
         >
           {/* Logo */}
-          <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "12px", flexShrink: 0 }}>
-            {/*
-              ─── LOGO PLACEHOLDER ───────────────────────────────────────────
-              Replace with:
-              <img
-                src="/wp-content/uploads/logo.png"
-                alt="Company Name"
-                style={{ height: '48px', width: 'auto' }}
-              />
-            */}
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em" }}>
-                Your Logo
-              </span>
-              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "8px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: C.gold, marginTop: "3px" }}>
-                Kitchen · Bath · Flooring
-              </span>
-            </div>
+          <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <img
+              src="/wp-content/uploads/2026/04/Tikal_imagotipo_condensado-scaled.png"
+              alt="Tikal Empire — Kitchen, Bath & Flooring"
+              style={{ height: "48px", width: "auto", display: "block" }}
+            />
           </a>
 
           {/* Desktop Nav */}

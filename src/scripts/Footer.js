@@ -242,20 +242,13 @@ function Footer() {
 
           {/* ── Col 1: Logo + Tagline + Badges ──────────────────────────────── */}
           <div style={{ gridColumn: "span 1" }}>
-            {/* Logo placeholder */}
+            {/* Logo */}
             <a href="/" style={{ display: "inline-block", textDecoration: "none", marginBottom: "16px" }}>
-              {/*
-                LOGO PLACEHOLDER — replace with:
-                <img src="/wp-content/uploads/logo.png" alt="Company Name" style={{ height: '52px', width: 'auto' }} />
-              */}
-              <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "24px", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em" }}>
-                  Your Logo
-                </span>
-                <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "8px", fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase", color: C.gold, marginTop: "4px" }}>
-                  Kitchen · Bath · Flooring
-                </span>
-              </div>
+              <img
+                src="/wp-content/uploads/2026/04/Tikal_imagotipo_condensado-scaled.png"
+                alt="Tikal Empire — Kitchen, Bath & Flooring"
+                style={{ height: "52px", width: "auto", display: "block" }}
+              />
             </a>
 
             {/* Tagline */}
