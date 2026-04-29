@@ -16,11 +16,19 @@ if (document.querySelector("#footer-root")) {
 }
 
 // ── ContactForm — full mode (Block 10 homepage, contact page) ─────────────────
-if (document.querySelector("#contact-form-root")) {
-  ReactDOM.createRoot(document.querySelector("#contact-form-root")).render(<ContactForm />)
+// Reads data-cf-config from its own mount div only (may contain email, address, etc.)
+const contactRoot = document.querySelector("#contact-form-root")
+if (contactRoot) {
+  let contactConfig = {}
+  try { contactConfig = JSON.parse(contactRoot.dataset.cfConfig || "{}") } catch {}
+  ReactDOM.createRoot(contactRoot).render(<ContactForm propConfig={contactConfig} />)
 }
 
 // ── ContactForm — compact mode (hero embed) ───────────────────────────────────
-if (document.querySelector("#hero-form-root")) {
-  ReactDOM.createRoot(document.querySelector("#hero-form-root")).render(<ContactForm />)
+// Always compact — config hardcoded here, never reads from other mounts
+const heroRoot = document.querySelector("#hero-form-root")
+if (heroRoot) {
+  let heroConfig = {}
+  try { heroConfig = JSON.parse(heroRoot.dataset.cfConfig || "{}") } catch {}
+  ReactDOM.createRoot(heroRoot).render(<ContactForm propConfig={heroConfig} />)
 }

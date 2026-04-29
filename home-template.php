@@ -388,10 +388,10 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
       foreach ($projects as $idx => $proj) : ?>
         <div>
           <div class="ba-container" data-idx="<?php echo $idx; ?>" style="position:relative; width:100%; padding-top:66.666%; border-radius:8px; overflow:hidden; cursor:ew-resize; user-select:none; box-shadow:0 8px 32px rgba(11,31,51,0.15);">
-            <img src="<?php echo $proj['before']; ?>" alt="Before — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.style.background='#415a77'; this.src='';" />
+            <img src="<?php echo $proj['before']; ?>" alt="Before — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.style.background='#415a77';" />
             <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
             <div class="ba-clip" style="position:absolute; inset:0; width:50%; overflow:hidden;">
-              <img src="<?php echo $proj['after']; ?>" class="ba-after-img" alt="After — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; top:0; left:0; height:100%; object-fit:cover;" onerror="this.style.background='#C9A84C'; this.src='';" />
+              <img src="<?php echo $proj['after']; ?>" class="ba-after-img" alt="After — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; top:0; left:0; height:100%; object-fit:cover;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.style.background='#415a77';" />
             </div>
             <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0d1b2a; padding:4px 10px; border-radius:3px;">After</span>
             <div class="ba-handle" style="position:absolute; top:0; left:50%; width:3px; height:100%; background:#C9A84C; transform:translateX(-50%); z-index:10; pointer-events:none;">

@@ -546,18 +546,12 @@ const STATUS = {
 //
 //  Config via data-cf-config JSON attribute on the mount div.
 // ─────────────────────────────────────────────────────────────────────────────
-function ContactForm() {
-  // ── Read config from mount div ──────────────────────────────────────────────
-  const config = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
-    const mounts = document.querySelectorAll("[data-cf-config]");
-    let parsed = {};
-    mounts.forEach(el => {
-      try {
-        Object.assign(parsed, JSON.parse(el.dataset.cfConfig));
-      } catch {}
-    });
-    return parsed;
-  }, []);
+function ContactForm({
+  propConfig = {}
+}) {
+  // ── Config comes as a prop from index.js ────────────────────────────────────
+  // Each mount passes its own data-cf-config so instances don't bleed into each other
+  const config = propConfig;
   const info = {
     ...DEFAULT_INFO,
     ...config
@@ -1019,6 +1013,8 @@ function ContactForm() {
           border: 1px solid rgba(201,168,76,0.22);
           border-radius: 12px;
           padding: 32px 28px;
+          max-width: 560px;
+          width: 100%;
         }
         @media (max-width: 640px) {
           .cf-compact-card { padding: 24px 18px !important; }
@@ -2923,13 +2919,29 @@ if (document.querySelector("#footer-root")) {
 }
 
 // ── ContactForm — full mode (Block 10 homepage, contact page) ─────────────────
-if (document.querySelector("#contact-form-root")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.querySelector("#contact-form-root")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {}));
+// Reads data-cf-config from its own mount div only (may contain email, address, etc.)
+const contactRoot = document.querySelector("#contact-form-root");
+if (contactRoot) {
+  let contactConfig = {};
+  try {
+    contactConfig = JSON.parse(contactRoot.dataset.cfConfig || "{}");
+  } catch {}
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(contactRoot).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    propConfig: contactConfig
+  }));
 }
 
 // ── ContactForm — compact mode (hero embed) ───────────────────────────────────
-if (document.querySelector("#hero-form-root")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.querySelector("#hero-form-root")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {}));
+// Always compact — config hardcoded here, never reads from other mounts
+const heroRoot = document.querySelector("#hero-form-root");
+if (heroRoot) {
+  let heroConfig = {};
+  try {
+    heroConfig = JSON.parse(heroRoot.dataset.cfConfig || "{}");
+  } catch {}
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(heroRoot).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    propConfig: heroConfig
+  }));
 }
 })();
 

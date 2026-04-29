@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from "react"
+import React, { useState, useEffect, useRef } from "react"
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  ⚙️  CONFIGURATION — fill these in before deploying
@@ -285,18 +285,11 @@ const STATUS = { IDLE: "idle", SENDING: "sending", SUCCESS: "success", ERROR: "e
 //
 //  Config via data-cf-config JSON attribute on the mount div.
 // ─────────────────────────────────────────────────────────────────────────────
-function ContactForm() {
+function ContactForm({ propConfig = {} }) {
 
-  // ── Read config from mount div ──────────────────────────────────────────────
-  const config = useMemo(() => {
-    const mounts = document.querySelectorAll("[data-cf-config]")
-    let parsed = {}
-    mounts.forEach((el) => {
-      try { Object.assign(parsed, JSON.parse(el.dataset.cfConfig)) } catch {}
-    })
-    return parsed
-  }, [])
-
+  // ── Config comes as a prop from index.js ────────────────────────────────────
+  // Each mount passes its own data-cf-config so instances don't bleed into each other
+  const config    = propConfig
   const info      = { ...DEFAULT_INFO, ...config }
   const isCompact = config.mode === "compact"
 
@@ -601,6 +594,8 @@ function ContactForm() {
           border: 1px solid rgba(201,168,76,0.22);
           border-radius: 12px;
           padding: 32px 28px;
+          max-width: 560px;
+          width: 100%;
         }
         @media (max-width: 640px) {
           .cf-compact-card { padding: 24px 18px !important; }
