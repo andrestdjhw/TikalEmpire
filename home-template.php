@@ -420,52 +420,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
 
 <!-- ═══ BLOCK 8 — TESTIMONIALS ══════════════════════════════════════════════ -->
 <section style="<?php echo hp_section_style($bg['testimonials'], '#0d1b2a', $overlay['testimonials']); ?> padding:96px 0;">
-  <?php hp_bg_overlay($bg['testimonials'], '#0d1b2a', $overlay['testimonials']); ?>
-  <div style="position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:0 24px;">
-    <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
-      <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
-        <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What Maryland Homeowners Are Saying</span>
-        <div style="width:36px; height:1px; background:#C9A84C;"></div>
-      </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; line-height:1.2;">
-        They Trusted Us.<br>Here's What They Found.
-      </h2>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-testimonials-grid">
-      <?php
-      $testimonials = [
-        ['quote'=>'Tikal Empire completely transformed our kitchen — from dated oak cabinets to a stunning modern space. They finished on time, within budget, and left our home spotless every single day.','name'=>'Jennifer M.','city'=>'Potomac, MD','service'=>'Kitchen Remodel'],
-        ['quote'=>'Our master bathroom went from a 1990s eyesore to something out of a magazine. Cristian and his team were professional, communicative, and the craftsmanship is flawless.','name'=>'Marcus & Diana T.','city'=>'Columbia, MD','service'=>'Bathroom Renovation'],
-        ['quote'=>'They installed LVP throughout our entire first floor in two days. The seams are invisible, the pattern layout is perfect, and they cleaned up better than any contractor we\'ve ever hired.','name'=>'Robert K.','city'=>'Ellicott City, MD','service'=>'Flooring Installation'],
-      ];
-      foreach ($testimonials as $t) : ?>
-        <div class="hp-testimonial-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:32px 28px; display:flex; flex-direction:column; gap:20px;">
-          <div style="display:flex; gap:3px;"><?php for($i=0;$i<5;$i++): ?><svg width="16" height="16" viewBox="0 0 20 20" fill="#C9A84C"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><?php endfor; ?></div>
-          <blockquote style="font-family:'Playfair Display',serif; font-size:15px; font-style:italic; color:rgba(255,255,255,0.82); line-height:1.75; margin:0; flex:1;">"<?php echo $t['quote']; ?>"</blockquote>
-          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid rgba(255,255,255,0.07);">
-            <div>
-              <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#fff; margin:0;"><?php echo $t['name']; ?></p>
-              <p style="font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.38); margin:3px 0 0;"><?php echo $t['city']; ?></p>
-            </div>
-            <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:rgba(201,168,76,0.12); color:#C9A84C; padding:4px 10px; border-radius:3px; border:1px solid rgba(201,168,76,0.2);"><?php echo $t['service']; ?></span>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">
-        <svg viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        Read More Reviews on Google →
-      </a>
-    </div>
-    <div style="margin-top:48px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; gap:28px; flex-wrap:wrap;">
-      <?php foreach(['Google Reviews ★★★★★','MHIC #154361','Licensed & Insured','Maryland'] as $badge): ?>
-        <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.3);"><?php echo $badge; ?></span>
-        <span style="color:rgba(201,168,76,0.2);">·</span>
-      <?php endforeach; ?>
-    </div>
-  </div>
+  
+
+  <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
 </section>
 
 <!-- ═══ BLOCK 9 — SERVICE AREAS ════════════════════════════════════════════ -->
