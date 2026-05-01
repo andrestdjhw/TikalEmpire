@@ -167,7 +167,6 @@ function Navbar() {
     <>
       {/* ── Fonts & Global Styles ─────────────────────────────────────────── */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
 
         @keyframes navTicker {
           from { transform: translateX(0); }
@@ -291,7 +290,7 @@ function Navbar() {
 
           {/* ── Left: phone + email ── */}
           <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-            <a href="tel:+13013004172" style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.05em", color: C.gold, textDecoration: "none", transition: "color 0.2s" }}
+            <a href="tel:+13013004172" style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "'Amino',sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.05em", color: C.gold, textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={(e) => e.currentTarget.style.color = C.goldHover}
               onMouseLeave={(e) => e.currentTarget.style.color = C.gold}
             >
@@ -301,7 +300,7 @@ function Navbar() {
               (301) 300-4172
             </a>
             <span style={{ color: "rgba(255,255,255,0.12)", fontSize: "12px" }}>|</span>
-            <a href="mailto:info@tikalempire.com" style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.04em", color: "rgba(255,255,255,0.5)", textDecoration: "none", transition: "color 0.2s" }}
+            <a href="mailto:info@tikalempire.com" style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "'Amino',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.04em", color: "rgba(255,255,255,0.5)", textDecoration: "none", transition: "color 0.2s" }}
               onMouseEnter={(e) => e.currentTarget.style.color = C.gold}
               onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
             >
@@ -317,7 +316,7 @@ function Navbar() {
             href="https://maps.google.com/?q=Maryland"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: "flex", alignItems: "center", gap: "7px", fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.09em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", textDecoration: "none", transition: "color 0.2s" }}
+            style={{ display: "flex", alignItems: "center", gap: "7px", fontFamily: "'Amino',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.09em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", textDecoration: "none", transition: "color 0.2s" }}
             onMouseEnter={(e) => e.currentTarget.style.color = C.gold}
             onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.45)"}
           >

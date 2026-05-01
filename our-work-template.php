@@ -12,7 +12,7 @@ get_header(); ?>
 
 /* ── Filter tabs ──────────────────────────────────────────────────────────── */
 .ow-filter-btn {
-  font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700;
+  font-family:'Amino',sans-serif; font-size:11px; font-weight:700;
   letter-spacing:0.1em; text-transform:uppercase;
   background:none; border:none; cursor:pointer;
   padding:12px 22px; color:rgba(11,31,51,0.4);
@@ -38,7 +38,7 @@ get_header(); ?>
 .ow-ba-clip { position:absolute; inset:0; width:50%; overflow:hidden; }
 .ow-ba-handle { position:absolute; top:0; left:50%; width:3px; height:100%; background:#C9A84C; transform:translateX(-50%); z-index:10; pointer-events:none; }
 .ow-ba-knob { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; border-radius:50%; background:#C9A84C; border:3px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; }
-.ow-ba-label { position:absolute; z-index:5; top:10px; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:4px 9px; border-radius:3px; }
+.ow-ba-label { position:absolute; z-index:5; top:10px; font-family:'Amino',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:4px 9px; border-radius:3px; }
 
 /* ── Grid layout ──────────────────────────────────────────────────────────── */
 .ow-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
@@ -62,20 +62,20 @@ get_header(); ?>
     <div style="max-width:680px;">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:24px;">
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Portfolio · Maryland</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Portfolio · Maryland</span>
       </div>
-      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,4.4rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px;">
+      <h1 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(2.2rem,6vw,4.4rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px;">
         Real Projects.<br><span style="color:#C9A84C;">Real Results.</span>
       </h1>
-      <p style="font-family:'Inter',sans-serif; font-size:clamp(1rem,2vw,1.15rem); color:rgba(255,255,255,0.75); line-height:1.78; max-width:560px;">
+      <p style="font-family:'Amino',sans-serif; font-size:clamp(1rem,2vw,1.15rem); color:rgba(255,255,255,0.75); line-height:1.78; max-width:560px;">
         Every transformation tells a story of clean execution, attention to detail, and a Maryland homeowner who felt certain from start to finish.
       </p>
       <!-- Stats row -->
       <div style="display:flex; gap:32px; flex-wrap:wrap; margin-top:44px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.1);">
         <?php foreach([['v'=>'6+','l'=>'Projects at Launch'],['v'=>'3','l'=>'Service Types'],['v'=>'MD','l'=>'50-Mile Radius']] as $s): ?>
           <div>
-            <p style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;"><?php echo $s['v']; ?></p>
-            <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:5px 0 0;"><?php echo $s['l']; ?></p>
+            <p style="font-family:'AkzidenzGrotesk',sans-serif; font-size:2rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;"><?php echo $s['v']; ?></p>
+            <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:5px 0 0;"><?php echo $s['l']; ?></p>
           </div>
         <?php endforeach; ?>
       </div>
@@ -106,7 +106,7 @@ get_header(); ?>
     </div>
 
     <!-- Counter -->
-    <p id="ow-count" style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(11,31,51,0.35); margin-bottom:32px; text-align:center;"></p>
+    <p id="ow-count" style="font-family:'Amino',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(11,31,51,0.35); margin-bottom:32px; text-align:center;"></p>
 
     <!-- Project grid -->
     <div class="ow-grid" id="ow-grid">
@@ -234,16 +234,16 @@ get_header(); ?>
           <!-- Card body -->
           <div style="padding:22px 22px 24px;">
             <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px;">
-              <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; background:<?php echo $bc['bg']; ?>; color:<?php echo $bc['color']; ?>; border:1px solid <?php echo $bc['border']; ?>; padding:4px 10px; border-radius:3px;">
+              <span style="font-family:'Amino',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; background:<?php echo $bc['bg']; ?>; color:<?php echo $bc['color']; ?>; border:1px solid <?php echo $bc['border']; ?>; padding:4px 10px; border-radius:3px;">
                 <?php echo $p['badge']; ?>
               </span>
-              <span style="font-family:'Inter',sans-serif; font-size:12px; color:#415a77; display:flex; align-items:center; gap:5px; white-space:nowrap;">
+              <span style="font-family:'Amino',sans-serif; font-size:12px; color:#415a77; display:flex; align-items:center; gap:5px; white-space:nowrap;">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                 <?php echo $p['loc']; ?>
               </span>
             </div>
-            <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2f2f2f; line-height:1.68; margin:0 0 16px; opacity:0.75;"><?php echo $p['note']; ?></p>
-            <a href="/contact" style="display:inline-flex; align-items:center; gap:6px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none; transition:gap 0.2s;" onmouseover="this.style.gap='10px';" onmouseout="this.style.gap='6px';">
+            <p style="font-family:'Amino',sans-serif; font-size:13px; color:#2f2f2f; line-height:1.68; margin:0 0 16px; opacity:0.75;"><?php echo $p['note']; ?></p>
+            <a href="/contact" style="display:inline-flex; align-items:center; gap:6px; font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none; transition:gap 0.2s;" onmouseover="this.style.gap='10px';" onmouseout="this.style.gap='6px';">
               Get a Similar Estimate <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -253,7 +253,7 @@ get_header(); ?>
 
     <!-- Empty state (hidden by default) -->
     <div id="ow-empty" style="display:none; text-align:center; padding:72px 0;">
-      <p style="font-family:'Playfair Display',serif; font-size:1.5rem; color:#0d1b2a; opacity:0.35; margin:0;">More projects coming soon.</p>
+      <p style="font-family:'AkzidenzGrotesk',sans-serif; font-size:1.5rem; color:#0d1b2a; opacity:0.35; margin:0;">More projects coming soon.</p>
     </div>
 
   </div>
@@ -263,15 +263,15 @@ get_header(); ?>
 <section style="background:#C9A84C; padding:56px 24px;">
   <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;" class="ow-cta-flex">
     <div>
-      <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Like What You See?</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Request a Free Estimate for Your Home.</h2>
-      <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
+      <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Like What You See?</p>
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Request a Free Estimate for Your Home.</h2>
+      <p style="font-family:'Amino',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
     </div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Amino',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
         Request a Free Estimate
       </a>
-      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
+      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Amino',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (301) 300-4172
       </a>

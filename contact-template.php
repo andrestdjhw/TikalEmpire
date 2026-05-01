@@ -20,13 +20,13 @@ get_header(); ?>
   <div style="max-width:1280px; margin:0 auto; padding:0 24px; text-align:center;" class="cp-fade-up">
     <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:20px;">
       <div style="width:36px; height:1px; background:#C9A84C;"></div>
-      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Free In-Home Estimate</span>
+      <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Free In-Home Estimate</span>
       <div style="width:36px; height:1px; background:#C9A84C;"></div>
     </div>
-    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.6rem); font-weight:900; color:#0d1b2a; line-height:1.1; margin-bottom:18px; letter-spacing:-0.02em;">
+    <h1 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(2rem,5vw,3.6rem); font-weight:900; color:#0d1b2a; line-height:1.1; margin-bottom:18px; letter-spacing:-0.02em;">
       Let's Talk About Your Home.
     </h1>
-    <p style="font-family:'Inter',sans-serif; font-size:clamp(1rem,2vw,1.1rem); color:#2f2f2f; opacity:0.6; max-width:580px; margin:0 auto; line-height:1.75;">
+    <p style="font-family:'Amino',sans-serif; font-size:clamp(1rem,2vw,1.1rem); color:#2f2f2f; opacity:0.6; max-width:580px; margin:0 auto; line-height:1.75;">
       Request a free in-home estimate. No pressure — just an honest conversation about what your home needs and what it will cost.
     </p>
   </div>
@@ -56,10 +56,10 @@ $contact_config = json_encode([
 <!-- ═══ RESPONSE PROMISE ══════════════════════════════════════════════════════ -->
 <section style="background:#d1d5db; padding:40px 0; border-top:1px solid rgba(11,31,51,0.07);">
   <div style="max-width:680px; margin:0 auto; padding:0 24px; text-align:center;" class="cp-fade-up">
-    <p style="font-family:'Playfair Display',serif; font-size:15px; font-style:italic; color:#2f2f2f; opacity:0.6; line-height:1.8; margin:0;">
+    <p style="font-family:'AkzidenzGrotesk',sans-serif; font-size:15px; font-style:italic; color:#2f2f2f; opacity:0.6; line-height:1.8; margin:0;">
       "We'll review your request and reach out within 24–48 hours. This is a real conversation with our team — not an automated funnel. We want to understand your project before we recommend anything."
     </p>
-    <span style="display:inline-block; margin-top:14px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C;">— Cristian, Founder · Tikal Empire LLC</span>
+    <span style="display:inline-block; margin-top:14px; font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C;">— Cristian, Founder · Tikal Empire LLC</span>
   </div>
 </section>
 
@@ -79,7 +79,7 @@ $contact_config = json_encode([
       <?php endif; ?>
       <div style="display:flex; align-items:center; gap:7px; white-space:nowrap;">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $item['icon']; ?>"/></svg>
-        <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; color:rgba(255,255,255,0.58);"><?php echo $item['text']; ?></span>
+        <span style="font-family:'Amino',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; color:rgba(255,255,255,0.58);"><?php echo $item['text']; ?></span>
       </div>
     <?php endforeach; ?>
   </div>

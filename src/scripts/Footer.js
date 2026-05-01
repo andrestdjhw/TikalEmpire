@@ -220,7 +220,7 @@ function Footer() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+        
       `}</style>
 
       <footer style={{ backgroundColor: C.navy }}>

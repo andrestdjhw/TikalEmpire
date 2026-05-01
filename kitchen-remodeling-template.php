@@ -53,19 +53,19 @@ get_header(); ?>
     <div style="max-width:760px;">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:24px;">
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Kitchen Remodeling · Maryland</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Kitchen Remodeling · Maryland</span>
       </div>
-      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,4.5rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px;">
+      <h1 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(2.2rem,6vw,4.5rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px;">
         The Kitchen You've Always Imagined.<br><span style="color:#C9A84C;">Built Exactly Right.</span>
       </h1>
-      <p style="font-family:'Inter',sans-serif; font-size:clamp(1rem,2vw,1.15rem); color:rgba(255,255,255,0.78); line-height:1.75; max-width:600px; margin-bottom:40px;">
+      <p style="font-family:'Amino',sans-serif; font-size:clamp(1rem,2vw,1.15rem); color:rgba(255,255,255,0.78); line-height:1.75; max-width:600px; margin-bottom:40px;">
         Full kitchen transformations in Maryland — cabinets, countertops, layout, tile, and every detail in between. Licensed, structured, and delivered on schedule.
       </p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
-        <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
+        <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0d1b2a; font-family:'Amino',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; box-shadow:0 4px 24px rgba(201,168,76,0.38); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
           Request a Free Estimate
         </a>
-        <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.75); font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.75)';">
+        <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.75); font-family:'Amino',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.75)';">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           (301) 300-4172
         </a>
@@ -73,7 +73,7 @@ get_header(); ?>
       <!-- Trust badges -->
       <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.1);">
         <?php foreach(['MHIC #154361','Licensed & Insured','Starting at $80,000','Free Estimate'] as $b): ?>
-          <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:7px;">
+          <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:7px;">
             <span style="width:5px; height:5px; border-radius:50%; background:#C9A84C; flex-shrink:0;"></span><?php echo $b; ?>
           </span>
         <?php endforeach; ?>
@@ -88,12 +88,12 @@ get_header(); ?>
     <div class="kr-fade-up">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Approach</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Our Approach</span>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin-bottom:28px;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin-bottom:28px;">
         More Than Cabinets<br>and Countertops.
       </h2>
-      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.82;">
+      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Amino',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.82;">
         <p style="margin:0;">Your kitchen is where your home begins. It's where mornings start, where family gathers, and where the character of your home is most on display.</p>
         <p style="margin:0;">At Tikal Empire, a kitchen remodel is never just about cabinets and countertops. It's about creating a space that functions perfectly for how you actually live — and looks exactly the way you imagined it.</p>
         <p style="margin:0;">With our MHIC-licensed team, locally sourced premium cabinets, and a structured process from design to final walk-through, you get a kitchen that lasts decades and makes you proud every single day.</p>
@@ -104,8 +104,8 @@ get_header(); ?>
         $stats = [['val'=>'MHIC','lbl'=>'Licensed Contractor'],['val'=>'$80K+','lbl'=>'Starting Investment'],['val'=>'3–6','lbl'=>'Weeks to Completion']];
         foreach ($stats as $s): ?>
           <div>
-            <p style="font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;"><?php echo $s['val']; ?></p>
-            <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#2f2f2f; opacity:0.55; margin:5px 0 0;"><?php echo $s['lbl']; ?></p>
+            <p style="font-family:'AkzidenzGrotesk',sans-serif; font-size:1.8rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;"><?php echo $s['val']; ?></p>
+            <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#2f2f2f; opacity:0.55; margin:5px 0 0;"><?php echo $s['lbl']; ?></p>
           </div>
         <?php endforeach; ?>
       </div>
@@ -114,7 +114,7 @@ get_header(); ?>
       <div style="border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:linear-gradient(135deg,#0d1b2a,#415a77); position:relative;">
         <img src="/wp-content/uploads/kitchen-cabinet-detail.jpg" alt="Premium kitchen cabinet hardware detail" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
         <div style="position:absolute; bottom:0; left:0; right:0; padding:16px 18px; background:linear-gradient(transparent,rgba(11,31,51,0.88));">
-          <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Craftsmanship Detail</span>
+          <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Craftsmanship Detail</span>
         </div>
       </div>
     </div>
@@ -127,10 +127,10 @@ get_header(); ?>
     <div style="text-align:center; margin-bottom:56px;" class="kr-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What's Included</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What's Included</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:560px; margin:0 auto;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:560px; margin:0 auto;">
         We Handle Everything.<br>You Focus on the Vision.
       </h2>
     </div>
@@ -151,11 +151,12 @@ get_header(); ?>
           <div style="width:40px; height:40px; border-radius:8px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $svc['icon']; ?>"/></svg>
           </div>
-          <span style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.04em; color:#0d1b2a; line-height:1.5; padding-top:9px;"><?php echo $svc['label']; ?></span>
+          <span style="font-family:'Amino',sans-serif
+          ; font-size:12px; font-weight:700; letter-spacing:0.04em; color:#0d1b2a; line-height:1.5; padding-top:9px;"><?php echo $svc['label']; ?></span>
         </div>
       <?php endforeach; ?>
     </div>
-    <p style="text-align:center; margin-top:28px; font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.5;">
+    <p style="text-align:center; margin-top:28px; font-family:'Amino',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.5;">
       Not sure what your project needs? <a href="/contact" style="color:#C9A84C; text-decoration:none; font-weight:600; border-bottom:1px solid rgba(201,168,76,0.4);">Let's talk through it together →</a>
     </p>
   </div>
@@ -167,10 +168,10 @@ get_header(); ?>
     <div style="text-align:center; margin-bottom:52px;" class="kr-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Investment Range</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Investment Range</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#fff; line-height:1.2;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#fff; line-height:1.2;">
         Transparent Pricing.<br>No Surprises.
       </h2>
     </div>
@@ -178,12 +179,12 @@ get_header(); ?>
       <!-- Tier 1 -->
       <div class="kr-pricing-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.2); border-radius:10px; padding:40px 36px; position:relative; overflow:hidden;">
         <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,transparent,#C9A84C88,transparent);"></div>
-        <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C9A84C; margin:0 0 12px;">Basic Kitchen Remodel</p>
-        <p style="font-family:'Playfair Display',serif; font-size:3rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;">$80,000<span style="font-size:1.2rem; color:rgba(255,255,255,0.45); font-family:'Montserrat',sans-serif; font-weight:500;">+</span></p>
-        <p style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:10px 0 28px;">3–4 Weeks</p>
+        <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C9A84C; margin:0 0 12px;">Basic Kitchen Remodel</p>
+        <p style="font-family:'AkzidenzGrotesk',sans-serif; font-size:3rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;">$80,000<span style="font-size:1.2rem; color:rgba(255,255,255,0.45); font-family:'Amino',sans-serif; font-weight:500;">+</span></p>
+        <p style="font-family:'Amino',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:10px 0 28px;">3–4 Weeks</p>
         <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
           <?php foreach(['Cabinets & hardware','Countertop installation','Tile backsplash','Paint & fixtures','Plumbing & sink swap'] as $item): ?>
-            <li style="display:flex; align-items:center; gap:10px; font-family:'Inter',sans-serif; font-size:14px; color:rgba(255,255,255,0.65);">
+            <li style="display:flex; align-items:center; gap:10px; font-family:'Amino',sans-serif; font-size:14px; color:rgba(255,255,255,0.65);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="#C9A84C"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <?php echo $item; ?>
             </li>
@@ -193,13 +194,13 @@ get_header(); ?>
       <!-- Tier 2 -->
       <div class="kr-pricing-card" style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.38); border-radius:10px; padding:40px 36px; position:relative; overflow:hidden;">
         <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,transparent,#C9A84C,transparent);"></div>
-        <div style="position:absolute; top:16px; right:20px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; border-radius:3px;">Most Popular</div>
-        <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C9A84C; margin:0 0 12px;">Full Kitchen Transformation</p>
-        <p style="font-family:'Playfair Display',serif; font-size:3rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;">$150,000<span style="font-size:1.2rem; color:rgba(255,255,255,0.45); font-family:'Montserrat',sans-serif; font-weight:500;">+</span></p>
-        <p style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:10px 0 28px;">4–6 Weeks</p>
+        <div style="position:absolute; top:16px; right:20px; background:#C9A84C; color:#0d1b2a; font-family:'Amino',sans-serif; font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; border-radius:3px;">Most Popular</div>
+        <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#C9A84C; margin:0 0 12px;">Full Kitchen Transformation</p>
+        <p style="font-family:'AkzidenzGrotesk',sans-serif; font-size:3rem; font-weight:900; color:#C9A84C; margin:0; line-height:1;">$150,000<span style="font-size:1.2rem; color:rgba(255,255,255,0.45); font-family:'Amino',sans-serif; font-weight:500;">+</span></p>
+        <p style="font-family:'Amino',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin:10px 0 28px;">4–6 Weeks</p>
         <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
           <?php foreach(['Complete layout redesign','Custom millwork & cabinetry','Premium quartz, granite, or marble','Full electrical & lighting design','Plumbing reconfiguration','Island design & installation','Flooring — full room'] as $item): ?>
-            <li style="display:flex; align-items:center; gap:10px; font-family:'Inter',sans-serif; font-size:14px; color:rgba(255,255,255,0.72);">
+            <li style="display:flex; align-items:center; gap:10px; font-family:'Amino',sans-serif; font-size:14px; color:rgba(255,255,255,0.72);">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="#C9A84C"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <?php echo $item; ?>
             </li>
@@ -207,7 +208,7 @@ get_header(); ?>
         </ul>
       </div>
     </div>
-    <p style="text-align:center; margin-top:28px; font-family:'Inter',sans-serif; font-size:14px; color:rgba(255,255,255,0.35); max-width:520px; margin-left:auto; margin-right:auto;">
+    <p style="text-align:center; margin-top:28px; font-family:'Amino',sans-serif; font-size:14px; color:rgba(255,255,255,0.35); max-width:520px; margin-left:auto; margin-right:auto;">
       Final investment depends on scope, materials, and layout complexity. Your estimate is <strong style="color:rgba(255,255,255,0.55);">free and obligation-free.</strong>
     </p>
   </div>
@@ -219,13 +220,13 @@ get_header(); ?>
     <div style="text-align:center; margin-bottom:52px;" class="kr-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Real Projects. Real Results.</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Real Projects. Real Results.</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         Kitchen Transformations<br>Across Maryland.
       </h2>
-      <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.5; margin-top:12px;">Drag the slider to reveal each transformation.</p>
+      <p style="font-family:'Amino',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.5; margin-top:12px;">Drag the slider to reveal each transformation.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="kr-ba-grid">
       <?php
@@ -238,11 +239,11 @@ get_header(); ?>
         <div>
           <div class="kr-ba-wrap" data-ba="<?php echo $idx; ?>">
             <img src="<?php echo $p['before']; ?>" alt="Before — <?php echo esc_attr($p['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.parentElement.style.background='#415a77'"/>
-            <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
+            <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Amino',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
             <div class="kr-ba-after-clip">
               <img src="<?php echo $p['after']; ?>" class="kr-ba-after-img" alt="After — <?php echo esc_attr($p['label']); ?>" style="position:absolute; top:0; left:0; height:100%; object-fit:cover;" onerror="this.parentElement.parentElement.style.background='#C9A84C'"/>
             </div>
-            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0d1b2a; padding:4px 10px; border-radius:3px;">After</span>
+            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Amino',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0d1b2a; padding:4px 10px; border-radius:3px;">After</span>
             <div class="kr-ba-handle">
               <div class="kr-ba-knob">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
@@ -251,10 +252,10 @@ get_header(); ?>
           </div>
           <div style="margin-top:14px; padding:0 4px; display:flex; align-items:center; justify-content:space-between;">
             <div>
-              <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#0d1b2a; margin:0;"><?php echo $p['label']; ?></p>
-              <p style="font-family:'Inter',sans-serif; font-size:12px; color:#415a77; margin:3px 0 0;"><?php echo $p['location']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:13px; font-weight:700; color:#0d1b2a; margin:0;"><?php echo $p['label']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:12px; color:#415a77; margin:3px 0 0;"><?php echo $p['location']; ?></p>
             </div>
-            <a href="/our-work" style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">View All →</a>
+            <a href="/our-work" style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">View All →</a>
           </div>
         </div>
       <?php endforeach; ?>
@@ -268,10 +269,10 @@ get_header(); ?>
     <div style="text-align:center; margin-bottom:64px;" class="kr-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">How We Work</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">How We Work</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         How Your Kitchen<br>Remodel Works.
       </h2>
     </div>
@@ -287,10 +288,10 @@ get_header(); ?>
       foreach ($steps as $i => $s): ?>
         <div class="kr-fade-up" style="text-align:center; padding:0 12px;" data-delay="<?php echo $i*100; ?>">
           <div style="width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,#0d1b2a,#060d18); border:2px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 20px; box-shadow:0 8px 24px rgba(11,31,51,0.14);">
-            <span style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:900; color:#C9A84C;"><?php echo $s['n']; ?></span>
+            <span style="font-family:'AkzidenzGrotesk',sans-serif; font-size:1.4rem; font-weight:900; color:#C9A84C;"><?php echo $s['n']; ?></span>
           </div>
-          <h3 style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
-          <p style="font-family:'Inter',sans-serif; font-size:13px; color:#2f2f2f; opacity:0.65; line-height:1.7; margin:0;"><?php echo $s['body']; ?></p>
+          <h3 style="font-family:'Amino',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
+          <p style="font-family:'Amino',sans-serif; font-size:13px; color:#2f2f2f; opacity:0.65; line-height:1.7; margin:0;"><?php echo $s['body']; ?></p>
         </div>
       <?php endforeach; ?>
     </div>
@@ -301,7 +302,7 @@ get_header(); ?>
 <section style="background:#0d1b2a; padding:80px 0;">
   <div style="max-width:960px; margin:0 auto; padding:0 24px;">
     <div style="text-align:center; margin-bottom:40px;" class="kr-fade-up">
-      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What Homeowners Say</span>
+      <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What Homeowners Say</span>
     </div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;" class="kr-pricing-grid">
       <?php
@@ -312,13 +313,13 @@ get_header(); ?>
       foreach ($testimonials as $t): ?>
         <div class="kr-testimonial" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:32px 28px;">
           <div style="display:flex; gap:3px; margin-bottom:18px;"><?php for($i=0;$i<5;$i++): ?><svg width="16" height="16" viewBox="0 0 20 20" fill="#C9A84C"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><?php endfor; ?></div>
-          <blockquote style="font-family:'Playfair Display',serif; font-size:15px; font-style:italic; color:rgba(255,255,255,0.8); line-height:1.75; margin:0 0 20px;">"<?php echo $t['q']; ?>"</blockquote>
+          <blockquote style="font-family:'AkzidenzGrotesk',sans-serif; font-size:15px; font-style:italic; color:rgba(255,255,255,0.8); line-height:1.75; margin:0 0 20px;">"<?php echo $t['q']; ?>"</blockquote>
           <div style="display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid rgba(255,255,255,0.07);">
             <div>
-              <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#fff; margin:0;"><?php echo $t['name']; ?></p>
-              <p style="font-family:'Inter',sans-serif; font-size:11px; color:rgba(255,255,255,0.38); margin:3px 0 0;"><?php echo $t['city']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:12px; font-weight:700; color:#fff; margin:0;"><?php echo $t['name']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:11px; color:rgba(255,255,255,0.38); margin:3px 0 0;"><?php echo $t['city']; ?></p>
             </div>
-            <span style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:rgba(201,168,76,0.12); color:#C9A84C; padding:4px 10px; border-radius:3px; border:1px solid rgba(201,168,76,0.2);">Kitchen Remodel</span>
+            <span style="font-family:'Amino',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:rgba(201,168,76,0.12); color:#C9A84C; padding:4px 10px; border-radius:3px; border:1px solid rgba(201,168,76,0.2);">Kitchen Remodel</span>
           </div>
         </div>
       <?php endforeach; ?>
@@ -330,15 +331,15 @@ get_header(); ?>
 <section style="background:#C9A84C; padding:56px 24px;">
   <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;" class="kr-cta-flex">
     <div>
-      <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Ready to Start?</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Ready to Transform Your Kitchen?</h2>
-      <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
+      <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(11,31,51,0.55); margin:0 0 8px;">Ready to Start?</p>
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:900; color:#0d1b2a; line-height:1.15; margin:0 0 6px;">Ready to Transform Your Kitchen?</h2>
+      <p style="font-family:'Amino',sans-serif; font-size:14px; color:rgba(11,31,51,0.65); margin:0;">We respond within 24–48 hours. No pressure. Just clarity.</p>
     </div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; justify-content:center; background:#0d1b2a; color:#C9A84C; font-family:'Amino',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 36px; height:54px; border-radius:4px; transition:background 0.2s,transform 0.15s; white-space:nowrap;" onmouseover="this.style.background='#060d18';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#0d1b2a';this.style.transform='none';">
         Request a Free Estimate
       </a>
-      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
+      <a href="tel:+13013004172" style="display:inline-flex; align-items:center; gap:8px; color:#0d1b2a; font-family:'Amino',sans-serif; font-size:14px; font-weight:700; text-decoration:none; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0.7';">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (301) 300-4172
       </a>

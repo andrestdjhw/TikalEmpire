@@ -11,7 +11,7 @@ get_header(); ?>
 .pp-fade-up.visible { opacity:1; transform:translateY(0); }
 .pp-section-link { color:#C9A84C; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.35); transition:border-color 0.2s; }
 .pp-section-link:hover { border-color:#C9A84C; }
-.pp-toc-link { display:block; font-family:'Inter',sans-serif; font-size:14px; color:rgba(11,31,51,0.6); text-decoration:none; padding:7px 0; border-bottom:1px solid rgba(11,31,51,0.06); transition:color 0.2s, padding-left 0.2s; }
+.pp-toc-link { display:block; font-family:'Amino',sans-serif; font-size:14px; color:rgba(11,31,51,0.6); text-decoration:none; padding:7px 0; border-bottom:1px solid rgba(11,31,51,0.06); transition:color 0.2s, padding-left 0.2s; }
 .pp-toc-link:hover { color:#C9A84C; padding-left:6px; }
 .pp-toc-link:last-child { border-bottom:none; }
 </style>
@@ -21,12 +21,12 @@ get_header(); ?>
   <div style="max-width:860px; margin:0 auto; padding:0 24px;">
     <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
       <div style="width:36px; height:2px; background:#C9A84C;"></div>
-      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Legal</span>
+      <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Legal</span>
     </div>
-    <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.2rem); font-weight:900; color:#fff; line-height:1.1; margin-bottom:16px;">
+    <h1 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(2rem,5vw,3.2rem); font-weight:900; color:#fff; line-height:1.1; margin-bottom:16px;">
       Privacy Policy
     </h1>
-    <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(255,255,255,0.38); margin:0;">
+    <p style="font-family:'Amino',sans-serif; font-size:14px; color:rgba(255,255,255,0.38); margin:0;">
       Last updated: <?php echo date('F j, Y'); ?> &nbsp;·&nbsp; Tikal Empire LLC &nbsp;·&nbsp; MHIC #154361
     </p>
   </div>
@@ -41,7 +41,7 @@ get_header(); ?>
 
       <!-- Intro -->
       <div style="background:#fff; border-radius:10px; padding:36px 40px; border:1px solid rgba(11,31,51,0.08); margin-bottom:32px;" class="pp-fade-up">
-        <p style="font-family:'Inter',sans-serif; font-size:15px; color:#2f2f2f; line-height:1.82; margin:0;">
+        <p style="font-family:'Amino',sans-serif; font-size:15px; color:#2f2f2f; line-height:1.82; margin:0;">
           Tikal Empire LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or contact us about our home remodeling services — kitchen remodeling, bathroom renovation, and flooring installation in Maryland.
         </p>
       </div>
@@ -165,10 +165,10 @@ get_header(); ?>
 
       foreach ($sections as $i => $s): ?>
         <div id="<?php echo $s['id']; ?>" style="background:#fff; border-radius:10px; padding:36px 40px; border:1px solid rgba(11,31,51,0.08); margin-bottom:16px; scroll-margin-top:100px;" class="pp-fade-up" data-delay="<?php echo min($i * 60, 300); ?>">
-          <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:#0d1b2a; margin:0 0 18px; padding-bottom:14px; border-bottom:2px solid rgba(201,168,76,0.2);">
+          <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:1.4rem; font-weight:700; color:#0d1b2a; margin:0 0 18px; padding-bottom:14px; border-bottom:2px solid rgba(201,168,76,0.2);">
             <?php echo $s['title']; ?>
           </h2>
-          <div style="font-family:'Inter',sans-serif; font-size:15px; color:#2f2f2f; line-height:1.82;">
+          <div style="font-family:'Amino',sans-serif; font-size:15px; color:#2f2f2f; line-height:1.82;">
             <?php echo $s['body']; ?>
           </div>
         </div>
@@ -180,7 +180,7 @@ get_header(); ?>
     <div style="position:sticky; top:100px;" class="pp-sidebar">
       <!-- Table of contents -->
       <div style="background:#fff; border-radius:10px; padding:24px 24px; border:1px solid rgba(11,31,51,0.08); margin-bottom:16px;">
-        <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin:0 0 16px;">
+        <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin:0 0 16px;">
           Contents
         </p>
         <?php foreach ($sections as $s): ?>
@@ -189,9 +189,9 @@ get_header(); ?>
       </div>
       <!-- Contact card -->
       <div style="background:#0d1b2a; border-radius:10px; padding:24px; border:1px solid rgba(201,168,76,0.15);">
-        <p style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C; margin:0 0 10px;">Questions?</p>
-        <p style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.55); line-height:1.6; margin:0 0 16px;">We're happy to explain how we handle your data.</p>
-        <a href="mailto:info@tikalempirellc.com" style="display:block; text-align:center; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:11px 0; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
+        <p style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C; margin:0 0 10px;">Questions?</p>
+        <p style="font-family:'Amino',sans-serif; font-size:13px; color:rgba(255,255,255,0.55); line-height:1.6; margin:0 0 16px;">We're happy to explain how we handle your data.</p>
+        <a href="mailto:info@tikalempirellc.com" style="display:block; text-align:center; background:#C9A84C; color:#0d1b2a; font-family:'Amino',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding:11px 0; border-radius:4px; transition:background 0.2s;" onmouseover="this.style.background='#DFB95A';" onmouseout="this.style.background='#C9A84C';">
           Email Us
         </a>
       </div>

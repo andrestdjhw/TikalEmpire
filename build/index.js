@@ -307,7 +307,7 @@ function ContactInfo({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "10px",
               fontWeight: 600,
               letterSpacing: "0.1em",
@@ -318,7 +318,7 @@ function ContactInfo({
             children: ph.label
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "17px",
               fontWeight: 700,
               color: "#fff",
@@ -342,7 +342,7 @@ function ContactInfo({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "10px",
               fontWeight: 600,
               letterSpacing: "0.1em",
@@ -353,7 +353,7 @@ function ContactInfo({
             children: "Email"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "14px",
               fontWeight: 600,
               color: "rgba(255,255,255,0.75)",
@@ -375,7 +375,7 @@ function ContactInfo({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "10px",
               fontWeight: 600,
               letterSpacing: "0.1em",
@@ -386,7 +386,7 @@ function ContactInfo({
             children: "Address"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "14px",
               fontWeight: 500,
               color: "rgba(255,255,255,0.65)",
@@ -415,7 +415,7 @@ function ContactInfo({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "10px",
               fontWeight: 600,
               letterSpacing: "0.1em",
@@ -426,7 +426,7 @@ function ContactInfo({
             children: "WhatsApp"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             style: {
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "15px",
               fontWeight: 700,
               color: "#fff",
@@ -449,7 +449,7 @@ function ContactInfo({
       children: [ICONS.shield(C.gold), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
           style: {
-            fontFamily: "'Montserrat',sans-serif",
+            fontFamily: "'Amino',sans-serif",
             fontSize: "11px",
             fontWeight: 800,
             letterSpacing: "0.08em",
@@ -460,7 +460,7 @@ function ContactInfo({
           children: "MHIC #154361 \u2014 Licensed & Insured"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
           style: {
-            fontFamily: "'Inter',sans-serif",
+            fontFamily: "'Amino',sans-serif",
             fontSize: "11px",
             color: "rgba(255,255,255,0.32)",
             margin: "4px 0 0"
@@ -494,7 +494,7 @@ function ContactInfo({
       },
       children: [ICONS.google, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
         style: {
-          fontFamily: "'Montserrat',sans-serif",
+          fontFamily: "'Amino',sans-serif",
           fontSize: "11px",
           fontWeight: 600,
           letterSpacing: "0.06em",
@@ -713,7 +713,7 @@ function ContactForm({
       children: ICONS.check(C.gold)
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
       style: {
-        fontFamily: "'Playfair Display',serif",
+        fontFamily: "'AkzidenzGrotesk',sans-serif",
         fontSize: "1.5rem",
         fontWeight: 700,
         color: "#fff",
@@ -722,7 +722,7 @@ function ContactForm({
       children: "We Got Your Request!"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
       style: {
-        fontFamily: "'Inter',sans-serif",
+        fontFamily: "'Amino',sans-serif",
         fontSize: "14px",
         color: "rgba(255,255,255,0.5)",
         lineHeight: 1.75,
@@ -733,7 +733,7 @@ function ContactForm({
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
       href: "tel:+13013004172",
       style: {
-        fontFamily: "'Montserrat',sans-serif",
+        fontFamily: "'Amino',sans-serif",
         fontSize: "11px",
         fontWeight: 700,
         letterSpacing: "0.1em",
@@ -752,7 +752,7 @@ function ContactForm({
         borderRadius: "4px",
         padding: "8px 20px",
         cursor: "pointer",
-        fontFamily: "'Montserrat',sans-serif",
+        fontFamily: "'Amino',sans-serif",
         fontSize: "10px",
         fontWeight: 700,
         letterSpacing: "0.1em",
@@ -904,7 +904,7 @@ function ContactForm({
       },
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
         style: {
-          fontFamily: "'Inter',sans-serif",
+          fontFamily: "'Amino',sans-serif",
           fontSize: "13px",
           color: "#ff6b6b",
           margin: 0,
@@ -932,7 +932,8 @@ function ContactForm({
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style", {
       children: `
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+        
+
 
         /* ── Full mode ─────────────────────────────────────────────── */
         .cf-section {
@@ -1025,7 +1026,7 @@ function ContactForm({
       className: "cf-compact-card",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
         style: {
-          fontFamily: "'Montserrat',sans-serif",
+          fontFamily: "'Amino',sans-serif",
           fontSize: "10px",
           fontWeight: 700,
           letterSpacing: "0.2em",
@@ -1036,7 +1037,7 @@ function ContactForm({
         children: "Free In-Home Estimate"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
         style: {
-          fontFamily: "'Playfair Display',serif",
+          fontFamily: "'AkzidenzGrotesk',sans-serif",
           fontSize: "1.4rem",
           fontWeight: 700,
           color: "#fff",
@@ -1046,7 +1047,7 @@ function ContactForm({
         children: "Get Your Free Estimate"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
         style: {
-          fontFamily: "'Inter',sans-serif",
+          fontFamily: "'Amino',sans-serif",
           fontSize: "12px",
           color: "rgba(255,255,255,0.38)",
           margin: "0 0 22px",
@@ -1065,7 +1066,7 @@ function ContactForm({
           children: status === STATUS.SUCCESS ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SuccessScreen, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
               style: {
-                fontFamily: "'Playfair Display',serif",
+                fontFamily: "'AkzidenzGrotesk',sans-serif",
                 fontSize: "1.5rem",
                 fontWeight: 700,
                 color: "#fff",
@@ -1074,7 +1075,7 @@ function ContactForm({
               children: "Request Your Free Estimate"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
               style: {
-                fontFamily: "'Inter',sans-serif",
+                fontFamily: "'Amino',sans-serif",
                 fontSize: "13px",
                 color: "rgba(255,255,255,0.4)",
                 marginBottom: "28px",
@@ -1421,7 +1422,7 @@ function Footer() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style", {
       children: `
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+        
       `
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("footer", {
       style: {
@@ -2113,7 +2114,6 @@ function Navbar() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style", {
       children: `
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
 
         @keyframes navTicker {
           from { transform: translateX(0); }
@@ -2245,7 +2245,7 @@ function Navbar() {
               display: "flex",
               alignItems: "center",
               gap: "6px",
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "11px",
               fontWeight: 700,
               letterSpacing: "0.05em",
@@ -2276,7 +2276,7 @@ function Navbar() {
               display: "flex",
               alignItems: "center",
               gap: "6px",
-              fontFamily: "'Montserrat',sans-serif",
+              fontFamily: "'Amino',sans-serif",
               fontSize: "11px",
               fontWeight: 600,
               letterSpacing: "0.04em",
@@ -2304,7 +2304,7 @@ function Navbar() {
             display: "flex",
             alignItems: "center",
             gap: "7px",
-            fontFamily: "'Montserrat',sans-serif",
+            fontFamily: "'Amino',sans-serif",
             fontSize: "11px",
             fontWeight: 600,
             letterSpacing: "0.09em",

@@ -187,8 +187,8 @@ function ContactInfo({ info }) {
           <a key={ph.href} href={ph.href} style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
             <IconBox bg="rgba(201,168,76,0.1)" border="rgba(201,168,76,0.2)">{ICONS.phone(C.gold)}</IconBox>
             <div>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>{ph.label}</p>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "17px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>{ph.number}</p>
+              <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>{ph.label}</p>
+              <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "17px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>{ph.number}</p>
             </div>
           </a>
         ))}
@@ -197,8 +197,8 @@ function ContactInfo({ info }) {
           <a href={`mailto:${info.email}`} style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
             <IconBox bg="rgba(74,111,138,0.12)" border="rgba(74,111,138,0.2)">{ICONS.email(C.steel)}</IconBox>
             <div>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>Email</p>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "14px", fontWeight: 600, color: "rgba(255,255,255,0.75)", margin: "3px 0 0" }}>{info.email}</p>
+              <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>Email</p>
+              <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "14px", fontWeight: 600, color: "rgba(255,255,255,0.75)", margin: "3px 0 0" }}>{info.email}</p>
             </div>
           </a>
         )}
@@ -207,8 +207,8 @@ function ContactInfo({ info }) {
           <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
             <IconBox bg="rgba(74,111,138,0.12)" border="rgba(74,111,138,0.2)">{ICONS.pin(C.steel)}</IconBox>
             <div>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>Address</p>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "14px", fontWeight: 500, color: "rgba(255,255,255,0.65)", margin: "3px 0 0", lineHeight: 1.5 }}>
+              <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>Address</p>
+              <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "14px", fontWeight: 500, color: "rgba(255,255,255,0.65)", margin: "3px 0 0", lineHeight: 1.5 }}>
                 {info.address.split("\n").map((line, i, arr) => (
                   <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
                 ))}
@@ -220,8 +220,8 @@ function ContactInfo({ info }) {
         <a href={info.whatsapp || "https://wa.me/13013004172"} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "14px", textDecoration: "none" }}>
           <IconBox bg="rgba(37,211,102,0.1)" border="rgba(37,211,102,0.2)">{ICONS.whatsapp}</IconBox>
           <div>
-            <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>WhatsApp</p>
-            <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "15px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>Message Us</p>
+            <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.32)", margin: 0 }}>WhatsApp</p>
+            <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "15px", fontWeight: 700, color: "#fff", margin: "3px 0 0" }}>Message Us</p>
           </div>
         </a>
 
@@ -230,8 +230,8 @@ function ContactInfo({ info }) {
       <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", padding: "12px 18px", borderRadius: "6px", border: "1px solid rgba(201,168,76,0.25)", background: "rgba(201,168,76,0.05)" }}>
         {ICONS.shield(C.gold)}
         <div>
-          <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: C.gold, margin: 0 }}>MHIC #154361 — Licensed & Insured</p>
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "11px", color: "rgba(255,255,255,0.32)", margin: "4px 0 0" }}>We respond within 24–48 hours. No pressure. Just clarity.</p>
+          <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: C.gold, margin: 0 }}>MHIC #154361 — Licensed & Insured</p>
+          <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "11px", color: "rgba(255,255,255,0.32)", margin: "4px 0 0" }}>We respond within 24–48 hours. No pressure. Just clarity.</p>
         </div>
       </div>
 
@@ -245,7 +245,7 @@ function ContactInfo({ info }) {
           onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";  e.currentTarget.style.background = "rgba(255,255,255,0.04)" }}
         >
           {ICONS.google}
-          <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.06em", color: "rgba(255,255,255,0.55)" }}>
+          <span style={{ fontFamily: "'Amino',sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.06em", color: "rgba(255,255,255,0.55)" }}>
             See Our Google Reviews ★★★★★
           </span>
         </a>
@@ -415,18 +415,18 @@ function ContactForm({ propConfig = {} }) {
   const SuccessScreen = () => (
     <div className="cf-success">
       <div className="cf-success-icon">{ICONS.check(C.gold)}</div>
-      <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0 }}>
+      <h3 style={{ fontFamily: "'AkzidenzGrotesk',sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0 }}>
         We Got Your Request!
       </h3>
-      <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: "320px", margin: 0 }}>
+      <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "14px", color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: "320px", margin: 0 }}>
         We'll reach out within 24–48 hours to schedule your free in-home estimate. No pressure — just clarity.
       </p>
-      <a href="tel:+13013004172" style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: C.gold, textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "2px" }}>
+      <a href="tel:+13013004172" style={{ fontFamily: "'Amino',sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: C.gold, textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "2px" }}>
         Or call us now: (301) 300-4172
       </a>
       <button
         onClick={resetForm}
-        style={{ background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "8px 20px", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", transition: "border-color 0.2s, color 0.2s" }}
+        style={{ background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "8px 20px", cursor: "pointer", fontFamily: "'Amino',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", transition: "border-color 0.2s, color 0.2s" }}
         onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold }}
         onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)"; e.currentTarget.style.color = "rgba(255,255,255,0.4)" }}
       >
@@ -493,7 +493,7 @@ function ContactForm({ propConfig = {} }) {
 
       {status === STATUS.ERROR && (
         <div style={{ padding: "12px 16px", borderRadius: "6px", background: "rgba(255,107,107,0.1)", border: "1px solid rgba(255,107,107,0.25)" }}>
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "13px", color: "#ff6b6b", margin: 0, lineHeight: 1.5 }}>
+          <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "13px", color: "#ff6b6b", margin: 0, lineHeight: 1.5 }}>
             Something went wrong. Please call us at{" "}
             <a href="tel:+13013004172" style={{ color: C.gold }}>(301) 300-4172</a>.
           </p>
@@ -513,7 +513,8 @@ function ContactForm({ propConfig = {} }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+        
+
 
         /* ── Full mode ─────────────────────────────────────────────── */
         .cf-section {
@@ -606,13 +607,13 @@ function ContactForm({ propConfig = {} }) {
       {/* ── COMPACT MODE — hero embed ───────────────────────────────────────── */}
       {isCompact && (
         <div className="cf-compact-card">
-          <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: C.gold, margin: "0 0 8px" }}>
+          <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: C.gold, margin: "0 0 8px" }}>
             Free In-Home Estimate
           </p>
-          <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.4rem", fontWeight: 700, color: "#fff", margin: "0 0 6px", lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "'AkzidenzGrotesk',sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "#fff", margin: "0 0 6px", lineHeight: 1.2 }}>
             Get Your Free Estimate
           </h2>
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: "0 0 22px", lineHeight: 1.55 }}>
+          <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: "0 0 22px", lineHeight: 1.55 }}>
             No pressure. We respond within 24–48 hours.
           </p>
           {status === STATUS.SUCCESS ? <SuccessScreen /> : <FormFields />}
@@ -633,10 +634,10 @@ function ContactForm({ propConfig = {} }) {
                 <SuccessScreen />
               ) : (
                 <>
-                  <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
+                  <h3 style={{ fontFamily: "'AkzidenzGrotesk',sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
                     Request Your Free Estimate
                   </h3>
-                  <p style={{ fontFamily: "'Inter',sans-serif", fontSize: "13px", color: "rgba(255,255,255,0.4)", marginBottom: "28px", lineHeight: 1.6 }}>
+                  <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "13px", color: "rgba(255,255,255,0.4)", marginBottom: "28px", lineHeight: 1.6 }}>
                     We respond within 24–48 hours. No pressure. Just clarity.
                   </p>
                   <FormFields />

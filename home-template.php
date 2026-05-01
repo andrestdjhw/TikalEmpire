@@ -114,24 +114,24 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div>
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:24px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Maryland's Trusted Remodeling Team</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Maryland's Trusted Remodeling Team</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
 
-      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4.5vw,4rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:22px;">
+      <h1 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(2rem,4.5vw,4rem); font-weight:900; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:22px;">
         When We Transform Your Home,<br><span style="color:#C9A84C;">the Stress Disappears.</span>
       </h1>
 
-      <p style="font-family:'Inter',sans-serif; font-size:clamp(0.95rem,1.8vw,1.1rem); color:rgba(255,255,255,0.75); line-height:1.78; max-width:500px; margin-bottom:36px;">
+      <p style="font-family:'Amino',sans-serif; font-size:clamp(0.95rem,1.8vw,1.1rem); color:rgba(255,255,255,0.75); line-height:1.78; max-width:500px; margin-bottom:36px;">
         Maryland homeowners trust Tikal Empire for kitchen remodeling, bathroom renovations, and flooring installation that delivers exactly what was promised — on time, on budget, and built to last.
       </p>
 
       <!-- CTAs -->
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;">
-        <a href="/our-work" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 28px; height:52px; border-radius:4px; border:2px solid rgba(255,255,255,0.45); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'; this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(255,255,255,0.45)'; this.style.color='#fff';">
+        <a href="/our-work" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#fff; font-family:'Amino',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 28px; height:52px; border-radius:4px; border:2px solid rgba(255,255,255,0.45); transition:border-color 0.2s, color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'; this.style.color='#C9A84C';" onmouseout="this.style.borderColor='rgba(255,255,255,0.45)'; this.style.color='#fff';">
           See Our Work
         </a>
-        <a href="/about-us" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); text-decoration:none; padding:0 12px; height:52px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.55)';">
+        <a href="/about-us" style="display:inline-flex; align-items:center; gap:8px; font-family:'Amino',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); text-decoration:none; padding:0 12px; height:52px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C';" onmouseout="this.style.color='rgba(255,255,255,0.55)';">
           Learn Our Story
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -145,7 +145,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
           ['icon'=>'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z', 'text'=>'Serving Maryland · 50 Miles'],
           ['icon'=>'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z', 'text'=>'★★★★★ Google Reviews'],
         ] as $b): ?>
-          <span style="display:flex; align-items:center; gap:7px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4);">
+          <span style="display:flex; align-items:center; gap:7px; font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4);">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $b['icon']; ?>"/></svg>
             <?php echo $b['text']; ?>
           </span>
@@ -197,7 +197,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
       <?php if ($idx > 0) : ?><span style="color:rgba(201,168,76,0.25); font-size:18px;">·</span><?php endif; ?>
       <div style="display:flex; align-items:center; gap:8px; white-space:nowrap;">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $item['path']; ?>"/></svg>
-        <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; color:rgba(255,255,255,0.68);"><?php echo $item['text']; ?></span>
+        <span style="font-family:'Amino',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.07em; color:rgba(255,255,255,0.68);"><?php echo $item['text']; ?></span>
       </div>
     <?php endforeach; ?>
   </div>
@@ -209,7 +209,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <?php
     $t = 'Your home, transformed with certainty.   ·   MHIC Licensed #154361   ·   Kitchen Remodeling   ·   Bathroom Remodeling   ·   Flooring Installation   ·   Howard County   ·   Montgomery County   ·   Frederick County   ·   Schedule Discipline   ·   Craftsmanship You Can See   ·   Licensed &amp; Insured   ·   ';
     for ($i=0;$i<3;$i++): ?>
-      <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; padding-right:6rem; flex-shrink:0; white-space:nowrap;"><?php echo $t; ?></span>
+      <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; padding-right:6rem; flex-shrink:0; white-space:nowrap;"><?php echo $t; ?></span>
     <?php endfor; ?>
   </div>
 </div>
@@ -220,28 +220,28 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div class="hp-fade-up">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
         <div style="width:36px; height:2px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Who We Are</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Who We Are</span>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:900; color:#0d1b2a; line-height:1.1; margin-bottom:28px;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:900; color:#0d1b2a; line-height:1.1; margin-bottom:28px;">
         One Team.<br>Every Detail.<br>Zero Surprises.
       </h2>
-      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Inter',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.8;">
+      <div style="display:flex; flex-direction:column; gap:18px; font-family:'Amino',sans-serif; font-size:16px; color:#2f2f2f; line-height:1.8;">
         <p style="margin:0;">Tikal Empire LLC is a licensed home improvement contractor <strong style="color:#0d1b2a;">(MHIC #154361)</strong> serving Maryland homeowners across Howard, Montgomery, Frederick, Prince George's, and Anne Arundel counties.</p>
         <p style="margin:0;">We specialize in kitchen remodeling, bathroom renovations, and flooring installation — and we exist to do one thing: <em>transform your home with the certainty you deserve.</em></p>
         <p style="margin:0;">That means showing up when we say. Finishing when we promise. Treating your home with the same respect we'd want for our own. And delivering results that make you say — yes, that's exactly what I imagined.</p>
       </div>
-      <a href="/about-us" style="display:inline-flex; align-items:center; gap:8px; margin-top:36px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none; border-bottom:2px solid rgba(201,168,76,0.35); padding-bottom:4px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='rgba(201,168,76,0.35)'">
+      <a href="/about-us" style="display:inline-flex; align-items:center; gap:8px; margin-top:36px; font-family:'Amino',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none; border-bottom:2px solid rgba(201,168,76,0.35); padding-bottom:4px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='rgba(201,168,76,0.35)'">
         Learn Our Story <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
     <div style="display:flex; flex-direction:column; gap:16px;" class="hp-fade-up">
       <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; position:relative; background:linear-gradient(135deg,#0d1b2a,#415a77);">
         <img src="/wp-content/uploads/team-jobsite.jpg" alt="Tikal Empire team on a clean, organized jobsite" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
-        <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Our Team</span></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Our Team</span></div>
       </div>
       <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; position:relative; background:linear-gradient(135deg,#162338,#0d1b2a);">
         <img src="/wp-content/uploads/kitchen-detail.jpg" alt="Precision kitchen detail — cabinet hardware and countertop edge" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
-        <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Craftsmanship Detail</span></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Craftsmanship Detail</span></div>
       </div>
     </div>
   </div>
@@ -254,10 +254,10 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="text-align:center; margin-bottom:64px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What We Do</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">What We Do</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; line-height:1.2; max-width:620px; margin:0 auto;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#fff; line-height:1.2; max-width:620px; margin:0 auto;">
         Everything Your Home Needs.<br><span style="color:#C9A84C;">One Team</span> You Can Trust.
       </h2>
     </div>
@@ -276,12 +276,12 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
             <div style="position:absolute; inset:0; background:linear-gradient(transparent 40%,rgba(7,24,40,0.92) 100%);"></div>
           </div>
           <div style="padding:28px 24px 28px;">
-            <h3 style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
-            <p style="font-family:'Inter',sans-serif; font-size:14px; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:14px;"><?php echo $s['desc']; ?></p>
+            <h3 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:10px;"><?php echo $s['title']; ?></h3>
+            <p style="font-family:'Amino',sans-serif; font-size:14px; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:14px;"><?php echo $s['desc']; ?></p>
             <?php if ($s['price']) : ?>
-              <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.06em; color:#C9A84C; margin-bottom:20px;"><?php echo $s['price']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.06em; color:#C9A84C; margin-bottom:20px;"><?php echo $s['price']; ?></p>
             <?php else: ?><div style="margin-bottom:20px;"></div><?php endif; ?>
-            <a href="<?php echo $s['href']; ?>" class="hp-explore-link" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">
+            <a href="<?php echo $s['href']; ?>" class="hp-explore-link" style="display:inline-flex; align-items:center; gap:8px; font-family:'Amino',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">
               <?php echo $s['cta']; ?> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -297,10 +297,10 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="text-align:center; margin-bottom:64px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Why Homeowners Choose Us</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Why Homeowners Choose Us</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:720px; margin:0 auto;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:720px; margin:0 auto;">
         In an Industry Full of Broken Promises,<br>We Deliver <span style="color:#C9A84C;">Certainty.</span>
       </h2>
     </div>
@@ -317,8 +317,8 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
           <div style="width:52px; height:52px; border-radius:10px; background:rgba(201,168,76,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:20px; flex-shrink:0;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A84C"><path d="<?php echo $p['d']; ?>"/></svg>
           </div>
-          <h3 style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:12px;"><?php echo $p['title']; ?></h3>
-          <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; line-height:1.75; margin:0; opacity:0.78;"><?php echo $p['body']; ?></p>
+          <h3 style="font-family:'Amino',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:12px;"><?php echo $p['title']; ?></h3>
+          <p style="font-family:'Amino',sans-serif; font-size:14px; color:#2f2f2f; line-height:1.75; margin:0; opacity:0.78;"><?php echo $p['body']; ?></p>
         </div>
       <?php endforeach; ?>
     </div>
@@ -332,10 +332,10 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="text-align:center; margin-bottom:72px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">How We Work</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">How We Work</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:620px; margin:0 auto;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2; max-width:620px; margin:0 auto;">
         A Clear Process.<br>No Guesswork. No Surprises.
       </h2>
     </div>
@@ -351,15 +351,15 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
       foreach ($steps as $i => $step) : ?>
         <div class="hp-fade-up" style="padding:0 20px; text-align:center; position:relative; z-index:1;" data-delay="<?php echo $i*120; ?>">
           <div style="width:88px; height:88px; border-radius:50%; background:linear-gradient(135deg,#0d1b2a,#060d18); border:2px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 28px; box-shadow:0 8px 24px rgba(11,31,51,0.14);">
-            <span style="font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:900; color:#C9A84C;"><?php echo $step['n']; ?></span>
+            <span style="font-family:'AkzidenzGrotesk',sans-serif; font-size:1.7rem; font-weight:900; color:#C9A84C;"><?php echo $step['n']; ?></span>
           </div>
-          <h3 style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:14px;"><?php echo $step['title']; ?></h3>
-          <p style="font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; line-height:1.75; opacity:0.72; margin:0;"><?php echo $step['body']; ?></p>
+          <h3 style="font-family:'Amino',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:#0d1b2a; margin-bottom:14px;"><?php echo $step['title']; ?></h3>
+          <p style="font-family:'Amino',sans-serif; font-size:14px; color:#2f2f2f; line-height:1.75; opacity:0.72; margin:0;"><?php echo $step['body']; ?></p>
         </div>
       <?php endforeach; ?>
     </div>
     <div style="text-align:center; margin-top:56px;">
-      <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0d1b2a; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 40px; height:52px; border-radius:4px; box-shadow:0 4px 20px rgba(201,168,76,0.28); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
+      <a href="/contact" style="display:inline-flex; align-items:center; gap:10px; background:#C9A84C; color:#0d1b2a; font-family:'Amino',sans-serif; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; padding:0 40px; height:52px; border-radius:4px; box-shadow:0 4px 20px rgba(201,168,76,0.28); transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='#DFB95A';this.style.transform='translateY(-1px)';" onmouseout="this.style.background='#C9A84C';this.style.transform='none';">
         Start With a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -372,11 +372,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Real Projects. Real Results.</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Real Projects. Real Results.</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2;">See the Transformation.</h2>
-      <p style="font-family:'Inter',sans-serif; font-size:15px; color:#2f2f2f; opacity:0.55; margin-top:12px;">Drag the slider left or right to reveal each transformation.</p>
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2;">See the Transformation.</h2>
+      <p style="font-family:'Amino',sans-serif; font-size:15px; color:#2f2f2f; opacity:0.55; margin-top:12px;">Drag the slider left or right to reveal each transformation.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-ba-grid">
       <?php
@@ -389,11 +389,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
         <div>
           <div class="ba-container" data-idx="<?php echo $idx; ?>" style="position:relative; width:100%; padding-top:66.666%; border-radius:8px; overflow:hidden; cursor:ew-resize; user-select:none; box-shadow:0 8px 32px rgba(11,31,51,0.15);">
             <img src="<?php echo $proj['before']; ?>" alt="Before — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.style.background='#415a77';" />
-            <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
+            <span style="position:absolute; top:12px; left:12px; z-index:5; font-family:'Amino',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(11,31,51,0.82); color:rgba(255,255,255,0.8); padding:4px 10px; border-radius:3px;">Before</span>
             <div class="ba-clip" style="position:absolute; inset:0; width:50%; overflow:hidden;">
               <img src="<?php echo $proj['after']; ?>" class="ba-after-img" alt="After — <?php echo esc_attr($proj['label']); ?>" style="position:absolute; top:0; left:0; height:100%; object-fit:cover;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.style.background='#415a77';" />
             </div>
-            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0d1b2a; padding:4px 10px; border-radius:3px;">After</span>
+            <span style="position:absolute; top:12px; right:12px; z-index:5; font-family:'Amino',sans-serif; font-size:9px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; background:rgba(201,168,76,0.92); color:#0d1b2a; padding:4px 10px; border-radius:3px;">After</span>
             <div class="ba-handle" style="position:absolute; top:0; left:50%; width:3px; height:100%; background:#C9A84C; transform:translateX(-50%); z-index:10; pointer-events:none;">
               <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#C9A84C; border:3px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8"/></svg>
@@ -402,16 +402,16 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
           </div>
           <div style="margin-top:14px; display:flex; align-items:center; justify-content:space-between; padding:0 4px;">
             <div>
-              <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#0d1b2a; margin:0;"><?php echo $proj['label']; ?></p>
-              <p style="font-family:'Inter',sans-serif; font-size:12px; color:#415a77; margin:3px 0 0;"><?php echo $proj['location']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:13px; font-weight:700; color:#0d1b2a; margin:0;"><?php echo $proj['label']; ?></p>
+              <p style="font-family:'Amino',sans-serif; font-size:12px; color:#415a77; margin:3px 0 0;"><?php echo $proj['location']; ?></p>
             </div>
-            <a href="/our-work" style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">View →</a>
+            <a href="/our-work" style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#C9A84C; text-decoration:none;">View →</a>
           </div>
         </div>
       <?php endforeach; ?>
     </div>
     <div style="text-align:center; margin-top:52px;">
-      <a href="/our-work" style="display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#0d1b2a; text-decoration:none; border-bottom:2px solid #C9A84C; padding-bottom:4px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#0d1b2a'">
+      <a href="/our-work" style="display:inline-flex; align-items:center; gap:8px; font-family:'Amino',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#0d1b2a; text-decoration:none; border-bottom:2px solid #C9A84C; padding-bottom:4px; transition:color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#0d1b2a'">
         View Our Full Portfolio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -431,10 +431,10 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="text-align:center; margin-bottom:56px;" class="hp-fade-up">
       <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:16px;">
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
-        <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Service Areas</span>
+        <span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C;">Service Areas</span>
         <div style="width:36px; height:1px; background:#C9A84C;"></div>
       </div>
-      <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
+      <h2 style="font-family:'AkzidenzGrotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:900; color:#0d1b2a; line-height:1.2;">
         Serving Maryland's Most<br><span style="color:#C9A84C;">Valued Communities.</span>
       </h2>
     </div>
@@ -453,16 +453,16 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
           <!-- H3 for SEO — per spec county names must render as H3 text -->
-          <h3 style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; color:#C9A84C; margin-bottom:12px;"><?php echo $area['county']; ?></h3>
+          <h3 style="font-family:'Amino',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.09em; text-transform:uppercase; color:#C9A84C; margin-bottom:12px;"><?php echo $area['county']; ?></h3>
           <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:7px;">
             <?php foreach ($area['cities'] as $city) : ?>
-              <li style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.5);"><?php echo $city; ?></li>
+              <li style="font-family:'Amino',sans-serif; font-size:13px; color:rgba(255,255,255,0.5);"><?php echo $city; ?></li>
             <?php endforeach; ?>
           </ul>
         </div>
       <?php endforeach; ?>
     </div>
-    <p style="text-align:center; margin-top:32px; font-family:'Inter',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.55;">
+    <p style="text-align:center; margin-top:32px; font-family:'Amino',sans-serif; font-size:14px; color:#2f2f2f; opacity:0.55;">
       Don't see your area? <a href="/contact" style="color:#C9A84C; text-decoration:none; font-weight:600; border-bottom:1px solid rgba(201,168,76,0.35);">Contact us</a> — we serve a 50-mile radius and may still be able to help.
     </p>
   </div>
