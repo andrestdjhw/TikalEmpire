@@ -236,11 +236,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     </div>
     <div style="display:flex; flex-direction:column; gap:16px;" class="hp-fade-up">
       <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; position:relative; background:linear-gradient(135deg,#0d1b2a,#415a77);">
-        <img src="/wp-content/uploads/team-jobsite.jpg" alt="Tikal Empire team on a clean, organized jobsite" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
+        <img src="/wp-content/uploads/2026/05/Site-scaled.jpeg" alt="Tikal Empire team on a clean, organized jobsite" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
         <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Our Team</span></div>
       </div>
       <div style="border-radius:8px; overflow:hidden; aspect-ratio:4/3; position:relative; background:linear-gradient(135deg,#162338,#0d1b2a);">
-        <img src="/wp-content/uploads/kitchen-detail.jpg" alt="Precision kitchen detail — cabinet hardware and countertop edge" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
+        <img src="/wp-content/uploads/2026/05/08-scaled.png" alt="Precision kitchen detail — cabinet hardware and countertop edge" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'"/>
         <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(11,31,51,0.85));"><span style="font-family:'Amino',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65);">Craftsmanship Detail</span></div>
       </div>
     </div>
@@ -381,9 +381,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: #C9A84C
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="hp-ba-grid">
       <?php
       $projects = [
-        ['label'=>'Kitchen Remodel','location'=>'Ellicott City, MD','before'=>'/wp-content/uploads/kitchen-before.jpg','after'=>'/wp-content/uploads/kitchen-after.jpg'],
-        ['label'=>'Bathroom Renovation','location'=>'Rockville, MD','before'=>'/wp-content/uploads/bathroom-before.jpg','after'=>'/wp-content/uploads/bathroom-after.jpg'],
-        ['label'=>'Flooring Installation','location'=>'Columbia, MD','before'=>'/wp-content/uploads/flooring-before.jpg','after'=>'/wp-content/uploads/flooring-after.jpg'],
+        ['label'=>'Kitchen Remodel','location'=>'Ellicott City, MD','before'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-1-scaled-e1777648349374.jpg','after'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-scaled-e1777648289861.jpg'],
+        ['label'=>'Bathroom Renovation','location'=>'Rockville, MD','before'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-1-scaled-e1777648349374.jpg','after'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-scaled-e1777648289861.jpg'],
+        ['label'=>'Flooring Installation','location'=>'Columbia, MD','before'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-1-scaled-e1777648349374.jpg','after'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-scaled-e1777648289861.jpg'],
       ];
       foreach ($projects as $idx => $proj) : ?>
         <div>

@@ -231,9 +231,9 @@ get_header(); ?>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="kr-ba-grid">
       <?php
       $projects = [
-        ['label'=>'Kitchen Transformation','location'=>'Columbia, MD',   'before'=>'/wp-content/uploads/kitchen-columbia-before.jpg',  'after'=>'/wp-content/uploads/kitchen-columbia-after.jpg'],
-        ['label'=>'Kitchen Remodel',       'location'=>'Bethesda, MD',   'before'=>'/wp-content/uploads/kitchen-bethesda-before.jpg',  'after'=>'/wp-content/uploads/kitchen-bethesda-after.jpg'],
-        ['label'=>'Full Kitchen Redesign', 'location'=>'Rockville, MD',  'before'=>'/wp-content/uploads/kitchen-rockville-before.jpg', 'after'=>'/wp-content/uploads/kitchen-rockville-after.jpg'],
+        ['label'=>'Kitchen Transformation','location'=>'Columbia, MD',   'before'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-1-scaled-e1777648349374.jpg',  'after'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-scaled-e1777648289861.jpg'],
+        ['label'=>'Kitchen Remodel',       'location'=>'Bethesda, MD',   'before'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-1-scaled-e1777648349374.jpg',  'after'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-scaled-e1777648289861.jpg'],
+        ['label'=>'Full Kitchen Redesign', 'location'=>'Rockville, MD',  'before'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-1-scaled-e1777648349374.jpg', 'after'=>'/wp-content/uploads/2026/05/renovation-vision-unfinished-to-finished-kitchen-2026-03-17-01-40-30-utc-scaled-e1777648289861.jpg'],
       ];
       foreach ($projects as $idx => $p): ?>
         <div>

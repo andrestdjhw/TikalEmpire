@@ -228,9 +228,9 @@ get_header(); ?>
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="br-ba-grid">
       <?php
       $projects = [
-        ['label'=>'Bathroom Renovation', 'location'=>'Ellicott City, MD','before'=>'/wp-content/uploads/bathroom-ellicott-before.jpg', 'after'=>'/wp-content/uploads/bathroom-ellicott-after.jpg'],
-        ['label'=>'Master Bath Remodel', 'location'=>'Potomac, MD',      'before'=>'/wp-content/uploads/bathroom-potomac-before.jpg',  'after'=>'/wp-content/uploads/bathroom-potomac-after.jpg'],
-        ['label'=>'Shower Conversion',   'location'=>'Columbia, MD',     'before'=>'/wp-content/uploads/bathroom-columbia-before.jpg', 'after'=>'/wp-content/uploads/bathroom-columbia-after.jpg'],
+        ['label'=>'Bathroom Renovation', 'location'=>'Ellicott City, MD','before'=>'/wp-content/uploads/2026/05/bathroom-under-construction-with-plumbing-and-fixt-2026-03-17-01-40-25-utc-1-scaled-e1777648870366.jpg', 'after'=>'/wp-content/uploads/2026/05/bathroom-under-construction-with-plumbing-and-fixt-2026-03-17-01-40-25-utc-scaled-e1777648755561.jpg'],
+        ['label'=>'Master Bath Remodel', 'location'=>'Potomac, MD',      'before'=>'/wp-content/uploads/2026/05/bathroom-under-construction-with-plumbing-and-fixt-2026-03-17-01-40-25-utc-1-scaled-e1777648870366.jpg',  'after'=>'/wp-content/uploads/2026/05/bathroom-under-construction-with-plumbing-and-fixt-2026-03-17-01-40-25-utc-scaled-e1777648755561.jpg'],
+        ['label'=>'Shower Conversion',   'location'=>'Columbia, MD',     'before'=>'/wp-content/uploads/2026/05/bathroom-under-construction-with-plumbing-and-fixt-2026-03-17-01-40-25-utc-1-scaled-e1777648870366.jpg', 'after'=>'/wp-content/uploads/2026/05/bathroom-under-construction-with-plumbing-and-fixt-2026-03-17-01-40-25-utc-scaled-e1777648755561.jpg'],
       ];
       foreach ($projects as $idx => $p): ?>
         <div>
