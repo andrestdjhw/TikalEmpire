@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect } from "react"
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  ⚙️  CONFIGURATION — fill these in before deploying
 // ─────────────────────────────────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID"
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY"
-const RECAPTCHA_SITE_KEY  = "YOUR_SITE_KEY"
+const EMAILJS_SERVICE_ID           = "service_4snqgt8"
+const EMAILJS_TEMPLATE_ID          = "template_dgqk8n4"  // Contact Us (notification)
+const EMAILJS_AUTOREPLY_TEMPLATE_ID = "template_ly8x5qa" // Auto Reply (to the requester)
+const EMAILJS_PUBLIC_KEY  = "2fxJ1GqPsSwd2g6bA"
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  Brand tokens
@@ -301,43 +301,14 @@ function ContactForm({ propConfig = {} }) {
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState(STATUS.IDLE)
 
-  // ── reCAPTCHA refs ──────────────────────────────────────────────────────────
-  const captchaContainerRef = useRef(null)
-  const widgetIdRef         = useRef(null)
-  const captchaTokenRef     = useRef("")
-
   // ── Load SDKs ───────────────────────────────────────────────────────────────
-  const emailjsReady   = useScript("https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js")
-  const recaptchaReady = useScript("https://www.google.com/recaptcha/api.js?render=explicit")
+  const emailjsReady = useScript("https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js")
 
   useEffect(() => {
     if (emailjsReady && window.emailjs) {
       window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY })
     }
   }, [emailjsReady])
-
-  useEffect(() => {
-    if (!recaptchaReady) return
-    const poll = setInterval(() => {
-      if (
-        window.grecaptcha &&
-        typeof window.grecaptcha.render === "function" &&
-        captchaContainerRef.current &&
-        widgetIdRef.current === null
-      ) {
-        widgetIdRef.current = window.grecaptcha.render(captchaContainerRef.current, {
-          sitekey:            RECAPTCHA_SITE_KEY,
-          theme:              "dark",
-          size:               "normal",
-          callback:           (token) => { captchaTokenRef.current = token; setErrors((p) => ({ ...p, captcha: "" })) },
-          "expired-callback": () => { captchaTokenRef.current = "" },
-          "error-callback":   () => { captchaTokenRef.current = "" },
-        })
-        clearInterval(poll)
-      }
-    }, 150)
-    return () => clearInterval(poll)
-  }, [recaptchaReady])
 
   // ── Helpers ─────────────────────────────────────────────────────────────────
   function update(e) {
@@ -366,7 +337,6 @@ function ContactForm({ propConfig = {} }) {
       e.email = "Please enter a valid email address."
     }
     if (!fields.city_zip.trim())  e.city_zip  = "Please enter your city or ZIP code."
-    if (!captchaTokenRef.current) e.captcha   = "Please confirm you're not a robot."
     return e
   }
 
@@ -379,32 +349,30 @@ function ContactForm({ propConfig = {} }) {
     setStatus(STATUS.SENDING)
     try {
       if (!window.emailjs) throw new Error("EmailJS not initialized")
-      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      const templateParams = {
         from_name:      fields.full_name,
         from_phone:     fields.phone,
         from_email:     fields.email,
         service_needed: fields.service  || "Not specified",
         city_zip:       fields.city_zip,
         message:        fields.message  || "No additional details.",
-        captcha_token:  captchaTokenRef.current,
         reply_to:       fields.email,
-      })
+      }
+      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      window.emailjs
+        .send(EMAILJS_SERVICE_ID, EMAILJS_AUTOREPLY_TEMPLATE_ID, templateParams)
+        .catch((err) => console.error("[ContactForm] Auto-reply failed:", err))
       setStatus(STATUS.SUCCESS)
       setFields({ full_name: "", phone: "", email: "", service: "", city_zip: "", message: "" })
-      captchaTokenRef.current = ""
-      if (widgetIdRef.current !== null && window.grecaptcha) window.grecaptcha.reset(widgetIdRef.current)
     } catch (err) {
       console.error("[ContactForm]", err)
       setStatus(STATUS.ERROR)
-      captchaTokenRef.current = ""
-      if (widgetIdRef.current !== null && window.grecaptcha) window.grecaptcha.reset(widgetIdRef.current)
     }
   }
 
   function resetForm() {
     setStatus(STATUS.IDLE)
     setErrors({})
-    captchaTokenRef.current = ""
   }
 
   // ─────────────────────────────────────────────────────────────────────────────
@@ -412,7 +380,7 @@ function ContactForm({ propConfig = {} }) {
   // ─────────────────────────────────────────────────────────────────────────────
 
   // Success screen
-  const SuccessScreen = () => (
+  const successScreenJsx = (
     <div className="cf-success">
       <div className="cf-success-icon">{ICONS.check(C.gold)}</div>
       <h3 style={{ fontFamily: "'AkzidenzGrotesk',sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0 }}>
@@ -436,7 +404,7 @@ function ContactForm({ propConfig = {} }) {
   )
 
   // Form fields
-  const FormFields = () => (
+  const formFieldsJsx = (
     <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 
       <FieldWrap label="Full Name *" error={errors.full_name}>
@@ -485,11 +453,6 @@ function ContactForm({ propConfig = {} }) {
           rows={isCompact ? 3 : 4}
           style={{ ...fieldStyle("message"), resize: "vertical", minHeight: isCompact ? "80px" : "100px" }} />
       </FieldWrap>
-
-      <div className="cf-captcha-wrap">
-        <div ref={captchaContainerRef} />
-        {errors.captcha && <span className="cf-captcha-error">{errors.captcha}</span>}
-      </div>
 
       {status === STATUS.ERROR && (
         <div style={{ padding: "12px 16px", borderRadius: "6px", background: "rgba(255,107,107,0.1)", border: "1px solid rgba(255,107,107,0.25)" }}>
@@ -555,8 +518,6 @@ function ContactForm({ propConfig = {} }) {
         }
         .cf-submit:hover:not(:disabled) { background: ${C.goldHov}; transform: translateY(-1px); }
         .cf-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-        .cf-captcha-wrap { display: flex; flex-direction: column; gap: 6px; }
-        .cf-captcha-error { font-family: 'Inter', sans-serif; font-size: 11px; color: #ff6b6b; }
         .cf-success {
           display: flex; flex-direction: column;
           align-items: center; justify-content: center;
@@ -616,7 +577,7 @@ function ContactForm({ propConfig = {} }) {
           <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "12px", color: "rgba(255,255,255,0.38)", margin: "0 0 22px", lineHeight: 1.55 }}>
             No pressure. We respond within 24–48 hours.
           </p>
-          {status === STATUS.SUCCESS ? <SuccessScreen /> : <FormFields />}
+          {status === STATUS.SUCCESS ? successScreenJsx : formFieldsJsx}
         </div>
       )}
 
@@ -631,7 +592,7 @@ function ContactForm({ propConfig = {} }) {
             {/* Right: form card */}
             <div className="cf-card">
               {status === STATUS.SUCCESS ? (
-                <SuccessScreen />
+                successScreenJsx
               ) : (
                 <>
                   <h3 style={{ fontFamily: "'AkzidenzGrotesk',sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
@@ -640,7 +601,7 @@ function ContactForm({ propConfig = {} }) {
                   <p style={{ fontFamily: "'Amino',sans-serif", fontSize: "13px", color: "rgba(255,255,255,0.4)", marginBottom: "28px", lineHeight: 1.6 }}>
                     We respond within 24–48 hours. No pressure. Just clarity.
                   </p>
-                  <FormFields />
+                  {formFieldsJsx}
                 </>
               )}
             </div>

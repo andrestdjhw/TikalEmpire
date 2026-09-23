@@ -373,26 +373,6 @@ function Footer() {
               ))}
             </div>
 
-            {/* Map pin note */}
-            <div
-              style={{
-                marginTop: "8px",
-                padding: "10px 14px",
-                borderRadius: "6px",
-                background: "rgba(74,111,138,0.12)",
-                border: `1px solid rgba(74,111,138,0.2)`,
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "8px",
-              }}
-            >
-              <svg viewBox="0 0 24 24" fill={C.steel} style={{ width: "14px", height: "14px", flexShrink: 0, marginTop: "1px" }}>
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", color: "rgba(255,255,255,0.32)", lineHeight: 1.5 }}>
-                Based in the Duluth, GA area. Traveling throughout Maryland for interior projects.
-              </span>
-            </div>
           </div>
 
           {/* ── Col 4: Contact Info ───────────────────────────────────────────── */}
